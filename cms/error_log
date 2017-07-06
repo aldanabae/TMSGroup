@@ -1,0 +1,5 @@
+[02-Jul-2016 20:35:15 America/Argentina/Buenos_Aires] PHP Warning:  getimagesize(): Filename cannot be empty in /home/fasteventcom/public_html/cms/application/Controller.php on line 94
+[02-Jul-2016 20:35:15 America/Argentina/Buenos_Aires] PHP Warning:  imagesx() expects parameter 1 to be resource, null given in /home/fasteventcom/public_html/cms/application/Controller.php on line 130
+[02-Jul-2016 20:35:15 America/Argentina/Buenos_Aires] PHP Warning:  imagesy() expects parameter 1 to be resource, null given in /home/fasteventcom/public_html/cms/application/Controller.php on line 131
+[02-Jul-2016 20:35:15 America/Argentina/Buenos_Aires] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, null given in /home/fasteventcom/public_html/cms/application/Controller.php on line 169
+[02-Jul-2016 20:35:15 America/Argentina/Buenos_Aires] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/fasteventcom/public_html/cms/application/Controller.php on line 206
