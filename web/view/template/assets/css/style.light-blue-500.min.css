@@ -5975,7 +5975,7 @@ label.color-white {
   background-color: #fff;
 }
 .ms-header.ms-header-primary .btn-circle:hover, .ms-header.ms-header-primary .btn-circle:focus {
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-header.ms-header-primary .btn-circle.no-focus:focus {
   color: #fff;
@@ -6450,7 +6450,7 @@ label.color-white {
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li.open > a, .ms-navbar-dark.navbar-mode .navbar-nav > li.open > a, .ms-navbar-primary.navbar-mode .navbar-nav > li.open > a, .ms-header-dark + .ms-navbar-dark .navbar-nav > li.open > a, .ms-header-white + .ms-navbar-white .navbar-nav > li.open > a, .ms-header-primary + .ms-navbar-primary .navbar-nav > li.open > a {
   background-color: transparent;
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li.open > a::before, .ms-navbar-dark.navbar-mode .navbar-nav > li.open > a::before, .ms-navbar-primary.navbar-mode .navbar-nav > li.open > a::before, .ms-header-dark + .ms-navbar-dark .navbar-nav > li.open > a::before, .ms-header-white + .ms-navbar-white .navbar-nav > li.open > a::before, .ms-header-primary + .ms-navbar-primary .navbar-nav > li.open > a::before {
   height: 100%;
@@ -6467,7 +6467,7 @@ label.color-white {
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li .dropdown-menu li a:hover, .ms-navbar-white.navbar-mode .navbar-nav > li .dropdown-menu li a:focus, .ms-navbar-dark.navbar-mode .navbar-nav > li .dropdown-menu li a:hover, .ms-navbar-dark.navbar-mode .navbar-nav > li .dropdown-menu li a:focus, .ms-navbar-primary.navbar-mode .navbar-nav > li .dropdown-menu li a:hover, .ms-navbar-primary.navbar-mode .navbar-nav > li .dropdown-menu li a:focus, .ms-header-dark + .ms-navbar-dark .navbar-nav > li .dropdown-menu li a:hover, .ms-header-dark + .ms-navbar-dark .navbar-nav > li .dropdown-menu li a:focus, .ms-header-white + .ms-navbar-white .navbar-nav > li .dropdown-menu li a:hover, .ms-header-white + .ms-navbar-white .navbar-nav > li .dropdown-menu li a:focus, .ms-header-primary + .ms-navbar-primary .navbar-nav > li .dropdown-menu li a:hover, .ms-header-primary + .ms-navbar-primary .navbar-nav > li .dropdown-menu li a:focus {
   background-color: #eee;
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li .dropdown-menu li.active a, .ms-navbar-dark.navbar-mode .navbar-nav > li .dropdown-menu li.active a, .ms-navbar-primary.navbar-mode .navbar-nav > li .dropdown-menu li.active a, .ms-header-dark + .ms-navbar-dark .navbar-nav > li .dropdown-menu li.active a, .ms-header-white + .ms-navbar-white .navbar-nav > li .dropdown-menu li.active a, .ms-header-primary + .ms-navbar-primary .navbar-nav > li .dropdown-menu li.active a {
   background-color: #eee;
@@ -11451,7 +11451,7 @@ body.lb-disable-scrolling {
   margin-bottom: 0;
 }
 .ms-footbar {
-  background-color: #607d8b;
+  background-color: #41708B; /*Cambio background-color: #607d8b;*/
   color: #eee;
   margin-top: 4rem;
   position: relative;
@@ -11481,7 +11481,7 @@ body.lb-disable-scrolling {
   transition: all 0.3s ease 0s;
 }
 .ms-footbar a:hover, .ms-footbar a:focus {
-  color: #ffa726;
+  color: #27E092; /*Cambio color: #ffa726;*/
 }
 .ms-footbar .ms-footbar-block {
   margin: 2rem 0;
@@ -11502,18 +11502,18 @@ body.lb-disable-scrolling {
   padding: 2px 0;
 }
 .three_cols li a i {
-  color: #26c6da;
+  color: #20B2AA; /*Cambio color: #26c6da;*/
   margin-right: 10px;
   text-align: center;
   width: 15px;
 }
 .three_cols li a:hover i {
-  color: #ffa726;
+  color: #27E092; /*Cambio color: #ffa726;*/
   transform: rotateY(360deg);
   transition: all 0.5s ease 0s;
 }
 .ms-footer-alt-color {
-  background-color: #455a64;
+  background-color: #0E3D58; /*Cambio background-color: #455a64;*/
 }
 .ms-input-subscribe {
   width: 100%;
@@ -11586,8 +11586,8 @@ body.lb-disable-scrolling {
   margin-right: 0.5rem;
 }
 .ms-footbar-social a {
-  background-color: #455a64;
-  color: #f5f5f5;
+  background-color: #0E3D58; /*Cambio background-color: #455a64;*/
+  color: #f5f5f5!important; /*Agrego importante para que priorice el blanco sobre el color de c/icono*/
   margin: 0 0 1rem 1rem;
 }
 .ms-footbar-social a:hover i {

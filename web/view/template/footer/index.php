@@ -2,9 +2,10 @@
 <aside class="ms-footbar">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 ms-footer-col">
+
+      <div class="col-md-4 ms-footer-col" style="height: 442px;">
         <div class="ms-footbar-block">
-          <h3 class="ms-footbar-title">Sitemap</h3>
+          <h3 class="ms-footbar-title">Mapa del Sitio</h3>
           <ul class="list-unstyled ms-icon-list three_cols">
             <li>
               <a href="index-2.html">
@@ -56,138 +57,56 @@
             </li>
           </ul>
         </div>
-        <div class="ms-footbar-block">
-          <h3 class="ms-footbar-title">Subscribe</h3>
-          <p class="">Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
-          <form>
-            <div class="form-group label-floating mt-2 mb-1">
-              <div class="input-group ms-input-subscribe">
-                <label class="control-label" for="ms-subscribe">
-                  <i class="zmdi zmdi-email"></i> Email Adress</label>
-                <input type="email" id="ms-subscribe" class="form-control"> </div>
-            </div>
-            <button class="ms-subscribre-btn" type="button">Subscribe</button>
-          </form>
-        </div>
       </div>
+
       <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
         <div class="ms-footbar-block">
-          <h3 class="ms-footbar-title text-center mb-2">Last Articles</h3>
-          <div class="ms-footer-media">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="javascript:void(0)">
-                  <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">
-                  <a href="javascript:void(0)">Lorem ipsum dolor sit expedita cumque amet consectetur adipisicing repellat</a>
-                </h4>
-                <div class="media-footer">
-                  <span>
-                    <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
-                  <span>
-                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                    <a href="javascript:void(0)">Design</a>
-                  </span>
-                </div>
-              </div>
+          <div class="ms-footbar-block">
+            <div class="ms-footbar-title">
+              <h3 class="ms-footbar-title text-center mb-2">
+                <strong>TMS</strong>Group
+              </h3>
             </div>
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="javascript:void(0)">
-                  <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">
-                  <a href="javascript:void(0)">Labore ut esse Duis consectetur expedita cumque ullamco ad dolor veniam velit</a>
-                </h4>
-                <div class="media-footer">
-                  <span>
-                    <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
-                  <span>
-                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                    <a href="javascript:void(0)">News</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="javascript:void(0)">
-                  <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">
-                  <a href="javascript:void(0)">voluptates deserunt ducimus expedita cumque quaerat molestiae labore</a>
-                </h4>
-                <div class="media-footer">
-                  <span>
-                    <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
-                  <span>
-                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                    <a href="javascript:void(0)">Productivity</a>
-                  </span>
-                </div>
-              </div>
+            
+            <div class="ms-footer-media text-center">
+              <address class="no-mb">
+              <p>
+                <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Ricardo Videla 8340, La Puntilla</p>
+              <p>
+                <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luján de Cuyo, CP 5505</p>
+              <p>
+                <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
+              </p>
+              <p>
+                <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261  </p>
+              <p>
+              </address>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">
+
+      <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">      
         <div class="ms-footbar-block">
-          <div class="ms-footbar-title">
-            <span class="ms-logo ms-logo-white ms-logo-sm mr-1">M</span>
-            <h3 class="no-m ms-site-title">Material
-              <span>Style</span>
-            </h3>
-          </div>
-          <address class="no-mb">
-            <p>
-              <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 795 Folsom Ave, Suite 600</p>
-            <p>
-              <i class="color-warning-light zmdi zmdi-map mr-1"></i> San Francisco, CA 94107</p>
-            <p>
-              <i class="color-info-light zmdi zmdi-email mr-1"></i>
-              <a href="mailto:joe@example.com">example@domain.com</a>
-            </p>
-            <p>
-              <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+34 123 456 7890 </p>
-            <p>
-              <i class="color-success-light fa fa-fax mr-1"></i>+34 123 456 7890 </p>
-          </address>
-        </div>
-        <div class="ms-footbar-block">
-          <h3 class="ms-footbar-title">Social Media</h3>
+          <h3 class="ms-footbar-title">Redes Sociales</h3>
           <div class="ms-footbar-social">
-            <a href="javascript:void(0)" class="btn-circle btn-facebook">
+            <a href="https://www.facebook.com/tmsgroupsa/" class="btn-circle btn-facebook">
               <i class="zmdi zmdi-facebook"></i>
             </a>
-            <a href="javascript:void(0)" class="btn-circle btn-twitter">
+            <a href="https://twitter.com/tmsgroup_sa" class="btn-circle btn-twitter">
               <i class="zmdi zmdi-twitter"></i>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-youtube">
-              <i class="zmdi zmdi-youtube"></i>
-            </a>
-            <br>
-            <a href="javascript:void(0)" class="btn-circle btn-google">
-              <i class="zmdi zmdi-google"></i>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-instagram">
-              <i class="zmdi zmdi-instagram"></i>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-github">
-              <i class="zmdi zmdi-github"></i>
             </a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </aside>
 <footer class="ms-footer">
   <div class="container">
-    <p>Copyright &copy; Material Style 2017</p>
+    <p><strong>Copyright &copy; TMS Group 2017</strong></p>
   </div>
 </footer>
 <div class="btn-back-top">
@@ -196,204 +115,8 @@
   </a>
 </div>
 </div>
-<!-- sb-site-container -->
-<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
-  <div class="sb-slidebar-container">
-    <header class="ms-slidebar-header">
-      <div class="ms-slidebar-login">
-        <a href="javascript:void(0)" class="withripple">
-          <i class="zmdi zmdi-account"></i> Login</a>
-        <a href="javascript:void(0)" class="withripple">
-          <i class="zmdi zmdi-account-add"></i> Register</a>
-      </div>
-      <div class="ms-slidebar-title">
-        <form class="search-form">
-          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
-          <label for="search-box-slidebar">
-            <i class="zmdi zmdi-search"></i>
-          </label>
-        </form>
-        <div class="ms-slidebar-t">
-          <span class="ms-logo ms-logo-sm">M</span>
-          <h3>Material
-            <span>Style</span>
-          </h3>
-        </div>
-      </div>
-    </header>
-    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
-      <li class="panel" role="tab" id="sch1">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc1" aria-expanded="false" aria-controls="sc1">
-          <i class="zmdi zmdi-home"></i> Home </a>
-        <ul id="sc1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch1">
-          <li>
-            <a href="index-2.html">Default Home</a>
-          </li>
-          <li>
-            <a href="home-generic-2.html">Home Black Slider</a>
-          </li>
-          <li>
-            <a href="home-landing.html">Home Landing Intro</a>
-          </li>
-          <li>
-            <a href="home-landing3.html">Home Landing Video</a>
-          </li>
-          <li>
-            <a href="home-shop.html">Home Shop 1</a>
-          </li>
-        </ul>
-      </li>
-      <li class="panel" role="tab" id="sch2">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc2" aria-expanded="false" aria-controls="sc2">
-          <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
-        <ul id="sc2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch2">
-          <li>
-            <a href="page-about.html">About US</a>
-          </li>
-          <li>
-            <a href="page-team.html">Our Team</a>
-          </li>
-          <li>
-            <a href="page-product.html">Products</a>
-          </li>
-          <li>
-            <a href="page-services.html">Services</a>
-          </li>
-          <li>
-            <a href="page-faq.html">FAQ</a>
-          </li>
-          <li>
-            <a href="page-timeline_left.html">Timeline</a>
-          </li>
-          <li>
-            <a href="page-contact.html">Contact Option</a>
-          </li>
-          <li>
-            <a href="page-login.html">Login</a>
-          </li>
-          <li>
-            <a href="page-pricing.html">Pricing</a>
-          </li>
-          <li>
-            <a href="page-coming.html">Coming Soon</a>
-          </li>
-        </ul>
-      </li>
-      <li class="panel" role="tab" id="sch4">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc4" aria-expanded="false" aria-controls="sc4">
-          <i class="zmdi zmdi-edit"></i> Blog </a>
-        <ul id="sc4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch4">
-          <li>
-            <a href="blog-sidebar.html">Blog Sidebar 1</a>
-          </li>
-          <li>
-            <a href="blog-sidebar2.html">Blog Sidebar 2</a>
-          </li>
-          <li>
-            <a href="blog-masonry.html">Blog Masonry 1</a>
-          </li>
-          <li>
-            <a href="blog-masonry2.html">Blog Masonry 2</a>
-          </li>
-          <li>
-            <a href="blog-full.html">Blog Full Page 1</a>
-          </li>
-          <li>
-            <a href="blog-full2.html">Blog Full Page 2</a>
-          </li>
-          <li>
-            <a href="blog-post.html">Blog Post 1</a>
-          </li>
-          <li>
-            <a href="blog-post2.html">Blog Post 2</a>
-          </li>
-        </ul>
-      </li>
-      <li class="panel" role="tab" id="sch5">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc5" aria-expanded="false" aria-controls="sc5">
-          <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
-        <ul id="sc5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch5">
-          <li>
-            <a href="ecommerce-filters.html">E-Commerce Sidebar</a>
-          </li>
-          <li>
-            <a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a>
-          </li>
-          <li>
-            <a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a>
-          </li>
-          <li>
-            <a href="ecommerce-item.html">E-Commerce Item</a>
-          </li>
-          <li>
-            <a href="ecommerce-cart.html">E-Commerce Cart</a>
-          </li>
-        </ul>
-      </li>
-      <li class="panel" role="tab" id="sch6">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc6" aria-expanded="false" aria-controls="sc6">
-          <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
-        <ul id="sc6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch6">
-          <li>
-            <a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a>
-          </li>
-          <li>
-            <a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a>
-          </li>
-          <li>
-            <a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a>
-          </li>
-          <li>
-            <a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a>
-          </li>
-          <li>
-            <a href="portfolio-cards.html">Porfolio Cards</a>
-          </li>
-          <li>
-            <a href="portfolio-masonry.html">Porfolio Masonry</a>
-          </li>
-          <li>
-            <a href="portfolio-item.html">Portfolio Item 1</a>
-          </li>
-          <li>
-            <a href="portfolio-item2.html">Portfolio Item 2</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="link" href="component-typography.html">
-          <i class="zmdi zmdi-view-compact"></i> UI Elements</a>
-      </li>
-      <li>
-        <a class="link" href="page-all.html">
-          <i class="zmdi zmdi-link"></i> All Pages</a>
-      </li>
-    </ul>
-    <div class="ms-slidebar-social ms-slidebar-block">
-      <h4 class="ms-slidebar-block-title">Social Links</h4>
-      <div class="ms-slidebar-social">
-        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
-          <i class="zmdi zmdi-facebook"></i>
-          <span class="badge badge-pink">12</span>
-          <div class="ripple-container"></div>
-        </a>
-        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
-          <i class="zmdi zmdi-twitter"></i>
-          <span class="badge badge-pink">4</span>
-          <div class="ripple-container"></div>
-        </a>
-        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
-          <i class="zmdi zmdi-google"></i>
-          <div class="ripple-container"></div>
-        </a>
-        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
-          <i class="zmdi zmdi-instagram"></i>
-          <div class="ripple-container"></div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 <script src="<?php echo URL_JS; ?>plugins.min.js"></script>
 <script src="<?php echo URL_JS; ?>app.min.js"></script>
 <script src="<?php echo URL_JS; ?>configurator.min.js"></script>

@@ -11,8 +11,8 @@
 class MenuTop {
 
   const table = 'seccion';
-  const ulMain = 'flexnav';
-  const ulSub = '';
+  const ulMain = 'nav navbar-nav';
+  const ulSub = 'dropdown-menu';
   const liSub = 'active';
 
   private $_registry;
@@ -69,13 +69,14 @@ class MenuTop {
 											<a href="' . $url . '">' . $menu['items'][$itemID]['Titulo'] . '</a>
 										</li>';
         }
+        // colocar cuando sea el menu padre de submenu
         if (isset($menu['parents'][$itemID])) {
           $parent_url = (!empty($menu['items'][$itemID]['URL'])) ?
                   URL_WEB . 'seccion/' . $menu['items'][$itemID]['URL'] : '';
           $url_vacia = (!empty($parent_url)) ? $parent_url : 'javascript:;';
           //$current = ($menu['items'][$itemID]['URL'] == Controller::getItem()) ? self::liSub : '';
-          $html .= '<li>
-											<a href="' . $url_vacia . '">' . $menu['items'][$itemID]['Titulo'] . '</a>';
+          $html .= '<li class="dropdown">
+											<a class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="dropdown" data-hover="dropdown" data-name="page" href="' . $url_vacia . '">' . $menu['items'][$itemID]['Titulo'] . '</a>';
           $html .= $this->recursiveMenu($itemID, $menu, self::ulSub, false, $parent_url);
           $html .= '</li>';
         }
