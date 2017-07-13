@@ -11,49 +11,49 @@
               <a href="index-2.html">
                 <i class="zmdi zmdi-home"></i> Home</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="page-blog.html">
                 <i class="zmdi zmdi-edit"></i> Blog</a>
             </li>
             <li>
               <a href="page-blog.html">
                 <i class="zmdi zmdi-image-o"></i> Portafolio</a>
-            </li>
+            </li> -->
             <li>
               <a href="portfolio-filters_sidebar.html">
-                <i class="zmdi zmdi-case"></i> Works</a>
+                <i class="zmdi zmdi-case"></i> Clientes</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="page-timeline_left2.html">
                 <i class="zmdi zmdi-time"></i> Timeline</a>
             </li>
             <li>
               <a href="page-pricing.html">
                 <i class="zmdi zmdi-money"></i> Pricing</a>
-            </li>
+            </li> -->
             <li>
               <a href="page-about.html">
-                <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
+                <i class="zmdi zmdi-favorite-outline"></i> Nosotros</a>
             </li>
             <li>
               <a href="page-team2.html">
-                <i class="zmdi zmdi-accounts"></i> Our Team</a>
+                <i class="zmdi zmdi-accounts"></i> Equipo</a>
             </li>
             <li>
               <a href="page-services.html">
-                <i class="zmdi zmdi-face"></i> Services</a>
+                <i class="zmdi zmdi-face"></i> Servicios</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="page-faq2.html">
                 <i class="zmdi zmdi-help"></i> FAQ</a>
             </li>
             <li>
               <a href="page-login2.html">
                 <i class="zmdi zmdi-lock"></i> Login</a>
-            </li>
+            </li> -->
             <li>
               <a href="page-contact.html">
-                <i class="zmdi zmdi-email"></i> Contact</a>
+                <i class="zmdi zmdi-email"></i> Contacto</a>
             </li>
           </ul>
         </div>
@@ -96,6 +96,9 @@
             </a>
             <a href="https://twitter.com/tmsgroup_sa" class="btn-circle btn-twitter">
               <i class="zmdi zmdi-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company-beta/1679521/" class="btn-circle btn-linkedin">
+              <i class="zmdi zmdi-linkedin"></i>
             </a>
           </div>
         </div>

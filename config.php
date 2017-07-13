@@ -12,7 +12,7 @@
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 //DATOS DE CONFIGURACIÓN DEL WEBSITE
-define('URL_WEB', 'http://localhost/TMSGroup/');
+define('URL_WEB', 'http://192.168.1.236/TMSGroup/');
 define('URL_THEME', 'template');
 define('URL_GAL', URL_WEB . 'galleries/');
 define('URL_CSS', URL_WEB . 'web/view/' . URL_THEME . '/assets/css/');

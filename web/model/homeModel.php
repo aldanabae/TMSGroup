@@ -43,6 +43,10 @@ class homeModel extends Model {
     return (count($temp) > 0) ? $temp[0] : false;
   }
 
+  public function getSliders() {
+    return $this->all(array('table' => 'banner_top', 'where' => "Publico='1'"));
+  }
+
   public function getSecciones() {
     return $this->all(array('table' => 'seccion', 'where' => "Publico='1' AND PadreID='0'"));
   }

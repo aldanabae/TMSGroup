@@ -4330,7 +4330,7 @@ blockquote.ms-blockquote footer {
   width: 50px;
 }
 .btn-circle i.zmdi {
-  font-size: 20px;
+  font-size: 28px; /*Cambio font-size: 20px;*/
   vertical-align: middle;
 }
 .btn-circle.btn-circle-xlg {
@@ -4437,10 +4437,10 @@ blockquote.ms-blockquote footer {
   color: #000;
 }
 .btn-circle.btn-circle-primary {
-  color: #03a9f4;
+  color: #124D6F; /*Cambio color boton compartir color: #03a9f4;*/
 }
 .btn-circle.btn-circle-primary::before {
-  background-color: #03a9f4;
+  background-color: #124D6F; /*Cambio color fondo bot compartir background-color: #03a9f4;*/
 }
 .btn-circle.btn-circle-primary:hover, .btn-circle.btn-circle-primary:focus {
   color: #fff;
@@ -4494,19 +4494,19 @@ blockquote.ms-blockquote footer {
   color: #3b5998;
 }
 .btn-circle.btn-facebook::before {
-  background-color: #3b5998;
+  background-color: #3b5998!important;
 }
 .btn-circle.btn-facebook:hover, .btn-circle.btn-facebook:focus {
-  color: #fff;
+  color: #fff!important;
 }
 .btn-circle.btn-twitter {
   color: #00aced;
 }
 .btn-circle.btn-twitter::before {
-  background-color: #00aced;
+  background-color: #00aced!important;
 }
 .btn-circle.btn-twitter:hover, .btn-circle.btn-twitter:focus {
-  color: #fff;
+  color: #fff!important;
 }
 .btn-circle.btn-google {
   color: #dd4b39;
@@ -4539,10 +4539,10 @@ blockquote.ms-blockquote footer {
   color: #007bb6;
 }
 .btn-circle.btn-linkedin::before {
-  background-color: #007bb6;
+  background-color: #007bb6!important;
 }
 .btn-circle.btn-linkedin:hover, .btn-circle.btn-linkedin:focus {
-  color: #fff;
+  color: #fff!important;
 }
 .btn-circle.btn-instagram {
   color: #e4405f;
@@ -5855,9 +5855,9 @@ label.color-white {
   width: 0;
 }
 .ms-header .header-right .search-form label {
-  color: #03a9f4;
+  color: #03a9f4; 
   cursor: pointer;
-  font-size: 20px;
+  font-size: 28px; /*Cambio agrando icono header font-size: 20px;*/
   height: 50px;
   left: 0;
   line-height: 50px;
@@ -5911,7 +5911,7 @@ label.color-white {
   color: rgba(0, 0, 0, 0.3);
 }
 .ms-header .header-right .search-form .search-input:focus {
-  border-bottom: 3px solid #03a9f4;
+  border-bottom: 3px solid #03a9f4; 
   border-radius: 0;
   width: 250px;
 }
@@ -5965,17 +5965,18 @@ label.color-white {
   color: #fff;
 }
 .ms-header.ms-header-primary {
-  background-color: #124D6F; /*Cambio background-color: #03a9f4;*/
+  background-color: #FFF; /*Cambio background-color: #03a9f4;*/
   color: #fff;
 }
-.ms-header.ms-header-primary .btn-circle {
-  color: #fff;
-}
+/*.ms-header.ms-header-primary .btn-circle {
+  color: #124D6F; /*Cambio color: #fff;
+}*/
+
 .ms-header.ms-header-primary .btn-circle::before {
-  background-color: #fff;
+  background-color: #124D6F; /*Cambio color circulo background-color: #fff;*/
 }
 .ms-header.ms-header-primary .btn-circle:hover, .ms-header.ms-header-primary .btn-circle:focus {
-  color: #20B2AA; /*Cambio color: #03a9f4;*/
+  color: #FFF; /*Cambio color: #03a9f4;*/
 }
 .ms-header.ms-header-primary .btn-circle.no-focus:focus {
   color: #fff;
@@ -6004,16 +6005,16 @@ label.color-white {
   text-shadow: 1px 1px 0 rgba(3, 169, 244, 0.04), 1px 2px 0 rgba(3, 169, 244, 0.04), 1px 3px 0 rgba(3, 169, 244, 0.04), 2px 4px 0 rgba(3, 169, 244, 0.04), 3px 5px 0 rgba(3, 169, 244, 0.04), 4px 6px 0 rgba(3, 169, 244, 0.04), 5px 7px 0 rgba(3, 169, 244, 0.04), 6px 8px 0 rgba(3, 169, 244, 0.04), 7px 9px 0 rgba(3, 169, 244, 0.04), 8px 10px 0 rgba(3, 169, 244, 0.04), 9px 11px 0 rgba(3, 169, 244, 0.04), 10px 12px 0 rgba(3, 169, 244, 0.04), 11px 13px 0 rgba(3, 169, 244, 0.04), 12px 14px 0 rgba(3, 169, 244, 0.04), 13px 15px 0 rgba(3, 169, 244, 0.04), 14px 16px 0 rgba(3, 169, 244, 0.04), 15px 17px 0 rgba(3, 169, 244, 0.04), 16px 18px 0 rgba(3, 169, 244, 0.04), 17px 19px 0 rgba(3, 169, 244, 0.04), 18px 20px 0 rgba(3, 169, 244, 0.04), 19px 21px 0 rgba(3, 169, 244, 0.04), 20px 22px 0 rgba(3, 169, 244, 0.04), 21px 23px 0 rgba(3, 169, 244, 0.04);
 }
 .ms-header.ms-header-primary .search-form label {
-  color: #fff;
+  color: #124D6F; /*Cambio color: #fff;*/
 }
 .ms-header.ms-header-primary .search-form label::before {
-  background-color: #fff;
+  background-color: #124D6F; /*Cambio color circulo background-color: #fff;*/
 }
 .ms-header.ms-header-primary .search-form label:hover {
-  color: #03a9f4;
+  color: #FFF; /*Cambio color: #03a9f4;*/
 }
 .ms-header.ms-header-primary .search-form .search-input {
-  color: #fff;
+  color: #124D6F; /*Cambio color: #fff;*/
   font-weight: 400;
 }
 .ms-header.ms-header-primary .search-form .search-input::-moz-placeholder {
@@ -6023,10 +6024,10 @@ label.color-white {
   color: rgba(255, 255, 255, 0.5);
 }
 .ms-header.ms-header-primary .search-form .search-input:focus {
-  border-bottom: 3px solid #fff;
+  border-bottom: 4px solid #124D6F; /*Cambio estilo search border-bottom: 3px solid #FFF;*/
 }
 .ms-header.ms-header-primary .search-form .search-input:focus + label {
-  color: #fff;
+  color: #124D6F; /*Cambio color: #fff;*/
 }
 .ms-logo {
   background-color: #03a9f4;
@@ -8557,7 +8558,7 @@ pre.line-numbers > code {
   color: #fff;
 }
 .ms-hero.ms-hero-material {
-  background-color: #011d2a;
+  background-color: #0E3D58; /*Cambio background-color: #011d2a; Triangulo Central*/
   color: #f5f5f5;
   min-height: 450px;
   overflow: hidden;
@@ -8618,7 +8619,7 @@ pre.line-numbers > code {
   animation-duration: 0.5s;
   animation-fill-mode: backwards;
   animation-name: heroBackOne;
-  background-color: #01405d;
+  background-color: #124D6F; /*Cambio background-color: #01405d; Triangulo medio*/
   bottom: -249%;
   box-shadow: 29px -26px 43px -1px rgba(0, 0, 0, 0.5);
   content: "";
@@ -8646,7 +8647,7 @@ pre.line-numbers > code {
   animation-duration: 0.5s;
   animation-fill-mode: backwards;
   animation-name: heroBackTwo;
-  background-color: #02638f;
+  background-color: #41708B; /*Cambio background-color: #02638f; Triangulo izq*/
   bottom: -140%;
   box-shadow: 28px 10px 43px -1px rgba(0, 0, 0, 0.5);
   content: "";
@@ -8663,7 +8664,7 @@ pre.line-numbers > code {
   animation-duration: 0.5s;
   animation-fill-mode: backwards;
   animation-name: heroBackThree;
-  background-color: #0275a8;
+  background-color: #41708B; /*Cambio background-color: #0275a8; Triangulo der*/
   bottom: -232%;
   box-shadow: -33px -22px 43px -1px rgba(0, 0, 0, 0.53);
   content: "";
@@ -8683,7 +8684,15 @@ pre.line-numbers > code {
   margin: 4rem 0 0 4rem;
   padding-left: 0;
   padding-top: 0;
-  position: relative;
+  position: absolute; /*Cambio muevo a pos abs la imagen del slider*/
+  top: -70px; /*Cambio Lo bajo 70px*/
+}
+
+@media (max-width: 767px){/*Cambio agrego codigo para que sea responsive, a partir de los 767px de pantalla baja la imagen*/
+  .ms-hero.ms-hero-material .ms-hero-img {
+    position: relative;
+    top: 0px;
+  }
 }
 .ms-hero.ms-hero-material .ms-hero-img .carousel {
   height: 100%;
@@ -8737,7 +8746,7 @@ pre.line-numbers > code {
   top: 0;
 }
 .ms-hero.ms-hero-material .carousel .carousel-controls {
-  bottom: 40px;
+  bottom: 0px; /*Cambio bajo el carousel de prev y sig*/
   left: 0;
   position: absolute;
   width: 160px;
@@ -8781,12 +8790,15 @@ pre.line-numbers > code {
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; 
   margin-left: -10000px;
-  padding: 1.6rem 1.6rem 1.6rem 10000px;
-  text-align: center;
+  padding: 40px 2rem 40px 10000px; /*Cambio muevo el el titulo hacia abajo y agrando la caja*/
+  text-align: left; /*Cambio alineacion dle texto a la izq*/
   z-index: 6;
+  margin-top: 50px;/*Cambio agrego codigo para bajar la caja*/
+  height: 200px; /*Cambio agrego codigo para bajar que prev y sig queden mas abajo del titulo*/
 }
+
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title h1 {
   font-size: 3rem;
   font-weight: 200;
@@ -8797,10 +8809,11 @@ pre.line-numbers > code {
   font-weight: 300;
 }
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title h2 {
-  color: #47c4fd;
+  color: #4CC1BB; /*Cambio color: #47c4fd;*/
   font-size: 2rem;
   margin: 0;
   text-shadow: 2px 2px 0 black;
+  line-height: 1.5; /*Cambio separacion lineas*/
 }
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-list {
   list-style-type: none;

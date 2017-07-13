@@ -16,10 +16,10 @@ class banner_topController extends Controller {
     $this->initialize();
     $this->_tabla = $this->_route['controller'];
     $this->_model = Load::model($this->_tabla);
-    $this->_wimage = 1400;
-    $this->_himage = 530;
-    $this->_wthumb = 467;
-    $this->_hthumb = 177;
+    $this->_wimage = 555;
+    $this->_himage = 487;
+    $this->_wthumb = 200;
+    $this->_hthumb = 150;
   }
 
   public function index() {

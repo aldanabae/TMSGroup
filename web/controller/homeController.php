@@ -10,6 +10,7 @@ class homeController extends Controller {
 
   public function index() {
     $data['title'] = 'Home';
+    $data['sliders'] = $this->_index->getSliders();    
     $data = array_merge($data, $this->getModules());
 
     $this->_view->assign('data', $data);
@@ -108,9 +109,6 @@ class homeController extends Controller {
   public function getModules() {
     $data['config'] = $this->_index->getConfig();
     $data['redes'] = $this->_index->getRedes();
-    $data['menu_top'] = $this->_index->getMenuTop();
-    $data['menu_foot'] = $this->_index->getMenuBot();
-    $data['ban300x250'] = $this->_index->getBan300x250(5);
 
     return $data;
   }
