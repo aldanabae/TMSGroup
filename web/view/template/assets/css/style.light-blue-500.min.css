@@ -153,7 +153,7 @@ body .container .well-royal, body .container .jumbotron-royal, body .container-f
   color: #00bcd4;
 }
 .btn.btn-warning:not(.btn-raised), .input-group-btn .btn.btn-warning:not(.btn-raised) {
-  color: #ff9800;
+  color: #20B2AA; /*Cambio color: #ff9800;*/
 }
 .btn.btn-danger:not(.btn-raised), .input-group-btn .btn.btn-danger:not(.btn-raised) {
   color: #f44336;
@@ -2235,7 +2235,7 @@ hr.on-light {
   top: 3px;
 }
 .animation-delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 1s;
 }
 .animation-delay-2 {
   animation-delay: 0.2s;
@@ -3336,7 +3336,7 @@ html {
 }
 body {
   background-color: #f5f5f5;
-  color: #757575;
+  color: #20B2AA; /*Cambio color: #757575;*/
   font-family: Roboto,sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -3428,6 +3428,7 @@ iframe {
   color: #fff;
 }
 .bg-warning {
+  box-shadow: 0 0 4px #ccc; /*Cambio agrego sombra para logos clientes blancos*/
   background-color: #ff9800;
   color: #fff;
 }
@@ -3665,7 +3666,7 @@ hr.double {
   padding: 20px;
 }
 .color-primary {
-  color: #03a9f4;
+  color: #124D6F; /*Cambio color: #03a9f4;*/
 }
 .color-success {
   color: #4caf50;
@@ -3674,7 +3675,7 @@ hr.double {
   color: #00bcd4;
 }
 .color-warning {
-  color: #ff9800;
+  color: #124D6F; /*Cambio color: #ff9800;*/
 }
 .color-danger {
   color: #f44336;
@@ -7821,7 +7822,7 @@ pre.line-numbers > code {
   }
 }
 .card {
-  background-color: #fff;
+  /*background-color: #fff;*/
   border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   margin-bottom: 2rem;
@@ -7985,7 +7986,7 @@ pre.line-numbers > code {
   color: #f5f5f5;
 }
 .card.card-warning {
-  border-bottom: 3px solid #ff9800;
+  border-bottom: 3px solid #124D6F; /*Cambio border-bottom: 3px solid #ff9800;*/
   border-radius: 3px;
 }
 .card.card-warning .card-header, .card.card-warning .card-footer {
@@ -8715,7 +8716,7 @@ pre.line-numbers > code {
   width: 12px;
 }
 .ms-hero.ms-hero-material .ms-hero-img .carousel .carousel-indicators li.active {
-  background-color: #03a9f4;
+  background-color: #4CC1BB; /*Cambio color bolitas slider img background-color: #03a9f4;*/
 }
 .ms-hero.ms-hero-material .ms-hero-img .ms-hero-img-slider {
   height: 100%;
@@ -9199,7 +9200,7 @@ pre.line-numbers > code {
   position: relative;
 }
 .ms-hero-bg-dark-light::after {
-  background-color: rgba(68, 68, 68, 0.95);
+  background-color: rgba(65, 112, 139, 1); /*Cambio background-color: rgba(68, 68, 68, 0.95) por #41708b;*/
   bottom: 0;
   content: "";
   display: block;
@@ -11454,7 +11455,7 @@ body.lb-disable-scrolling {
   color: #bdbdbd;
 }
 .ms-footer {
-  background-color: #808080; /*Cambio background-color: #3b4c55;*/
+  background-color: #666666; /*Cambio background-color: #3b4c55;*/
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14) inset, 0 3px 1px -2px rgba(0, 0, 0, 0.2) inset, 0 1px 5px 0 rgba(0, 0, 0, 0.12) inset;
   color: #124D6F;/*Cambio color: #bdbdbd;*/
   padding: 1.2rem 0;

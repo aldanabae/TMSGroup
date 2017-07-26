@@ -119,13 +119,13 @@
   </div>
 </div>
 <script type="text/javascript">
-  <!--//
   $('#select_rol').change(function () {
-    var string = '';
+    var arString = new Array();
+    arString.push(0);
     $('#select_rol option:selected').each(function () {
-      string += $(this).val() + ',';
+      arString.push($(this).val());
     });
-    $('#roles').val(string);
+    $('#roles').val(arString.join());
   }).change();
 
   $(document).ready(function () {
@@ -148,5 +148,4 @@
       });
     });
   });
-  //-->
 </script>

@@ -52,7 +52,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
       <header class="ms-header ms-header-primary">
         <div class="container container-full">
           <div class="ms-title">
-            <a href="http://localhost/TMSGroup/" title="TMS Group" rel="home">
+            <a href="<?php echo URL_WEB; ?>" title="TMS Group" rel="home">
 							<img class="img-responsive" src="<?php echo URL_IMG; ?>logoTMS.png" style="height:110px; width:310px;">
 						</a>
           </div>
@@ -103,12 +103,9 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
             </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-
-            <?php //echo $menu_top;?>
-
             <ul class="nav navbar-nav">
               <li class="dropdown active">
-                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-4" data-toggle="dropdown" data-hover="dropdown" data-name="home">Home
+                <a href="<?php echo URL_WEB; ?>" class="dropdown-toggle animated fadeIn animation-delay-4" data-name="home">Home
                 </a>
               </li>
 
@@ -122,7 +119,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                       <i class="mr-2 fa fa-bookmark"></i> Quienes Somos</a>
                   </li>
                   <li>
-                    <a href="blog-sidebar2.html">
+                    <a href="<?php echo URL_WEB."clientes"; ?>">
                       <i class="mr-2 fa fa-address-book"></i> Clientes</a>
                   </li>
                   <li>
@@ -138,6 +135,10 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
                   <li>
+                    <a href="portfolio-filters_sidebar_fluid.html">
+                      <i class="mr-1 zmdi zmdi-accounts zmdi-hc-fw"></i>Outsourcing IT</a>
+                  </li>
+                  <li>
                     <a href="portfolio-filters_sidebar.html">
                       <i class="mr-1 zmdi zmdi-laptop-chromebook zmdi-hc-fw"></i>Desarrollo</a>
                   </li>
@@ -145,10 +146,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                     <a href="portfolio-filters_topbar.html">
                       <i class="mr-1 zmdi zmdi-smartphone-android zmdi-hc-fw"></i>APPS</a>
                   </li>
-                  <li>
-                    <a href="portfolio-filters_sidebar_fluid.html">
-                      <i class="mr-1 zmdi zmdi-accounts zmdi-hc-fw"></i>Outsourcing IT</a>
-                  </li>
+                  
                   <li>
                     <a href="portfolio-filters_sidebar_fluid.html">
                       <i class="mr-2 fa fa-briefcase"></i> Consultoría</a>
@@ -183,24 +181,24 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" style="display: none;">
                       <li>
-                        <a href="page-profile.html">Cableados IP y VoIP</a>
+                        <a href="page-profile.html">Cableados Estructurados</a>
                       </li>
                       <li>
-                        <a href="page-profile2.html"></a>
+                        <a href="page-profile2.html">Telefonía VoIP</a>
                       </li>
-                      <li>
+                      <!-- <li>
                         <a href="page-profile2.html"></a>
-                      </li>
+                      </li> -->
                     </ul>
                 </ul>
               </li>
-               <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li> 
+               <!-- <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li>  -->
             </ul>
           </div>
           <!-- navbar-collapse collapse -->
-          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+          <!-- <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
             <i class="zmdi zmdi-menu"></i>
-          </a>
+          </a> -->
         </div>
         <!-- container -->
       </nav>

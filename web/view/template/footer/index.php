@@ -20,7 +20,7 @@
                 <i class="zmdi zmdi-image-o"></i> Portafolio</a>
             </li> -->
             <li>
-              <a href="portfolio-filters_sidebar.html">
+              <a href="<?php echo URL_WEB."clientes"; ?>">
                 <i class="zmdi zmdi-case"></i> Clientes</a>
             </li>
             <!-- <li>
@@ -109,7 +109,7 @@
 </aside>
 <footer class="ms-footer">
   <div class="container">
-    <p><strong>Copyright &copy; TMS Group 2017</strong></p>
+    <p>Copyright &copy; <strong>TMS</strong>Group 2017</p>
   </div>
 </footer>
 <div class="btn-back-top">

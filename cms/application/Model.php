@@ -28,6 +28,7 @@ class Model {
 
       $table = DB_PREF . $info['table'];
       $query = "SELECT " . $field . " FROM " . $table . ' ' . $where . $group . $order . $limit;
+
       return $query;
     }
   }

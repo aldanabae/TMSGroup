@@ -7,7 +7,7 @@ class Database {
 
   private function __construct() {
     $params = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES " . DB_CHAR);
-    
+
     try {
       $this->dbh = new PDO(DB_DRIVER . ":dbname=" .
               DB_NAME . ";host=" .

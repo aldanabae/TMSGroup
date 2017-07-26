@@ -7049,7 +7049,8 @@ ul.nav-categories>li>a{
   margin-bottom: 10px;
 }
 .widget-content .top-actions {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  margin-left: 10px;
 }
 @media screen and (max-width: 360px){
   .top-actions {
@@ -7413,4 +7414,7 @@ span.checkbox-span {
 }
 .btn-margin {
   margin: 5px 0;
+}
+.dataTables_filter input {
+  display: inline-block !important;
 }

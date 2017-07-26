@@ -30,6 +30,7 @@ class MenuLeft {
     $tabla = DB_PREF . self::table;
     $menu = $this->_db->query("SELECT PadreID FROM " . $tabla . " WHERE Tabla='" . Controller::getItem() . "'");
     $padre_id = ($result = $menu->fetch()) ? $result['PadreID'] : false;
+    
     return $padre_id;
   }
 
@@ -71,7 +72,7 @@ class MenuLeft {
                     '</li>';
           }
         }
-        
+
         if (isset($menu['parents'][$itemID])) {
           $active = ($this->getOpenItem() == $itemID) ? 'class="active"' : '';
           $style = ($this->getOpenItem() == $itemID) ? 'style="display: block;"' : '';

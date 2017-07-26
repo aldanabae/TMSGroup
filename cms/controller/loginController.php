@@ -74,7 +74,7 @@ class loginController extends Controller {
 
     $fields['ID'] = $user['ID'];
     $fields['UltimaVez'] = date('Y-m-d H:i:s', time());
-    
+
     if ($nologout == 1) {
       $fields['KeyCookie'] = $this->generateCookie($user['ID']);
     }
@@ -83,13 +83,13 @@ class loginController extends Controller {
 
   public function close() {
     Session::destroy();
-    
+
     unset($_COOKIE['user_id']);
     unset($_COOKIE['key_cookie']);
-    
+
     setcookie('user_id', '', time() - 3600);
     setcookie('key_cookie', '', time() - 3600);
-    
+
     Url::redirect();
   }
 
@@ -98,7 +98,7 @@ class loginController extends Controller {
     $random = mt_rand(1000000, 999999999);
     setcookie('user_id', $user_id, time() + (60 * 60 * 24 * $days));
     setcookie('key_cookie', $random, time() + (60 * 60 * 24 * $days));
-    
+
     return $random;
   }
 

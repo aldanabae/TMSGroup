@@ -37,8 +37,7 @@ class Load {
     }
   }
 
-  public static function library($name) 
-  {
+  public static function library($name) {
     $libPath = ROOT . 'lib' . DS . $name . '.php';
 
     if (is_readable($libPath)) {
