@@ -10,24 +10,26 @@ class homeController extends Controller {
 
   public function index() {
     $data['title'] = 'Home';
-    $data['sliders'] = $this->_index->getSliders();    
-    $data = array_merge($data, $this->getModules());
+    $data['sliders'] = $this->_index->getSliders(); 
+    $data['planes'] = $this->_index->getPlanes();  
 
+    $data = array_merge($data, $this->getModules()); 
     $this->_view->assign('data', $data);
     $this->_view->render('index');
   }
 
-  public function seccion($url = '') {
+  //public function seccion($url = '') {
+  public function seccion() {
     $data['tabla'] = 'seccion';
 
-    if (!empty($url)) {
-      $data[$data['tabla']] = $this->_index->getSeccion($url);
-      $data['title'] = $data[$data['tabla']]['Titulo'];
-      $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
-      $data['parrafo'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
-    } else {
-      die('Error 404: Página no encontrada');
-    }
+    // if (!empty($url)) {
+    //   $data[$data['tabla']] = $this->_index->getSeccion($url);
+    //   $data['title'] = $data[$data['tabla']]['Titulo'];
+    //   $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
+    //   $data['parrafo'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
+    // } else {
+    //   die('Error 404: Página no encontrada');
+    // }
 
     $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);
@@ -55,8 +57,8 @@ class homeController extends Controller {
   public function clientes() {
     $data['tabla'] = 'clientes';
 
-      $data['clientes'] = $this->_index->getClientes();
-      $data['title'] = 'Clientes';
+    $data['clientes'] = $this->_index->getClientes();
+    $data['title'] = 'Clientes';
 
     $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);

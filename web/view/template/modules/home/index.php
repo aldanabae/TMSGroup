@@ -1,8 +1,7 @@
 <!-- <div>
   <h3>CONTENIDO DEL HOME</h3> -->
 
-
-<!Inicio Slider-->
+<!INICIO Slider-->
 
 <?php if (isset($data['sliders']) && count($data['sliders']) > 0) : ?>
 	<div class="ms-hero ms-hero-material">
@@ -25,14 +24,12 @@
 						            	<?php echo $item['Descripcion']; ?>
 						          	</header>
 					        	</div>
-					        <!-- ms-hero-material-text-container -->
 					      	</div>
 					    </div>
 					<?php 
 						$i++;
 						endforeach; 
 					?>
-
 					    <div class="carousel-controls">
 					      	<!-- Controls -->
 					      	<a class="left carousel-control animated zoomIn animation-delay-30" href="#carousel-hero" role="button" data-slide="prev">
@@ -102,114 +99,92 @@
 	</div>
 <?php endif; ?>
 
-<!Fin Slider-->
+<!FIN Slider-->
 
 
 
+<!INICIO Servicios-->
+
+<!-- servicios -->
+
+<!FIN Servicios-->
 
 
 
+<!INICIO Desarrollo-->
 
-
-
-
-
-
-
-
-<!Inicio Planes-->
-
-<div class="container mt-6">
-    <div class="text-center mb-4">
-      <h2 class="uppercase color-primary">Nuestros Planes de Internet Banda Ancha</h2>
-      <p class="lead uppercase">Ajustamos planes a tus necesidades</p>
-    </div>
-    <div class="row">
-      	<div class="col-md-4 price-table price-table-info wow zoomInUp animation-delay-2" style="visibility: visible; animation-name: zoomInUp;">
-	        <header class="price-table-header">
-	          <span class="price-table-category">Personal</span>
-	          <h3>
-	            <sup>$</sup>19.99
-	            <sub>/mo.</sub>
-	          </h3>
-	        </header>
-	        <div class="price-table-body">
-	          <ul class="price-table-list">
-	            <li>
-	              <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
-	            <li>
-	              <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
-	            <li>
-	              <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
-	            <li>
-	              <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
-	            <li>
-	              <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
-	          </ul>
-	          <div class="text-center">
-	            <a href="javascript:void(0)" class="btn btn-info btn-raised">
-	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
-	          </div>
+<div class="wrap wrap-mountain mt-6">
+    <div class="container">
+      	<h2 class="text-center text-light mb-6 wow fadeInDown animation-delay-5" style="visibility: visible; animation-name: fadeInDown;">Desarrollamos 
+        	<strong>Software a MEDIDA</strong></h2>
+      	<div class="row">
+        	<div class="col-md-6 col-md-push-6 mb-4  center-block">
+	          	<img src="<?php echo URL_IMG.'dispositivos.png'; ?>" alt="" class="img-responsive center-block wow zoomIn animation-delay-12" style="visibility: visible; animation-name: zoomIn;"> 
 	        </div>
-      	</div>
-      	<div class="col-md-4 price-table price-table-success prominent wow zoomInDown animation-delay-2" style="visibility: visible; animation-name: zoomInDown;">
-	        <header class="price-table-header">
-	          <span class="price-table-category">Professional</span>
-	          <h3>
-	            <sup>$</sup>49.99
-	            <sub>/mo.</sub>
-	          </h3>
-	        </header>
-	        <div class="price-table-body">
-	          <ul class="price-table-list">
-	            <li>
-	              <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
-	            <li>
-	              <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
-	            <li>
-	              <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
-	            <li>
-	              <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
-	            <li>
-	              <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
-	          </ul>
-	          <div class="text-center">
-	            <a href="javascript:void(0)" class="btn btn-success btn-raised">
-	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
-	          </div>
-	        </div>
-      	</div>
-      	<div class="col-md-4 price-table price-table-warning wow zoomInUp animation-delay-2" style="visibility: visible; animation-name: zoomInUp;">
-	        <header class="price-table-header">
-	          <span class="price-table-category">Business</span>
-	          <h3>
-	            <sup>$</sup>99.99
-	            <sub>/mo.</sub>
-	          </h3>
-	        </header>
-	        <div class="price-table-body">
-	          <ul class="price-table-list">
-	            <li>
-	              <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
-	            <li>
-	              <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
-	            <li>
-	              <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
-	            <li>
-	              <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
-	            <li>
-	              <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
-	          </ul>
-	          <div class="text-center">
-	            <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
-	          </div>
-	        </div>
+
+        	<div class="col-md-6 col-md-pull-6 pr-6">
+          		<p class="wow fadeInLeft animation-delay-6" style="visibility: visible; animation-name: fadeInLeft;">
+	          		Creamos herramientas informáticas cuando tu negocio, empresa o entidad tiene una necesidad y 
+	          		no existe en el mercado un producto que se adecúe a ella.
+          		</p>
+	          	<p class="wow fadeInLeft animation-delay-7" style="visibility: visible; animation-name: fadeInLeft;">
+	          		Desarrollamos diferentes tipos de software con multiples lenguajes de programación como aplicaciones de escritorio, aplicaciones web, plataformas de gestión de entidades.
+	          	</p>
+	          	<p class="wow fadeInLeft animation-delay-8" style="visibility: visible; animation-name: fadeInLeft;">
+		          	Creemos en los nuevos conceptos de aplicaciones a medida, conscientes de que el 80% del tiempo que pasamos con 
+		          	nuestros smartphones lo dedicamos a las aplicaciones móviles. Es por ellos que nos dedicamos a adaptar tus necesidades, tambien al mundo de las apps.
+        		</p>
+	          	<div class="text-center">
+	            	<a href="javascript:void(0)" class="btn btn-success btn-raised wow flipInX animation-delay-16" style="visibility: visible; animation-name: flipInX;">
+	              		<i class="zmdi zmdi-case"></i>Saber más
+	              	</a>
+	          	</div>
+        	</div>
       	</div>
     </div>
 </div>
 
-<!Inicio Planes-->
+<!FIN Desarrollo-->
+
+
+
+<!INICIO Planes-->
+
+<div class="container mt-6">
+    <div class="text-center mb-4">
+      <h2 class="uppercase color-primary">Nuestros Planes de Internet de Alta Velocidad</h2>
+      <p class="lead uppercase" style="color: #20B2AA;">Consultanos por planes para tu empresa</p>
+    </div>
+
+    <div class="row">
+    	<?php 	foreach ($data['planes'] as $plan) {
+    				$zoom = $plan['Destacado'] == 1 ? 'zoomInDown' : 'zoomInUp';
+    				$prom = $plan['Destacado'] == 1 ? 'prominent' : '';
+	    ?>
+      	<div class="col-md-3 price-table price-table-<?php echo $plan['Estilo']; ?> wow 
+      		<?php echo $prom.' '.$zoom; ?> animation-delay-2" style="visibility: visible; animation-name: <?php echo $zoom; ?>;">  
+	        <header class="price-table-header">
+	          <span class="price-table-category">Velocidad</span>
+	          <h3><?php echo $plan['Titulo']; ?></h3>
+	        </header>
+	        <div class="price-table-body">
+	          <?php echo $plan['Descripcion']; ?>
+	          <div class="text-center">
+	            <a href="javascript:void(0)" class="btn btn-<?php echo $plan['Estilo']; ?> btn-raised">
+	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
+	          </div>
+	        </div>
+      	</div>
+      	<?php 	} ?>
+    </div>
+
+    <div class="text-center mb-4">
+      <p style="color: #757575;">Planes sujetos a disponibilidad técnica y geográfica.</p>
+      <p style="color: #757575;">* Tarifas modificables por parte de TMS Group por variaciones en la economía nacional. ** Unidad de medida estimativa.</p>
+    </div>
+</div>
+
+<!FIN Planes-->
 
 <!-- </div> -->
 

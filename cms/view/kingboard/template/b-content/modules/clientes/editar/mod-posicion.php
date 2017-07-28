@@ -22,7 +22,7 @@ if(!isset($data[$tabla]['ID'])) :
 	?>
 	<tr id="<?php echo $i; ?>" class="alert alert-info">
 		<td width="1" class="center"><?php echo $i; ?></td>
-		<td>Nueva Secci&oacute;n</td>
+		<td>Nuevo Item</td>
 	</tr>	
 	<?php
 endif;

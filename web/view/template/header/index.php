@@ -59,13 +59,13 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
           <div class="header-right">
             <div class="share-menu">
               <ul class="share-menu-list">
-                <li class="animated fadeInRight animation-delay-2">
+                <li class="animated fadeInRight animation-delay-3">
                   <a href="https://www.facebook.com/tmsgroupsa/" class="btn-circle btn-facebook">
                     <i class="zmdi zmdi-facebook"></i>
                   </a>
                 </li>
 
-                <li class="animated fadeInRight animation-delay-1">
+                <li class="animated fadeInRight animation-delay-2">
                   <a href="https://twitter.com/tmsgroup_sa" class="btn-circle btn-twitter">
                     <i class="zmdi zmdi-twitter"></i>
                   </a>
@@ -110,17 +110,13 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Empresa
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="empresa">Empresa
                   <i class="zmdi zmdi-chevron-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                   <li>
                     <a href="blog-sidebar.html">
                       <i class="mr-2 fa fa-bookmark"></i> Quienes Somos</a>
-                  </li>
-                  <li>
-                    <a href="<?php echo URL_WEB."clientes"; ?>">
-                      <i class="mr-2 fa fa-address-book"></i> Clientes</a>
                   </li>
                   <li>
                     <a href="blog-masonry.html">
@@ -130,7 +126,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Servicios
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="servicios">Servicios
                   <i class="zmdi zmdi-chevron-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
@@ -191,6 +187,16 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                       </li> -->
                     </ul>
                 </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="<?php echo URL_WEB."clientes"; ?>" class="dropdown-toggle animated fadeIn animation-delay-7" role="button" aria-haspopup="true" aria-expanded="false" data-name="clientes">Clientes
+                </a>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" role="button" aria-haspopup="true" aria-expanded="false" data-name="socios">Partners
+                </a>
               </li>
                <!-- <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li>  -->
             </ul>

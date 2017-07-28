@@ -8,7 +8,7 @@
           <h3 class="ms-footbar-title">Mapa del Sitio</h3>
           <ul class="list-unstyled ms-icon-list three_cols">
             <li>
-              <a href="index-2.html">
+              <a href="<?php echo URL_WEB; ?>">
                 <i class="zmdi zmdi-home"></i> Home</a>
             </li>
             <!-- <li>
