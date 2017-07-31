@@ -106,7 +106,7 @@
 <!INICIO Servicios-->
 
 <div class="container mt-4">
-    <h1 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Nuestros Servicios</h1>
+    <h1 class="text-center color-tms mb-2 wow fadeInDown animation-delay-4">Nuestros Servicios</h1>
     <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="color: #20B2AA;"> 
     Mejorá los resultados de tu negocio
     </p>
@@ -172,7 +172,7 @@
 
 <div class="container mt-6">
     <div class="text-center mb-4">
-      <h2 class="uppercase color-primary">Nuestros Planes de Internet de Alta Velocidad</h2>
+      <h2 class="uppercase color-tms">Nuestros Planes de Internet de Alta Velocidad</h2>
       <p class="lead uppercase" style="color: #20B2AA;">Consultanos por planes para tu empresa</p>
     </div>
 

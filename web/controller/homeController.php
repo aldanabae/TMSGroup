@@ -19,11 +19,19 @@ class homeController extends Controller {
     $this->_view->render('index');
   }
 
-  //public function seccion($url = '') {
-  public function seccion() {
+  public function seccion($url = '') {
     $data['tabla'] = 'seccion';
 
-  //Arreglar lo que falta
+    //Seccion 
+    // if (!empty($url)) {
+    //   $data['info_cat'] = $this->_index->getCategoriaID($url);
+    //   $data['title'] = $data['info_cat']['Titulo'];
+
+    //   $page = (isset($_POST['page'])) ? $_POST['page'] : 1;
+    //   $data['postcat'] = $this->_index->paginationCategorias($page, $data['info_cat']['ID']);
+    // } else {
+    //   die('Error 404: Página no encontrada');
+    // }
 
     $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);

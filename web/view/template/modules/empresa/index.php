@@ -23,7 +23,7 @@
 <div class="container">
     <div class="card card-hero animated slideInUp animation-delay-8 mb-6">
       	<div class="card-block">
-	    <h2 class="color-primary"><strong>Nuestra Empresa</strong></h2>
+	    <h2 class="color-tms"><strong>Nuestra Empresa</strong></h2>
 	        <div class="row">
 	          	<div class="col-md-6 text-justify">
 		            <p class="dropcaps">

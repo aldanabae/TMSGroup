@@ -2672,7 +2672,7 @@ hr.on-light {
     color: #bdbdbd;
   }
   50% {
-    color: #fff;
+    color: #fff; /*Cambio color: #20B2AA;*/
   }
   100% {
     color: #bdbdbd;
@@ -2683,7 +2683,7 @@ hr.on-light {
     color: #bdbdbd;
   }
   50% {
-    color: #fff;
+    color: #20B2AA; /*Cambio color: #20B2AA;*/
   }
   100% {
     color: #bdbdbd;
@@ -3675,7 +3675,7 @@ hr.double {
   padding: 20px;
 }
 .color-primary {
-  color: #124D6F; /*Cambio color: #03a9f4;*/
+  color: #03a9f4; /*Cambio color: #124D6F;*/
 }
 .color-success {
   color: #4caf50;
@@ -3694,6 +3694,12 @@ hr.double {
 }
 .color-blue {
   color: #3f51b5;
+}
+.color-tms {
+  color: #124D6F;
+}
+.color-aqua {
+  color: #20B2AA;
 }
 .color-primary-inverse {
   background-color: #03a9f4;
@@ -7254,6 +7260,10 @@ label.color-white {
   background-color:#3f51b5;
   color: #fff;
 }
+.ms-icon.color-aqua {
+  background-color:#20B2AA;
+  color: #fff;
+}
 .ms-icon.ms-icon-inverse {
   background-color: transparent;
   border: 1px solid #03a9f4;
@@ -7288,6 +7298,11 @@ label.color-white {
   background-color: transparent;
   border-color: #3f51b5;
   color: #3f51b5;
+}
+.ms-icon.ms-icon-inverse.color-aqua {
+  background-color: transparent;
+  border-color: #20B2AA;;
+  color: #20B2AA;
 }
 .ms-icon.ms-icon-inverse.color-black {
   background-color: transparent;
@@ -7334,7 +7349,12 @@ label.color-white {
 .ms-icon.ms-icon-white.ms-icon-inverse {
   background-color: transparent;
   border-color: #fff;
-  color: #fff;
+  color: #FFF;
+}
+.ms-icon.ms-icon-aqua.ms-icon-inverse {
+  background-color: transparent;
+  border-color: #20B2AA;
+  color: #20B2AA;
 }
 .ms-icon-feature {
   display: table;
@@ -9251,7 +9271,7 @@ pre.line-numbers > code {
   position: relative;
 }
 .ms-hero-bg-dark-light::after {
-  background-color: rgba(65, 112, 139, 1); /*Cambio background-color: rgba(68, 68, 68, 0.95) por #41708b;*/
+  background-color: rgba(102, 102, 102, 0.95); /*Cambio background-color: rgba(68, 68, 68, 0.95) por #666666;*/
   bottom: 0;
   content: "";
   display: block;

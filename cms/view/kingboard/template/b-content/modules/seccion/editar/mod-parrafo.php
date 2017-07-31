@@ -12,12 +12,12 @@ $id_par = (isset($data['parrafo'][$data['cur'] - 1]['ID']) &&
     <div class="widget-header">
       <h3><i class="fa fa-info-circle"></i> Contenido</h3>
       <?php if ($data['cur'] != 1): ?>
-      <div class="btn-group widget-header-toolbar">
-        <button onclick="closeTab(<?php echo $data['cur']; ?>,<?php echo $id_par; ?>, '<?php echo URL_CMS . $data['base_url'] . 'deltab'; ?>')" class="btn btn-danger btn-sm" type="button">
-          <i class="fa fa-trash-o"></i>
-          <span>Eliminar P&aacute;rrafo</span>
-        </button>
-      </div>
+        <div class="btn-group widget-header-toolbar">
+          <button onclick="closeTab(<?php echo $data['cur']; ?>,<?php echo $id_par; ?>, '<?php echo URL_CMS . $data['base_url'] . 'deltab'; ?>')" class="btn btn-danger btn-sm" type="button">
+            <i class="fa fa-trash-o"></i>
+            <span>Eliminar P&aacute;rrafo</span>
+          </button>
+        </div>
       <?php endif; ?>
     </div>
     <div class="widget-content">
@@ -43,28 +43,28 @@ $id_par = (isset($data['parrafo'][$data['cur'] - 1]['ID']) &&
         </script>
       </div>
       <div class="form-group">
-				<div class="controls">
-					<?php 
-					$checkedCon = (isset($data['parrafo'][$data['cur'] - 1]['IsLink']) && $data['parrafo'][$data['cur'] - 1]['IsLink'] == 1) ? 'checked="checked"' : ''; 
-					$displayLink = (isset($data['parrafo'][$data['cur'] - 1]['IsLink']) && $data['parrafo'][$data['cur'] - 1]['IsLink'] == 1) ? 'display:block;' : 'display:none;'; 
-					?>
-					<label class="checkbox inline">
-						<input type="checkbox" id="islink_<?php echo $data['cur']; ?>" name="paragraph[<?php echo $data['cur'] - 1; ?>][IsLink]" value="1" <?php echo $checkedCon; ?>> 
-						<span class="checkbox-span">Activar T&iacute;tulo como Enlace</span>
-					</label>
-					<p class="help-block"></p>
-				</div>
-				<script>
-					$("#islink_<?php echo $data['cur']; ?>").click(function () {
-				    if ($("#boxlink_<?php echo $data['cur']; ?>").is(':visible')) {
-				      $("#boxlink_<?php echo $data['cur']; ?>").hide();
-				    } else {
-				      $("#boxlink_<?php echo $data['cur']; ?>").show();
-				      $("#enlace_<?php echo $data['cur']; ?>").focus();
-				    }
-				  });
-				</script>
-			</div>
+        <div class="controls">
+          <?php
+          $checkedCon = (isset($data['parrafo'][$data['cur'] - 1]['IsLink']) && $data['parrafo'][$data['cur'] - 1]['IsLink'] == 1) ? 'checked="checked"' : '';
+          $displayLink = (isset($data['parrafo'][$data['cur'] - 1]['IsLink']) && $data['parrafo'][$data['cur'] - 1]['IsLink'] == 1) ? 'display:block;' : 'display:none;';
+          ?>
+          <label class="checkbox inline">
+            <input type="checkbox" id="islink_<?php echo $data['cur']; ?>" name="paragraph[<?php echo $data['cur'] - 1; ?>][IsLink]" value="1" <?php echo $checkedCon; ?>> 
+            <span class="checkbox-span">Activar T&iacute;tulo como Enlace</span>
+          </label>
+          <p class="help-block"></p>
+        </div>
+        <script>
+          $("#islink_<?php echo $data['cur']; ?>").click(function () {
+            if ($("#boxlink_<?php echo $data['cur']; ?>").is(':visible')) {
+              $("#boxlink_<?php echo $data['cur']; ?>").hide();
+            } else {
+              $("#boxlink_<?php echo $data['cur']; ?>").show();
+              $("#enlace_<?php echo $data['cur']; ?>").focus();
+            }
+          });
+        </script>
+      </div>
       <div id="boxlink_<?php echo $data['cur']; ?>" class="form-group" style="<?php echo $displayLink; ?>">
         <label class="control-label" for="enlace_<?php echo $data['cur']; ?>">Enlace:</label>
         <div class="controls">
@@ -85,6 +85,13 @@ $id_par = (isset($data['parrafo'][$data['cur'] - 1]['ID']) &&
       <h3><i class="fa fa-cog"></i> Configuraci&oacute;n</h3>      
     </div>
     <div class="widget-content">
+      <div class="form-group">
+        <label class="control-label" for="icono_<?php echo $data['cur']; ?>">&Iacute;cono:</label>
+        <div class="controls">
+          <input type="text" class="form-control" id="icono_<?php echo $data['cur']; ?>" name="paragraph[<?php echo $data['cur'] - 1; ?>][Icono]" value="<?php if (isset($data['parrafo'][$data['cur'] - 1]['Icono'])) echo $data['parrafo'][$data['cur'] - 1]['Icono']; ?>" />
+          <p class="help-block"></p>
+        </div>
+      </div>
       <div class="form-group">
         <label class="control-label" for="imagen_<?php echo $data['cur']; ?>">Imagen:</label>
         <div class="controls">
