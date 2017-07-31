@@ -105,7 +105,27 @@
 
 <!INICIO Servicios-->
 
-<!-- servicios -->
+<div class="container mt-4">
+    <h1 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Nuestros Servicios</h1>
+    <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="color: #20B2AA;"> 
+    Mejorá los resultados de tu negocio
+    </p>
+	</br>
+    <?php 	foreach ($data['servicios'] as $serv) {				
+	?>
+    <div class="ms-feature col-lg-2 col-md-6 col-sm-6 card wow flipInX animation-delay-<?php echo $serv['Delay']; ?>">
+      	<div class="text-center card-block">
+	        <span class="ms-icon ms-icon-circle ms-icon-xxlg color-<?php echo $serv['Estilo']; ?>">
+	          <i class="<?php echo $serv['Icono']; ?>"></i>
+	        </span>
+	        <h4 class="color-<?php echo $serv['Estilo']; ?>"><?php echo $serv['Titulo']; ?></h4>
+	        <p class=""><?php echo $serv['Descripcion']; ?></p>
+	        <a href="<?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver Más</a>
+      	</div>
+    </div>
+    <?php 	}				
+	?>
+</div>
 
 <!FIN Servicios-->
 

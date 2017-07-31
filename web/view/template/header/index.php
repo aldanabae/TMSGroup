@@ -115,7 +115,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="blog-sidebar.html">
+                    <a href="<?php echo URL_WEB.'empresa'; ?>">
                       <i class="mr-2 fa fa-bookmark"></i> Quienes Somos</a>
                   </li>
                   <li>
@@ -173,7 +173,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                   </li>
                   <li class="dropdown-submenu"><!Submenu-->
                     <a href="javascript:void(0)" class="has_children">
-                      <i class="mr-2 fa fa-cloud"></i> Networking Solutions
+                      <i class="mr-2 fa fa-plug"></i> Networking Solutions
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" style="display: none;">
                       <li>

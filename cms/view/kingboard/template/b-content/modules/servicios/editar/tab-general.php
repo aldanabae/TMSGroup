@@ -48,6 +48,20 @@
         </div>
       </div>	
       <div class="form-group">
+        <label class="control-label" for="estilo">Estilo</label>
+        <div class="controls">
+          <input type="text" class="form-control" id="estilo" name="<?php echo $tabla; ?>[Estilo]" value="<?php if (isset($data[$tabla]['Estilo'])) echo $data[$tabla]['Estilo']; ?>" />
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="delay">Delay</label>
+        <div class="controls">
+          <input type="text" class="form-control" id="delay" name="<?php echo $tabla; ?>[Delay]" value="<?php if (isset($data[$tabla]['Delay'])) echo $data[$tabla]['Delay']; ?>" />
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
         <label class="control-label" for="posicion">Posici&oacute;n:</label>
         <div id="content-pos" class="controls">
           <?php include('mod-posicion.php'); ?>

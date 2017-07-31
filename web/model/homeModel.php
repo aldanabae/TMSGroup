@@ -56,6 +56,10 @@ class homeModel extends Model {
     return $this->all(array('table' => 'planes', 'where' => "Publico='1'", 'order'=>'Posicion'));
   }
 
+  public function getServicios() {
+    return $this->all(array('table' => 'servicios', 'where' => "Publico='1'", 'order'=>'Posicion'));
+  }
+
   public function getSecciones() {
     return $this->all(array('table' => 'seccion', 'where' => "Publico='1' AND PadreID='0'"));
   }

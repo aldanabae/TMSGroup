@@ -32,7 +32,7 @@
                 <i class="zmdi zmdi-money"></i> Pricing</a>
             </li> -->
             <li>
-              <a href="page-about.html">
+              <a href="<?php echo URL_WEB.'empresa'; ?>">
                 <i class="zmdi zmdi-favorite-outline"></i> Nosotros</a>
             </li>
             <li>
