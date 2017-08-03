@@ -187,7 +187,7 @@ $id_par = (isset($data['parrafo'][$data['cur'] - 1]['ID']) &&
 </div>
 <div id="pop-video_<?php echo $data['cur']; ?>" class="videoline">
   <div class="f-content">
-    <p><strong>Ingrese la direcci&oacute;n de su video de Youtube:</strong></p>
+    <p><strong>Ingrese la URL del video de Youtube:</strong></p>
     <span class="mini-text">Ejemplo: http://www.youtube.com/watch?v=oeZtenPCLVg</span>			
   </div>
   <div class="controls">

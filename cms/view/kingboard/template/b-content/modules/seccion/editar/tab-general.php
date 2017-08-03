@@ -33,25 +33,7 @@
           <textarea id="detalle" name="<?php echo $tabla; ?>[Detalle]" class="form-control" rows="4"><?php if (isset($data[$tabla]['Detalle'])) echo $data[$tabla]['Detalle']; ?></textarea>
           <p class="help-block"></p>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label">Plantilla:</label>
-        <div class="controls">
-          <select id="plantilla" name="<?php echo $tabla; ?>[PlantillaID]" data-rel="chosen">                							
-            <option value="0">- seleccione -</option>            
-            <?php
-            if (isset($data['selplantilla']) && count($data['selplantilla']) > 0) :
-              foreach ($data['selplantilla'] as $item):
-                $selected = ($data[$tabla]['PlantillaID'] == $item['ID']) ? 'selected="selected"' : '';
-                ?>								
-                <option value="<?php echo $item['ID']; ?>" <?php echo $selected; ?>><?php echo $item['Nombre']; ?></option>
-                <?php
-              endforeach;
-            endif;
-            ?>
-          </select>
-        </div>
-      </div>
+      </div>      
       <div class="cont-hint">
         <span class="obligatory">*</span>
         <p class="help-block">Los campos son obligatorios</p>
@@ -78,6 +60,42 @@
       </ul>
       <div class="tab-content">
         <div class="tab-pane fade in active" id="image">
+          <div class="form-group">
+            <label class="control-label">Plantilla:</label>
+            <div class="controls">
+              <select id="plantilla" name="<?php echo $tabla; ?>[PlantillaID]" data-rel="chosen">                							
+                <option value="0">- seleccione -</option>            
+                <?php
+                if (isset($data['selplantilla']) && count($data['selplantilla']) > 0) :
+                  foreach ($data['selplantilla'] as $item):
+                    $selected = ($data[$tabla]['PlantillaID'] == $item['ID']) ? 'selected="selected"' : '';
+                    ?>								
+                    <option value="<?php echo $item['ID']; ?>" <?php echo $selected; ?>><?php echo $item['Nombre']; ?></option>
+                    <?php
+                  endforeach;
+                endif;
+                ?>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Tabla Secundaria:</label>
+            <div class="controls">
+              <select id="tabla_sec" name="<?php echo $tabla; ?>[TablaSec]" data-rel="chosen">                							
+                <option value="0">- seleccione -</option>            
+                <?php
+                if (isset($data['tablas']) && count($data['tablas']) > 0) :
+                  foreach ($data['tablas'] as $item):
+                    $selected = ($data[$tabla]['TablaSec'] == $item['Nombre']) ? 'selected="selected"' : '';
+                    ?>								
+                    <option value="<?php echo $item['Nombre']; ?>" <?php echo $selected; ?>><?php echo $item['Titulo']; ?></option>
+                    <?php
+                  endforeach;
+                endif;
+                ?>
+              </select>
+            </div>
+          </div>
           <div class="form-group">
             <label class="control-label" for="imagen">Imagen:</label>
             <div class="controls">
@@ -211,8 +229,7 @@
   </div>
 </div>
 <script type="text/javascript">
-  <!--//
-$(document).ready(function () {
+  $(document).ready(function () {
     $('.fancybox').fancybox();
     $('.fancybox-media').attr('rel', 'media-gallery').fancybox({
       openEffect: 'none',
@@ -224,12 +241,6 @@ $(document).ready(function () {
         media: {},
         buttons: {}
       }
-    });
-    
-    $("#sumario").charCount({
-      allowed: 200,
-      warning: 15,
-      counterText: 'Quedan: '
     });
 
     $('#titulo').keyup(function () {
@@ -300,7 +311,10 @@ $(document).ready(function () {
   });
 
   setTimeout(function () {
+    set_minieditor('sumario');
+  }, 1000);
+
+  setTimeout(function () {
     set_editor('detalle');
   }, 1000);
-  //-->
 </script>

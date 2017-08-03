@@ -10,11 +10,11 @@ class homeController extends Controller {
 
   public function index() {
     $data['title'] = 'Home';
-    $data['sliders'] = $this->_index->getSliders(); 
-    $data['planes'] = $this->_index->getPlanes(); 
-    $data['servicios'] = $this->_index->getServicios(); 
+    $data['sliders'] = $this->_index->getSliders();
+    $data['planes'] = $this->_index->getPlanes();
+    $data['servicios'] = $this->_index->getServicios();
 
-    $data = array_merge($data, $this->getModules()); 
+    $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);
     $this->_view->render('index');
   }
@@ -22,16 +22,21 @@ class homeController extends Controller {
   public function seccion($url = '') {
     $data['tabla'] = 'seccion';
 
-    //Seccion 
-    // if (!empty($url)) {
-    //   $data['info_cat'] = $this->_index->getCategoriaID($url);
-    //   $data['title'] = $data['info_cat']['Titulo'];
+    if (!empty($url)) {
+      $data[$data['tabla']] = $this->_index->getSeccion($url);
+      $info = $data[$data['tabla']];
 
-    //   $page = (isset($_POST['page'])) ? $_POST['page'] : 1;
-    //   $data['postcat'] = $this->_index->paginationCategorias($page, $data['info_cat']['ID']);
-    // } else {
-    //   die('Error 404: Página no encontrada');
-    // }
+      if(!empty($info['TablaSec'])) {
+        $data['tabla_sec'] = $this->_index->getTablaSec($info['TablaSec']);
+      }
+
+
+      $data['title'] = $data[$data['tabla']]['Titulo'];
+      $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
+      $data['parrafos'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
+    } else {
+      die('Error 404: Página no encontrada');
+    }
 
     $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);

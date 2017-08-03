@@ -11,7 +11,6 @@
 				<div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
 				  <!-- Wrapper for slides -->
 				  	<div class="carousel-inner" role="listbox">
-
 					<?php
 					    $i = 1;
 					    foreach ($data['sliders'] as $item) :
@@ -107,7 +106,7 @@
 
 <div class="container mt-4">
     <h1 class="text-center color-tms mb-2 wow fadeInDown animation-delay-4">Nuestros Servicios</h1>
-    <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="color: #20B2AA;"> 
+    <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4 color-aqua"> 
     Mejorá los resultados de tu negocio
     </p>
 	</br>
@@ -120,7 +119,7 @@
 	        </span>
 	        <h4 class="color-<?php echo $serv['Estilo']; ?>"><?php echo $serv['Titulo']; ?></h4>
 	        <p class=""><?php echo $serv['Descripcion']; ?></p>
-	        <a href="<?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver Más</a>
+	        <a href="<?php echo URL_WEB.'seccion/'; ?><?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver Más</a>
       	</div>
     </div>
     <?php 	}				
@@ -155,7 +154,7 @@
 		          	nuestros smartphones lo dedicamos a las aplicaciones móviles. Es por ellos que nos dedicamos a adaptar tus necesidades, tambien al mundo de las apps.
         		</p>
 	          	<div class="text-center">
-	            	<a href="javascript:void(0)" class="btn btn-success btn-raised wow flipInX animation-delay-16" style="visibility: visible; animation-name: flipInX;">
+	            	<a href="<?php echo URL_WEB.'seccion/software-factoring'; ?>" class="btn btn-primary btn-raised wow flipInX animation-delay-16" style="visibility: visible; animation-name: flipInX;">
 	              		<i class="zmdi zmdi-case"></i>Saber más
 	              	</a>
 	          	</div>
@@ -173,7 +172,7 @@
 <div class="container mt-6">
     <div class="text-center mb-4">
       <h2 class="uppercase color-tms">Nuestros Planes de Internet de Alta Velocidad</h2>
-      <p class="lead uppercase" style="color: #20B2AA;">Consultanos por planes para tu empresa</p>
+      <p class="lead uppercase color-aqua">Consultanos por planes para tu empresa</p>
     </div>
 
     <div class="row">
@@ -190,7 +189,7 @@
 	        <div class="price-table-body">
 	          <?php echo $plan['Descripcion']; ?>
 	          <div class="text-center">
-	            <a href="javascript:void(0)" class="btn btn-<?php echo $plan['Estilo']; ?> btn-raised">
+	            <a href="<?php echo URL_WEB.'contacto'; ?>" class="btn btn-<?php echo $plan['Estilo']; ?> btn-raised">
 	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
 	          </div>
 	        </div>
@@ -206,5 +205,11 @@
 
 <!FIN Planes-->
 
+
+
+<!INICIO Portfolio-->
+
+
+<!INICIO Portfolio-->
 <!-- </div> -->
 

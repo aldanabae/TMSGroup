@@ -1,11 +1,16 @@
-<!-- BEGIN TABS NAVS -->
+<div class="top-actions">
+  <a onclick="validate(1);" class="btn btn-primary">Publicar</a>
+  <a onclick="validate(2);" class="btn btn-info">Borrador</a>
+  <a href="<?php echo URL_CMS . $data['base_url'] . 'listar'; ?>" class="btn btn-warning">Cancelar</a>
+</div>
+<div class="clear"></div>
 <ul class="nav nav-tabs">
   <li class="active">
     <a href="#tab_general" data-toggle="tab">General</a>
   </li>
-  <li>
-    <a href="#tab_parrafo">P&aacute;rrafos</a>
-  </li>
+  <li><a href="#tab_parrafo">P&aacute;rrafos</a></li>
+  <li><a href="#tab_meta">Metatags</a></li>
+  <li><a href="#tab_galeria">Galer&iacute;a</a></li>
 </ul>
 <form id="form" method="post">
   <input type="hidden" name="actualizar" value="1" />
@@ -26,18 +31,17 @@
       <?php include('tab-galeria.php'); ?>	
     </div>    
     <div class="clear"></div>    
-  </div>
-  <div class="top-actions">
-    <a onclick="validate(1);" class="btn btn-primary">Guardar y Publicar</a>
-    <a onclick="validate(2);" class="btn btn-info">Guardar Borrador</a>
-    <a href="<?php echo URL_CMS . $data['base_url'] . 'listar/1'; ?>" class="btn btn-warning">Cancelar</a>
-  </div>
-  <div class="clear"></div>	
+  </div>  
 </form>
-<!-- END TABS NAVS -->
+<div class="top-actions">
+  <a onclick="validate(1);" class="btn btn-primary">Publicar</a>
+  <a onclick="validate(2);" class="btn btn-info">Borrador</a>
+  <a href="<?php echo URL_CMS . $data['base_url'] . 'listar'; ?>" class="btn btn-warning">Cancelar</a>
+</div>
+<div class="clear"></div>	
 <div class="videoline" id="pop-video">
   <div class="box-title">
-    <h4>Ingrese la direcci&oacute;n de su video de Youtube:</h4>
+    <h4>Ingrese la URL del video de Youtube:</h4>
     <span>Ejemplo: http://www.youtube.com/watch?v=oeZtenPCLVg</span>			
   </div>
   <div class="box-input">
@@ -49,10 +53,8 @@
   </div>
 </div>
 <script type="text/javascript">
-<!--//
   function validate(id) {
     $('#publico').val(id);
     $('#form').submit();
   }
-//-->
 </script>

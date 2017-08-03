@@ -48,10 +48,6 @@ class homeModel extends Model {
     return $this->all(array('table' => 'banner_top', 'where' => "Publico='1'"));
   }
 
-  public function getTablaSec($tabla) {
-    return $this->all(array('table' => $tabla, 'where' => "Publico='1'", 'order' => 'Posicion'));
-  }
-
   public function getClientes() {
     return $this->all(array('table' => 'clientes', 'where' => "Publico='1'", 'order'=>'Posicion'));
   }

@@ -52,7 +52,7 @@
                 <i class="zmdi zmdi-lock"></i> Login</a>
             </li> -->
             <li>
-              <a href="page-contact.html">
+              <a href="<?php echo URL_WEB.'contacto'; ?>">
                 <i class="zmdi zmdi-email"></i> Contacto</a>
             </li>
           </ul>

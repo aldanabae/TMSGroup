@@ -27,14 +27,11 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-<!--//
 <?php $count_gal = (isset($data['galeria']) && count($data['galeria'])) ? count($data['galeria']) : 0; ?>
-
+<script type="text/javascript">
   uploadGalery('upgalery',
           "<?php echo $count_gal; ?>",
           "<?php echo URL_CMS . 'view/' . CMS_THEME . '/assets/js/'; ?>",
           "<?php echo URL_CMS . $data['base_url'] . 'galeria'; ?>",
           "<?php echo URL_CMS . $data['tabla'] . '/getimage'; ?>");
-  //-->
 </script>

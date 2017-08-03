@@ -1,9 +1,7 @@
-<!-- king gallery -->
-<?php if (isset($data['galeria']) && count($data['galeria'])) : ?>
-  <?php
+<?php
+if (isset($data['galeria']) && count($data['galeria'])) :
   for ($i = 1; $i < (count($data['galeria']) + 1); $i++) :
     if (isset($data['galeria'][$i - 1]['Imagen']) && !empty($data['galeria'][$i - 1]['Imagen'])) :
-    	$id = $data['galeria'][$i - 1]['ID'];
       $thumb = URL_GAL . $data['tabla'] . '/thumbs/TH_' . $data['galeria'][$i - 1]['Imagen'];
       $image = URL_GAL . $data['tabla'] . '/images/IM_' . $data['galeria'][$i - 1]['Imagen'];
       $title = (!empty($data['galeria'][$i - 1]['Titulo'])) ? $data['galeria'][$i - 1]['Titulo'] : 'Ingrese una descripci&oacute;n';
@@ -29,16 +27,17 @@
           <a href="javascript:editGallery('galeria_<?php echo $i; ?>');" class="btn btn-primary btn-xs">
             <i class="fa fa-pencil"></i> <span class="bt-edit">Editar</span>
           </a>
-          <a href="javascript:deleteGallery('galeria_<?php echo $i; ?>', <?php echo $id; ?>)" class="btn btn-danger btn-xs">
+          <a href="javascript:deleteGallery('galeria_<?php echo $i; ?>', 0)" class="btn btn-danger btn-xs">
             <i class="fa fa-trash-o"></i> Eliminar
           </a>
         </div>
       </div>
-    <?php endif; ?>
-  <?php endfor; ?>
-<?php else : ?>	
+      <?php
+    endif;
+  endfor;
+else :
+  ?>	
   <p class="center">Lo sentimos, no se encontr&oacute; ninguna imagen en la galeria!</p>
-<?php endif; ?>	
-<!-- end king gallery -->
-
-
+<?php
+endif;
+?>	

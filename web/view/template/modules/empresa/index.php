@@ -11,9 +11,10 @@
         </h1>
     	</br>
         <p class="lead lead-lg color-white text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">
-        	Transformación es <span class="color-info">lo que hacemos</span>
-        	, innovación es <span class="color-info">quienes somos</span> 
-        	y la entrega sobresaliente de servicios es lo que <span class="color-info">nos diferencia</span>
+        	Transformación es <span class="color-aqua">lo que hacemos</span>
+        	, innovación es <span class="color-aqua">quienes somos</span> 
+        	y la entrega sobresaliente de servicios es lo que 
+        	<span class="color-aqua">nos diferencia</span>
         </p>
       </div>
     </div>
@@ -21,7 +22,7 @@
 
 
 <div class="container">
-    <div class="card card-hero animated slideInUp animation-delay-8 mb-6">
+    <div class="card card-hero2 animated slideInUp animation-delay-8 mb-6">
       	<div class="card-block">
 	    <h2 class="color-tms"><strong>Nuestra Empresa</strong></h2>
 	        <div class="row">

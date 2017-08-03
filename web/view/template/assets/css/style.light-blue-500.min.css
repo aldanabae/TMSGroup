@@ -152,19 +152,21 @@ body .container .well-royal, body .container .jumbotron-royal, body .container-f
 .btn.btn-info:not(.btn-raised), .input-group-btn .btn.btn-info:not(.btn-raised) {
   color: #00bcd4;
 }
-.btn.btn-blue:not(.btn-raised), .input-group-btn .btn.btn-info:not(.btn-raised) {
+.btn.btn-blue:not(.btn-raised), .input-group-btn .btn.btn-info:not(.btn-raised) {/*Creo color blue*/
   color: #3f51b5;
 }
 .btn.btn-warning:not(.btn-raised), .input-group-btn .btn.btn-warning:not(.btn-raised) {
-  color: #20B2AA; /*Cambio color: #ff9800;*/
+  color: #ff9800; 
+}
+.btn.btn-aqua:not(.btn-raised), .input-group-btn .btn.btn-aqua:not(.btn-raised) {/*Creo color aqua*/
+  color: #20B2AA;  
 }
 .btn.btn-danger:not(.btn-raised), .input-group-btn .btn.btn-danger:not(.btn-raised) {
-  color: #f44336;
+  color: #f44336; 
 }
 .btn.btn-royal:not(.btn-raised), .input-group-btn .btn.btn-royal:not(.btn-raised) {
   color: #9c27b0;
 }
-
 .btn:hover:not(.btn-raised):not(.btn-link), .btn:focus:not(.btn-raised):not(.btn-link), .input-group-btn .btn:hover:not(.btn-raised):not(.btn-link), .input-group-btn .btn:focus:not(.btn-raised):not(.btn-link) {
   background-color: rgba(153, 153, 153, 0.2);
 }
@@ -206,7 +208,11 @@ body .container .well-royal, body .container .jumbotron-royal, body .container-f
 .btn.btn-raised.btn-blue, .btn.btn-fab.btn-blue, .btn-group-raised .btn.btn-blue, .input-group-btn .btn.btn-raised.btn-blue, .input-group-btn .btn.btn-fab.btn-blue, .btn-group-raised .input-group-btn .btn.btn-blue {
   background-color: #3f51b5;
   color: rgba(255, 255, 255, 0.84);
-}
+}/*Creo color blue*/
+.btn.btn-raised.btn-aqua, .btn.btn-fab.btn-aqua, .btn-group-raised .btn.btn-aqua, .input-group-btn .btn.btn-raised.btn-aqua, .input-group-btn .btn.btn-fab.btn-aqua, .btn-group-raised .input-group-btn .btn.btn-aqua {
+  background-color: #20B2AA;
+  color: rgba(255, 255, 255, 0.84);
+}/*Creo color aqua*/
 
 .btn.btn-raised:not(.btn-link), .btn-group-raised .btn:not(.btn-link), .input-group-btn .btn.btn-raised:not(.btn-link), .btn-group-raised .input-group-btn .btn:not(.btn-link) {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -238,6 +244,12 @@ body .container .well-royal, body .container .jumbotron-royal, body .container-f
 .btn.btn-raised.btn-royal:hover:not(.btn-link), .btn.btn-raised.btn-royal:focus:not(.btn-link), .btn.btn-raised.active.btn-royal:not(.btn-link), .btn.btn-raised.btn-royal:active:not(.btn-link), .btn-group-raised .btn.btn-royal:hover:not(.btn-link), .btn-group-raised .btn.btn-royal:focus:not(.btn-link), .btn-group-raised .btn.active.btn-royal:not(.btn-link), .btn-group-raised .btn.btn-royal:active:not(.btn-link), .input-group-btn .btn.btn-raised.btn-royal:hover:not(.btn-link), .input-group-btn .btn.btn-raised.btn-royal:focus:not(.btn-link), .input-group-btn .btn.btn-raised.active.btn-royal:not(.btn-link), .input-group-btn .btn.btn-raised.btn-royal:active:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-royal:hover:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-royal:focus:not(.btn-link), .btn-group-raised .input-group-btn .btn.active.btn-royal:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-royal:active:not(.btn-link) {
   background-color: #8d239f;
 }
+.btn.btn-raised.btn-blue:hover:not(.btn-link), .btn.btn-raised.btn-blue:focus:not(.btn-link), .btn.btn-raised.active.btn-blue:not(.btn-link), .btn.btn-raised.btn-blue:active:not(.btn-link), .btn-group-raised .btn.btn-blue:hover:not(.btn-link), .btn-group-raised .btn.btn-blue:focus:not(.btn-link), .btn-group-raised .btn.active.btn-blue:not(.btn-link), .btn-group-raised .btn.btn-blue:active:not(.btn-link), .input-group-btn .btn.btn-raised.btn-blue:hover:not(.btn-link), .input-group-btn .btn.btn-raised.btn-blue:focus:not(.btn-link), .input-group-btn .btn.btn-raised.active.btn-blue:not(.btn-link), .input-group-btn .btn.btn-raised.btn-blue:active:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-blue:hover:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-blue:focus:not(.btn-link), .btn-group-raised .input-group-btn .btn.active.btn-blue:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-blue:active:not(.btn-link) {
+  background-color: #3f51b5;
+}/*Creo color blue*/
+.btn.btn-raised.btn-aqua:hover:not(.btn-link), .btn.btn-raised.btn-aqua:focus:not(.btn-link), .btn.btn-raised.active.btn-aqua:not(.btn-link), .btn.btn-raised.btn-aqua:active:not(.btn-link), .btn-group-raised .btn.btn-aqua:hover:not(.btn-link), .btn-group-raised .btn.btn-aqua:focus:not(.btn-link), .btn-group-raised .btn.active.btn-aqua:not(.btn-link), .btn-group-raised .btn.btn-aqua:active:not(.btn-link), .input-group-btn .btn.btn-raised.btn-aqua:hover:not(.btn-link), .input-group-btn .btn.btn-raised.btn-aqua:focus:not(.btn-link), .input-group-btn .btn.btn-raised.active.btn-aqua:not(.btn-link), .input-group-btn .btn.btn-raised.btn-aqua:active:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-aqua:hover:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-aqua:focus:not(.btn-link), .btn-group-raised .input-group-btn .btn.active.btn-aqua:not(.btn-link), .btn-group-raised .input-group-btn .btn.btn-aqua:active:not(.btn-link) {
+  background-color: #20B2AA;
+}/*Creo color aqua*/
 .btn.btn-raised.active:not(.btn-link), .btn.btn-raised.active:hover:not(.btn-link), .btn.btn-raised:active:not(.btn-link), .btn.btn-raised:active:hover:not(.btn-link), .btn-group-raised .btn.active:not(.btn-link), .btn-group-raised .btn.active:hover:not(.btn-link), .btn-group-raised .btn:active:not(.btn-link), .btn-group-raised .btn:active:hover:not(.btn-link), .input-group-btn .btn.btn-raised.active:not(.btn-link), .input-group-btn .btn.btn-raised.active:hover:not(.btn-link), .input-group-btn .btn.btn-raised:active:not(.btn-link), .input-group-btn .btn.btn-raised:active:hover:not(.btn-link), .btn-group-raised .input-group-btn .btn.active:not(.btn-link), .btn-group-raised .input-group-btn .btn.active:hover:not(.btn-link), .btn-group-raised .input-group-btn .btn:active:not(.btn-link), .btn-group-raised .input-group-btn .btn:active:hover:not(.btn-link) {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
@@ -763,7 +775,7 @@ output {
   padding-top: 8px;
 }
 .form-control {
-  font-size: 16px;
+  font-size: 12px; /*Cambio font-size: 16px;*/
   height: 38px;
   line-height: 1.42857;
   padding: 7px 0;
@@ -948,7 +960,7 @@ output {
   position: absolute;
 }
 .form-group.is-focused .form-control {
-  background-image: linear-gradient(#03a9f4, #03a9f4), linear-gradient(#d2d2d2, #d2d2d2);
+  background-image: linear-gradient(#20B2AA, #20B2AA), linear-gradient(#d2d2d2, #d2d2d2); /*Cambio background-image: linear-gradient(#03a9f4, #03a9f4)*/
   background-size: 100% 2px, 100% 1px;
   box-shadow: none;
   outline: medium none;
@@ -958,7 +970,7 @@ output {
   background-color: #03a9f4;
 }
 .form-group.is-focused label, .form-group.is-focused label.control-label {
-  color: #03a9f4;
+  color: #20B2AA; /Cambio color: #03a9f4;*/
 }
 .form-group.is-focused.label-placeholder label, .form-group.is-focused.label-placeholder label.control-label {
   color: #bdbdbd;
@@ -1059,7 +1071,7 @@ label.control-label {
   line-height: 1.42857;
 }
 .form-group label.control-label {
-  font-size: 12px;
+  font-size: 18px; /*Cambio font-size: 12px;*/
   font-weight: 400;
   line-height: 1.07143;
   margin: 16px 0 0;
@@ -3441,6 +3453,11 @@ iframe {
   background-color: #ff9800;
   color: #fff;
 }
+.bg-tms {/*Creo color tms*/
+  box-shadow: 0 0 4px #ccc; /*Cambio agrego sombra para logos clientes blancos*/
+  background-color: #124D6F;
+  color: #fff;
+}
 .bg-danger {
   background-color: #f44336;
   color: #fff;
@@ -3628,7 +3645,7 @@ hr.double {
   height: 5px;
 }
 .dropcaps::first-letter {
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
   float: left;
   font-size: 3em;
   font-weight: 400;
@@ -3692,13 +3709,13 @@ hr.double {
 .color-royal {
   color: #9c27b0;
 }
-.color-blue {
+.color-blue {/*Creo color blue*/
   color: #3f51b5;
 }
-.color-tms {
+.color-tms {/*Creo color tms*/
   color: #124D6F;
 }
-.color-aqua {
+.color-aqua {/*Creo color aqua*/
   color: #20B2AA;
 }
 .color-primary-inverse {
@@ -3972,8 +3989,11 @@ blockquote.ms-blockquote footer {
 .btn.btn-fab.btn-royal:hover, .btn.btn-fab.btn-royal:focus, .btn.btn-fab.btn-royal:active {
   background-color: #8e24aa;
 }
-.btn.btn-fab.btn-blue:hover, .btn.btn-fab.btn-blue:focus, .btn.btn-fab.btn-blue:active {
+.btn.btn-fab.btn-blue:hover, .btn.btn-fab.btn-blue:focus, .btn.btn-fab.btn-blue:active {/*Creo color blue*/
   background-color: #3f51b5;
+}
+.btn.btn-fab.btn-aqua:hover, .btn.btn-fab.btn-aqua:focus, .btn.btn-fab.btn-aqua:active {/*Creo color aqua*/
+  background-color: #20B2AA;
 }
 .btn.btn-raised:hover, .btn.btn-raised:focus, .btn.btn-raised:active {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
@@ -5157,7 +5177,7 @@ blockquote.ms-blockquote footer {
   font-size: 18px;
 }
 .form-group label {
-  color: #9e9e9e;
+  color: #124D6F; /*Cambio color: #9e9e9e;*/
 }
 .form-group.is-focused .radio label {
   transition: all 0.3s ease 0s;
@@ -6191,7 +6211,7 @@ label.color-white {
   transition: background 0.3s ease 0s;
 }
 .ms-navbar .navbar-nav li.active > a, .ms-navbar .navbar-nav li.active > a:hover, .ms-navbar .navbar-nav li.active > a:focus {
-  background-color: #0391d1;
+  background-color: #20B2AA; /*Cambio background-color: #0391d1;*/
 }
 .ms-navbar .navbar-nav li.dropdown {
   position: relative;
@@ -6466,7 +6486,7 @@ label.color-white {
   background-color: transparent;
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li > a:hover, .ms-navbar-white.navbar-mode .navbar-nav > li > a:focus, .ms-navbar-dark.navbar-mode .navbar-nav > li > a:hover, .ms-navbar-dark.navbar-mode .navbar-nav > li > a:focus, .ms-navbar-primary.navbar-mode .navbar-nav > li > a:hover, .ms-navbar-primary.navbar-mode .navbar-nav > li > a:focus, .ms-header-dark + .ms-navbar-dark .navbar-nav > li > a:hover, .ms-header-dark + .ms-navbar-dark .navbar-nav > li > a:focus, .ms-header-white + .ms-navbar-white .navbar-nav > li > a:hover, .ms-header-white + .ms-navbar-white .navbar-nav > li > a:focus, .ms-header-primary + .ms-navbar-primary .navbar-nav > li > a:hover, .ms-header-primary + .ms-navbar-primary .navbar-nav > li > a:focus {
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-navbar-white.navbar-mode .navbar-nav > li > a:hover::before, .ms-navbar-white.navbar-mode .navbar-nav > li > a:focus::before, .ms-navbar-dark.navbar-mode .navbar-nav > li > a:hover::before, .ms-navbar-dark.navbar-mode .navbar-nav > li > a:focus::before, .ms-navbar-primary.navbar-mode .navbar-nav > li > a:hover::before, .ms-navbar-primary.navbar-mode .navbar-nav > li > a:focus::before, .ms-header-dark + .ms-navbar-dark .navbar-nav > li > a:hover::before, .ms-header-dark + .ms-navbar-dark .navbar-nav > li > a:focus::before, .ms-header-white + .ms-navbar-white .navbar-nav > li > a:hover::before, .ms-header-white + .ms-navbar-white .navbar-nav > li > a:focus::before, .ms-header-primary + .ms-navbar-primary .navbar-nav > li > a:hover::before, .ms-header-primary + .ms-navbar-primary .navbar-nav > li > a:focus::before {
   height: 100%;
@@ -7256,11 +7276,11 @@ label.color-white {
   background-color: #000;
   color: #fff;
 }
-.ms-icon.color-blue {
+.ms-icon.color-blue {/*Creo color blue*/
   background-color:#3f51b5;
   color: #fff;
 }
-.ms-icon.color-aqua {
+.ms-icon.color-aqua {/*Creo color aqua*/
   background-color:#20B2AA;
   color: #fff;
 }
@@ -7294,12 +7314,12 @@ label.color-white {
   border-color: #9c27b0;
   color: #9c27b0;
 }
-.ms-icon.ms-icon-inverse.color-blue {
+.ms-icon.ms-icon-inverse.color-blue {/*Creo color blue*/
   background-color: transparent;
   border-color: #3f51b5;
   color: #3f51b5;
 }
-.ms-icon.ms-icon-inverse.color-aqua {
+.ms-icon.ms-icon-inverse.color-aqua {/*Creo color aqua*/
   background-color: transparent;
   border-color: #20B2AA;;
   color: #20B2AA;
@@ -7351,7 +7371,7 @@ label.color-white {
   border-color: #fff;
   color: #FFF;
 }
-.ms-icon.ms-icon-aqua.ms-icon-inverse {
+.ms-icon.ms-icon-aqua.ms-icon-inverse {/*Creo color aqua*/
   background-color: transparent;
   border-color: #20B2AA;
   color: #20B2AA;
@@ -7946,8 +7966,8 @@ pre.line-numbers > code {
   color: #f5f5f5;
 }
 .card.card-dark-inverse {
-  background-color: #424242;
-  border-bottom: 3px solid #424242;
+  background-color: #666666; /*Cambio background-color: #424242;*/
+  border-bottom: 3px solid #666666; /*Cambio border-bottom: 3px solid #424242;*/
   color: #fff;
 }
 .card.card-dark-inverse a.link {
@@ -7961,11 +7981,11 @@ pre.line-numbers > code {
   color: #f5f5f5;
 }
 .card.card-primary {
-  border-bottom: 3px solid #03a9f4;
+  border-bottom: 3px solid #124D6F; /*Cambio border-bottom: 3px solid #03a9f4;*/
   border-radius: 3px;
 }
 .card.card-primary .card-header, .card.card-primary .card-footer {
-  background-color: #03a9f4;
+  background-color: #124D6F; /*Cambio background-color: #03a9f4;*/
   color: #f5f5f5;
 }
 .card.card-primary-inverse {
@@ -8118,10 +8138,18 @@ pre.line-numbers > code {
 }
 .card-hero {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  /*margin-top: -100px; Cambio para que baje About US*/
+  margin-top: -100px; 
   position: relative;
 }
 .card-hero > .card-block {
+  padding: 4rem;
+}
+.card-hero2 {/*Creo para usarlo en About US que quede mas abajo*/
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  /*margin-top: -100px; Cambio para que baje About US*/
+  position: relative;
+}
+.card-hero2 > .card-block {
   padding: 4rem;
 }
 .ms-feature {
@@ -8477,25 +8505,25 @@ pre.line-numbers > code {
   color: #4caf50;
 }
 
-.price-table.price-table-blue {
+.price-table.price-table-blue {/*Creo color blue*/
   border-bottom: 3px solid #3f51b5;
 }
-.price-table.price-table-blue header {
+.price-table.price-table-blue header {/*Creo color blue*/
   background-color: #3f51b5;
 }
-.price-table.price-table-blue .price-table-body::after {
+.price-table.price-table-blue .price-table-body::after {/*Creo color blue*/
   background-color: #3f51b5;
 }
-.price-table.price-table-blue .price-table-list i {
+.price-table.price-table-blue .price-table-list i {/*Creo color blue*/
   color: #3f51b5;
 }
-.price-table.price-table-blue:hover .price-table-body {
+.price-table.price-table-blue:hover .price-table-body {/*Creo color blue*/
   color: #fff;
 }
-.price-table.price-table-blue:hover .price-table-body .price-table-list li {
+.price-table.price-table-blue:hover .price-table-body .price-table-list li {/*Creo color blue*/
   border-color: #8acc8d;
 }
-.price-table.price-table-blue:hover .price-table-body .price-table-list li i {
+.price-table.price-table-blue:hover .price-table-body .price-table-list li i {/*Creo color blue*/
   color: #fff;
 }
 .price-table.price-table-blue:hover .price-table-body .btn-raised {
@@ -8943,7 +8971,7 @@ pre.line-numbers > code {
   position: relative;
 }
 .wrap.wrap-mountain::after {
-  background-color: rgba(1, 71, 103, 0.8);
+  background-color: rgba(18, 77, 111, 0.8); /*Cambio background-color: rgba(1, 71, 103, 0.8);*/
   bottom: 0;
   content: "";
   display: block;
@@ -9150,7 +9178,7 @@ pre.line-numbers > code {
   position: relative;
 }
 .ms-hero-bg-primary::after {
-  background-color: rgba(1, 82, 118, 0.85);
+  background-color: rgba(65, 112, 139, 0.85);/*Cambio color background-color: rgba(1, 82, 118, 0.85); por #41708B*/
   bottom: 0;
   content: "";
   display: block;
@@ -9266,6 +9294,47 @@ pre.line-numbers > code {
   position: relative;
   z-index: 1;
 }
+.ms-hero-bg-tms {/*Creo color tms*/
+  position: relative;
+}
+.ms-hero-bg-tms::after {/*Creo color tms*/
+  background-color: rgba(18, 77, 111, 0.85);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.ms-hero-bg-tms .container {/*Creo color tms*/
+  position: relative;
+  z-index: 1;
+}
+.ms-hero-bg-tms-light {/*Creo color tms*/
+  position: relative;
+}
+.ms-hero-bg-tms-light::after {/*Creo color tms-light*/
+  background-color: rgba(112, 148, 168, 0.85);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.ms-hero-bg-tms-light .container {/*Creo color tms*/
+  position: relative;
+  z-index: 1;
+}
+
 .ms-hero-bg-dark-light {
   color: #fff;
   position: relative;
@@ -10242,7 +10311,7 @@ pre.line-numbers > code {
   background-color: transparent;
 }
 .owl-dots .owl-dot.active span {
-  background-color: #03a9f4;
+  background-color: #20B2AA; /*Cambio background-color: #03a9f4;*/
 }
 .owl-dots.owl-dots-white .owl-dot span {
   border: 2px solid #fff;
@@ -11538,7 +11607,7 @@ body.lb-disable-scrolling {
 .ms-footbar {
   background-color: #41708B; /*Cambio background-color: #607d8b;*/
   color: #eee;
-  margin-top: 4rem;
+  /*margin-top: 4rem; Cambio subo footer para reducir linea blanca*/
   position: relative;
 }
 .ms-footbar::after {

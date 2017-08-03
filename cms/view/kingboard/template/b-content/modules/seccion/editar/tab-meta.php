@@ -23,7 +23,7 @@
         <label class="control-label" for="keywords">Palabras Clave:</label>
         <div class="controls">
           <div class="tag-content">
-            <input type="text" name="tags" placeholder="Palabras Clave" class="tm-input" />
+            <input type="text" name="tags" placeholder="Palabras Clave" class="tm-input w120" />
             <input type="hidden" id="keywords" name="meta[Keywords]" value="<?php if (isset($data['meta']['Keywords'])) echo $data['meta']['Keywords']; ?>" />
           </div>
           <p class="help-block"></p>
@@ -57,11 +57,9 @@
   </div>
 </div>
 <script type="text/javascript">
-<!--//
   $(document).ready(function () {
-    $('.tm-input').tagsManager({
+    jQuery('.tm-input').tagsManager({
       hiddenTagListId: 'keywords'
     });
   });
-//-->
 </script>

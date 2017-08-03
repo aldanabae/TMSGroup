@@ -94,12 +94,9 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
       <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
         <div class="container container-full">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index-2.html">
-              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
-              <!-- <span class="ms-logo ms-logo-sm">M</span> -->
-              <span class="ms-title">
-                <strong>TMS</strong>Group
-              </span>
+            <a class="navbar-brand" href="<?php echo URL_WEB; ?>">
+               <img src="<?php echo URL_IMG; ?>logo.png" alt=""> 
+              <!-- <span class="ms-title"><strong>TMS</strong>Group</span> -->
             </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
@@ -119,7 +116,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                       <i class="mr-2 fa fa-bookmark"></i> Quienes Somos</a>
                   </li>
                   <li>
-                    <a href="blog-masonry.html">
+                    <a href="<?php echo URL_WEB.'sumate'; ?>">
                       <i class="mr-2 fa fa-user-plus"></i>Trabaja con Nosotros</a>
                   </li>  
                 </ul>
@@ -131,28 +128,28 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
                   <li>
-                    <a href="portfolio-filters_sidebar_fluid.html">
+                    <a href="<?php echo URL_WEB.'seccion/outsourcing-it'; ?>">
                       <i class="mr-1 zmdi zmdi-accounts zmdi-hc-fw"></i>Outsourcing IT</a>
                   </li>
                   <li>
-                    <a href="portfolio-filters_sidebar.html">
+                    <a href="<?php echo URL_WEB.'seccion/software-factoring'; ?>">
                       <i class="mr-1 zmdi zmdi-laptop-chromebook zmdi-hc-fw"></i>Desarrollo</a>
                   </li>
                   <li>
-                    <a href="portfolio-filters_topbar.html">
+                    <a href="<?php echo URL_WEB.'seccion/software-factoring'; ?>">
                       <i class="mr-1 zmdi zmdi-smartphone-android zmdi-hc-fw"></i>APPS</a>
                   </li>
                   
                   <li>
-                    <a href="portfolio-filters_sidebar_fluid.html">
+                    <a href="<?php echo URL_WEB.'seccion/consultoria-capacitacion'; ?>">
                       <i class="mr-2 fa fa-briefcase"></i> Consultoría</a>
                   </li>
                   <li>
-                    <a href="portfolio-masonry.html">
+                    <a href="<?php echo URL_WEB.'seccion/internet-service-provider'; ?>">
                       <i class="mr-1 zmdi zmdi-wifi-alt zmdi-hc-fw"></i>ISP</a>
                   </li>
                   <li>
-                    <a href="portfolio-filters_topbar_fluid.html">
+                    <a href="<?php echo URL_WEB.'seccion/soporte-tecnologico'; ?>">
                       <i class="mr-1 zmdi zmdi-wrench zmdi-hc-fw"></i>Soporte Tecnológico</a>
                   </li>
                   <li class="dropdown-submenu"><!Submenu-->
@@ -161,13 +158,13 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" style="display: none;">
                       <li>
-                        <a href="page-profile.html"><strong>SaaS</strong> - Software as a Service</a>
+                        <a href="<?php echo URL_WEB.'seccion/cloud-solutions'; ?>"><strong>SaaS</strong> - Software as a Service</a>
                       </li>
                       <li>
-                        <a href="page-profile2.html"><strong>IaaS</strong> - Infrastructure as a Service</a>
+                        <a href="<?php echo URL_WEB.'seccion/cloud-solutions'; ?>"><strong>IaaS</strong> - Infrastructure as a Service</a>
                       </li>
                       <li>
-                        <a href="page-profile2.html"><strong>PaaS</strong> - Platform as a Service</a>
+                        <a href="<?php echo URL_WEB.'seccion/cloud-solutions'; ?>"><strong>PaaS</strong> - Platform as a Service</a>
                       </li>
                     </ul>
                   </li>
@@ -177,10 +174,10 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" style="display: none;">
                       <li>
-                        <a href="page-profile.html">Cableados Estructurados</a>
+                        <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Cableados Estructurados</a>
                       </li>
                       <li>
-                        <a href="page-profile2.html">Telefonía VoIP</a>
+                        <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Telefonía VoIP</a>
                       </li>
                       <!-- <li>
                         <a href="page-profile2.html"></a>
@@ -190,12 +187,17 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="<?php echo URL_WEB."clientes"; ?>" class="dropdown-toggle animated fadeIn animation-delay-7" role="button" aria-haspopup="true" aria-expanded="false" data-name="clientes">Clientes
+                <a href="<?php echo URL_WEB."clientes"; ?>" class="dropdown-toggle animated fadeIn animation-delay-9"  data-name="clientes">Clientes
                 </a>
               </li>
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" role="button" aria-haspopup="true" aria-expanded="false" data-name="socios">Partners
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="partners">Partners
+                </a>
+              </li>
+
+              <li class="dropdown">
+                <a href="<?php echo URL_WEB.'contacto'; ?>" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="contacto">Contacto
                 </a>
               </li>
                <!-- <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li>  -->
