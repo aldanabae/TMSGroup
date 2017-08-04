@@ -68,6 +68,10 @@ class homeModel extends Model {
     return $this->all(array('table' => 'seccion', 'where' => "Publico='1' AND PadreID='0'"));
   }
 
+  public function getPartners() {
+    return $this->all(array('table' => 'partners', 'where' => "Publico='1'", 'order'=>'Posicion'));
+  }
+
   public function getCategorias() {
     return $this->all(array('table' => 'categorias', 'where' => "Publico='1'", 'order' => 'Nombre ASC'));
   }

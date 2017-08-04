@@ -72,6 +72,17 @@ class homeController extends Controller {
     $this->_view->render($data['tabla']);
   }
 
+  public function partners() {
+    $data['tabla'] = 'partners';
+
+    $data['partners'] = $this->_index->getPartners();
+    $data['title'] = 'Partners';
+
+    $data = array_merge($data, $this->getModules());
+    $this->_view->assign('data', $data);
+    $this->_view->render($data['tabla']);
+  }
+
   public function autor($id = '') {
     $data['tabla'] = 'sys_user';
 

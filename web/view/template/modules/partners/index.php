@@ -11,13 +11,18 @@
 
 <div class="container">
     <div class="card card-hero card-flat bg-transparent">
-        <div class="row">          
+        <div class="row"> 
+            <?php foreach ($data['partners'] as $part) {
+                      $url_imagen = URL_GAL.'partners/images/IM_'.$part['Imagen']; 
+            ?>        
             <div class="col-lg-3 col-sm-6">
             	<div class="text-center mt-2">
-            		<img src="http://192.168.1.236/TMSGroup/web/view/template/assets/img/demo/windows.png" alt="..." class="ms-avatar-hero animated zoomIn animation-delay-7">
-            		<h2 class="color-tms mt-4 animated fadeInUp animation-delay-10">Titulo</h2>          
+            		<img src="<?php echo $url_imagen; ?>" alt="..." class="ms-avatar-hero animated zoomIn animation-delay-7">
+            		<h2 class="color-tms mt-4 animated fadeInUp animation-delay-10"><?php echo $part['Nombre']; ?></h2>          
           		</div>   
-            </div>			
+            </div>	
+            <?php }
+            ?>		
         </div>
     </div>
 </div>

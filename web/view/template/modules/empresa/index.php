@@ -6,7 +6,7 @@
       <div class="text-center">
       	<h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">
       		<a href="<?php echo URL_WEB; ?>" title="TMS Group" rel="home">
-        		<center><img class="img-responsive" src="<?php echo URL_IMG; ?>logo.png"></center>		
+        		<center><img class="img-responsive" src="<?php echo URL_IMG; ?>logo_blanco.png"></center>		
 			</a>
         </h1>
     	</br>

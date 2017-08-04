@@ -19,7 +19,7 @@
                 <div class="card card-warning wow zoomInUp animation-delay-5" style="visibility: visible; animation-name: zoomInUp;">
                     <div class="text-center bg-tms">
                       <a href="javascript:void()" class="">
-                        <img src="<?php echo $url_imagen?>" alt="..." class="">
+                        <img src="<?php echo $url_imagen?>" height="100%" width="100%" class="">
                       </a>
                     </div>
                     <div class="card-block text-center">

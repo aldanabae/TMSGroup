@@ -36,8 +36,8 @@
                 <i class="zmdi zmdi-favorite-outline"></i> Nosotros</a>
             </li>
             <li>
-              <a href="page-team2.html">
-                <i class="zmdi zmdi-accounts"></i> Equipo</a>
+              <a href="<?php echo URL_WEB.'partners'; ?>">
+                <i class="zmdi zmdi-accounts"></i> Partners</a>
             </li>
             <li>
               <a href="page-services.html">

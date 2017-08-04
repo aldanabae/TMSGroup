@@ -53,7 +53,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
         <div class="container container-full">
           <div class="ms-title">
             <a href="<?php echo URL_WEB; ?>" title="TMS Group" rel="home">
-							<img class="img-responsive" src="<?php echo URL_IMG; ?>logoTMS.png" style="height:110px; width:310px;">
+							<img class="img-responsive" src="<?php echo URL_IMG; ?>logo_azul.png">
 						</a>
           </div>
           <div class="header-right">
@@ -95,7 +95,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
         <div class="container container-full">
           <div class="navbar-header">
             <a class="navbar-brand" href="<?php echo URL_WEB; ?>">
-               <img src="<?php echo URL_IMG; ?>logo.png" alt=""> 
+               <img src="<?php echo URL_IMG; ?>logo_blanco.png"> 
               <!-- <span class="ms-title"><strong>TMS</strong>Group</span> -->
             </a>
           </div>
@@ -192,7 +192,12 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="partners">Partners
+                <a href="<?php echo URL_WEB.'partners'; ?>" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="partners">Partners
+                </a>
+              </li>
+
+              <li class="dropdown">
+                <a href="<?php echo URL_WEB.'partners'; ?>" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="partners">Portfolio
                 </a>
               </li>
 
