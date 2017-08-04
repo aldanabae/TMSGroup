@@ -24,7 +24,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
 
     <!-- BEGIN FONTS FILES -->
     <!-- END FONTS FILES -->
-
+    <script src="<?php echo URL_JS; ?>jquery.js"></script>
     <!-- BEGIN CSS FILES -->
     <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

@@ -6,9 +6,7 @@
                   <h2 class="text-center no-m pt-4 pb-4 color-white index-1">Consulta</h2>
                 </div>
                 <div class="card-block">
-                  <div id="result"></div>
-                  <form id="contactForm" class="form-horizontal" name="contactForm" action="<?php echo URL_WEB.'sendformContacto'; ?>" method="post">
-                    <input type="hidden" name="enviar" value="1">
+                  <form class="form-horizontal" name="contactForm" action="<?php echo URL_WEB.'sendform'; ?>" method="post">
                     <fieldset>
                       <div class="form-group is-empty">
                         <label for="inputNombre" class="col-md-2 control-label">Nombre</label>
@@ -60,7 +58,7 @@
                         <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
                       </p>
                       <p>
-                        <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261 5244759 </p>
+                        <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261 </p>
                     </address>
                 </div>
             </div>
@@ -74,82 +72,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-<!--//
-$(document).ready(function() {
-  $('#contactForm').submit(function() {
-    var user_name       = $('#nombre').val();
-    var user_email      = $('#email').val();
-    var user_phone      = $('#asunto').val();
-    var user_message    = $('#consulta').val();
-    
-    var output = '<div class="error color-danger text-center">Complete los campos obligatorios!</div>';
-
-    var proceed = true;    
-
-    if(user_name == '') {
-      $('#nombre').focus();     
-      $("#result").hide().html(output).slideDown();
-      proceed = false;
-      return false;
-    }
-    if(user_email == '') {
-      $('#email').focus();     
-      $("#result").hide().html(output).slideDown();
-      proceed = false;
-      return false;
-    }
-    if(user_phone == '') {
-      $('#asunto').focus();     
-      $("#result").hide().html(output).slideDown();
-      proceed = false;
-      return false;
-    }    
-    if(user_message == '') {
-      $('#consulta').focus();     
-      $("#result").hide().html(output).slideDown();
-      proceed = false;
-      return false;
-    }
-
-    if(proceed) {
-      $.ajax({
-        type: 'POST',
-        url: "<?php echo URL_WEB.'sendformContacto'; ?>",
-        data: $(this).serialize(),
-        success: function(response) {
-          var isJson = true;        
-          var clean = true; 
-
-          try {
-            data = $.parseJSON(response); 
-          } catch(e) {
-            isJson = false;
-            output = '<div class="error color-danger text-center">No se pudo enviar el correo. Por favor, int&eacute;ntelo m&aacute;s tarde!</div>';
-          }       
-          if(isJson) {
-            if(data.type == 'error') {
-              output = '<div class="error">'+data.text+'</div>';
-              clean = false;
-            } else {
-              output = '<div class="success">'+data.text+'</div>';
-            }
-          }
-          if(clean) {
-            $('input').val('');    
-            $('textarea').val('');          
-          }
-          $("#result").hide().html(output).slideDown();
-        }
-      });     
-    }
-    return false;
-  });
-
-  $('#contactForm input, #contactForm textarea').keyup(function() {
-    $('#contactForm input, #contactForm textarea').css('border-color','');
-    if($('#result').is(':visible')) $('#result').slideUp();
-  });
-});
-//-->
-</script>

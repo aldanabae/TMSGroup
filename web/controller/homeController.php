@@ -205,9 +205,10 @@ class homeController extends Controller {
     }
   }
 
-  public function sendform() {
+  public function sendformContacto() {
+    var_dump($_POST);
     $info['nombre'] = Validator::sanitizeString('nombre', true);
-    $info['telefono'] = Validator::sanitizeString('telefono', true);
+    $info['asunto'] = Validator::sanitizeString('asunto', true);
     $info['email'] = Validator::sanitizeString('email', true);
     $email_valido = Validator::validateEmail('email', true);
     $info['consulta'] = Validator::sanitizeString('consulta', true);
@@ -219,10 +220,6 @@ class homeController extends Controller {
       }
       if (strlen($info['nombre']) < 4) {
         $output = json_encode(array('type' => 'error', 'text' => 'El Nombre ingresado es muy corto!'));
-        die($output);
-      }
-      if (!$info['telefono']) {
-        $output = json_encode(array('type' => 'error', 'text' => 'Debe ingresar su tel&eacute;fono!'));
         die($output);
       }
       if (!$info['email']) {

@@ -79,7 +79,7 @@
                 <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
               </p>
               <p>
-                <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261  </p>
+                <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261 5244759 </p>
               <p>
               </address>
             </div>
