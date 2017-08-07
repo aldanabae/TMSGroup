@@ -30,7 +30,6 @@ class homeController extends Controller {
         $data['tabla_sec'] = $this->_index->getTablaSec($info['TablaSec']);
       }
 
-
       $data['title'] = $data[$data['tabla']]['Titulo'];
       $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
       $data['parrafos'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
@@ -206,7 +205,6 @@ class homeController extends Controller {
   }
 
   public function sendformContacto() {
-    var_dump($_POST);
     $info['nombre'] = Validator::sanitizeString('nombre', true);
     $info['asunto'] = Validator::sanitizeString('asunto', true);
     $info['email'] = Validator::sanitizeString('email', true);
@@ -240,6 +238,114 @@ class homeController extends Controller {
       die($output);
     }
   }
+
+  public function sendformSumate() {
+    if(isset($_POST['email'])) {    
+        //Para y asunto del mensaje a enviar
+        $email_to = "info@tmsgroup.com.ar"; 
+        $email_subject = "Email desde pagina Web";
+
+        //Funcion utilizada
+        function died($error) {
+          echo "Lo sentimos mucho, pero hubo un error(es) encontrado en el formulario. ";
+          echo "Estos son los errores:<br /><br />";
+          echo $error."<br /><br />";
+          echo "Retroceda y arregle el error.<br /><br />";
+          die();
+        }
+            
+        //Validation expected data exists
+        if(!isset($_POST['nombre']) ||
+            !isset($_POST['apellido']) ||
+            !isset($_POST['dni']) ||
+            !isset($_POST['email']) ||
+            !isset($_POST['celular']) ||
+            !isset($_POST['asunto']) ||
+            !isset($_POST['mensaje']) ||
+            !isset($_FILES['cvitae']['name'])){
+              $error = "Lo sentimos, pero hubo un error(es) encontrado en el formulario.";
+              died($error);       
+        }
+         
+        //variables para los campos
+        $nombre = $_POST['nombre']; // required
+        $apellido = $_POST['apellido']; // required
+        $dni = $_POST['dni']; // required
+        $email_from = $_POST['email']; // required
+        $celular = $_POST['celular']; // required
+        $asunto = $_POST['asunto']; // not required
+        $mensaje = $_POST['mensaje']; // not required
+            
+        $error_message = "";
+        $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+        $string_exp = "/^[A-Za-z .'-]+$/";
+        
+        if(!preg_match($email_exp,$email_from)) {
+          $error_message .= 'El email que ingresaste no parece ser válido. <br />';
+        }
+        if(!preg_match($string_exp,$nombre)) {
+          $error_message .= 'El nombre que ingresaste no parece ser válido. <br />';
+        }
+        if(!preg_match($string_exp,$apellido)) {
+          $error_message .= 'El apellido que ingresaste no parece ser válido. <br />';
+        }
+        if(strlen($mensaje) < 2) {
+          $error_message .= 'El mensaje que ingresaste no parece ser válido<br />';
+        }
+        if(strlen($error_message) > 0) {
+          died($error_message);
+        }
+
+        //variables para los datos del archivo 
+        $nombrearchivo = $_FILES['cvitae']['name'];
+        $archivo = $_FILES['cvitae']['tmp_name'];
+        // Leemos el archivo a adjuntar
+        
+        $archivo = file_get_contents($archivo);
+        $archivo = chunk_split(base64_encode($archivo));
+
+        //Funcion utilizada 
+        function clean_string($string) {
+          $bad = array("content-type","bcc:","to:","cc:","href");
+          return str_replace($bad,"",$string);
+        }
+         
+        // Cuerpo del Email
+        $CuerpoMensaje  = "";
+        $CuerpoMensaje .= "A continuación más detalles:\r\n\r\n";
+        $CuerpoMensaje .= "<b>Nombre:</b> ".clean_string($nombre)."\r\n";
+        $CuerpoMensaje .= "<b>Apellido:</b> ".clean_string($apellido)."\r\n";
+        $CuerpoMensaje .= "<b>DNI:</b> ".clean_string($dni)."\r\n";
+        $CuerpoMensaje .= "<b>Email:</b> ".clean_string($email_from)."\r\n";    
+        $CuerpoMensaje .= "<b>Celular:</b> ".clean_string($celular)."\r\n";
+        $CuerpoMensaje .= "<b>Asunto:</b> ".clean_string($asunto)."\r\n";
+        $CuerpoMensaje .= "<b>Mensaje:</b> ".clean_string($mensaje)."\r\n";
+       
+        
+        //cabecera del email (forma correcta de codificarla)
+        $headers = "From: TMS Group WEB <" . $email_from . ">\r\n";
+        //$header .= "Reply-To: " . $replyto . "\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: multipart/mixed; boundary=\"=A=G=R=O=\"\r\n\r\n";
+        //armando mensaje del email
+        $email_message = "--=A=G=R=O=\r\n";
+        $email_message .= "Content-type:text/plain; charset=utf-8\r\n";
+        $email_message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+        $email_message .= $CuerpoMensaje . "\r\n\r\n";
+        
+        //archivo adjunto  para email    
+        $email_message .= "--=A=G=R=O=\r\n";
+        $email_message .= "Content-Type: application/octet-stream; name=\"" . $nombrearchivo . "\"\r\n";
+        $email_message .= "Content-Transfer-Encoding: base64\r\n";
+        $email_message .= "Content-Disposition: attachment; filename=\"" . $nombrearchivo . "\"\r\n\r\n";
+        $email_message .= $archivo . "\r\n\r\n";
+        $email_message .= "--=A=G=R=O=--";
+        
+        //enviamos el email
+        mail($email_to, $email_subject, $email_message, $headers);
+    }
+  }
+
 
   public function tracking($tabla = '', $id = '') {
     $fields['IP'] = $_SERVER['REMOTE_ADDR'];

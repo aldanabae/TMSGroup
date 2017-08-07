@@ -179,9 +179,6 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                       <li>
                         <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Telefonía VoIP</a>
                       </li>
-                      <!-- <li>
-                        <a href="page-profile2.html"></a>
-                      </li> -->
                     </ul>
                 </ul>
               </li>
@@ -197,12 +194,12 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="<?php echo URL_WEB.'partners'; ?>" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="partners">Portfolio
+                <a href="<?php echo URL_WEB.'partners'; ?>" class="dropdown-toggle animated fadeIn animation-delay-11" data-name="partners">Portfolio
                 </a>
               </li>
 
               <li class="dropdown">
-                <a href="<?php echo URL_WEB.'contacto'; ?>" class="dropdown-toggle animated fadeIn animation-delay-10" data-name="contacto">Contacto
+                <a href="<?php echo URL_WEB.'contacto'; ?>" class="dropdown-toggle animated fadeIn animation-delay-12" data-name="contacto">Contacto
                 </a>
               </li>
                <!-- <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li>  -->
