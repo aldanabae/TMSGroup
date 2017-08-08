@@ -40,17 +40,16 @@
                 <i class="zmdi zmdi-accounts"></i> Partners</a>
             </li>
             <li>
-              <a href="page-services.html">
+              <a href="<?php echo URL_WEB.'servicios'; ?>">
                 <i class="zmdi zmdi-face"></i> Servicios</a>
             </li>
-            <!-- <li>
-              <a href="page-faq2.html">
-                <i class="zmdi zmdi-help"></i> FAQ</a>
+            <li>
+                <i class="zmdi zmdi-image-o"></i> Portfolio</a>
             </li>
             <li>
-              <a href="page-login2.html">
-                <i class="zmdi zmdi-lock"></i> Login</a>
-            </li> -->
+              <a href="<?php echo URL_WEB.'sumate'; ?>">
+                <i class="fa fa-user-plus"></i> Sumate</a>
+            </li> 
             <li>
               <a href="<?php echo URL_WEB.'contacto'; ?>">
                 <i class="zmdi zmdi-email"></i> Contacto</a>
