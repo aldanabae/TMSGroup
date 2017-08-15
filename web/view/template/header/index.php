@@ -26,7 +26,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
     <!-- END FONTS FILES -->
     <script src="<?php echo URL_JS; ?>jquery.js"></script>
     <!-- BEGIN CSS FILES -->
-    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3">
+    <link rel="shortcut icon" href="<?php echo URL_IMG; ?>favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="<?php echo URL_CSS; ?>preload.min.css" />
     <link rel="stylesheet" href="<?php echo URL_CSS; ?>plugins.min.css" />
@@ -142,7 +142,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                   
                   <li>
                     <a href="<?php echo URL_WEB.'seccion/consultoria-capacitacion'; ?>">
-                      <i class="mr-2 fa fa-briefcase"></i> Consultoría</a>
+                      <i class="mr-2 fa fa-briefcase"></i> Consultor&iacute;a</a>
                   </li>
                   <li>
                     <a href="<?php echo URL_WEB.'seccion/internet-service-provider'; ?>">
@@ -150,7 +150,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                   </li>
                   <li>
                     <a href="<?php echo URL_WEB.'seccion/soporte-tecnologico'; ?>">
-                      <i class="mr-1 zmdi zmdi-wrench zmdi-hc-fw"></i>Soporte Tecnológico</a>
+                      <i class="mr-1 zmdi zmdi-wrench zmdi-hc-fw"></i>Soporte Tecnol&oacute;gico</a>
                   </li>
                   <li class="dropdown-submenu"><!Submenu-->
                     <a href="javascript:void(0)" class="has_children">
@@ -177,7 +177,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                         <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Cableados Estructurados</a>
                       </li>
                       <li>
-                        <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Telefonía VoIP</a>
+                        <a href="<?php echo URL_WEB.'seccion/networking-solutions'; ?>">Telefon&iacute;a VoIP</a>
                       </li>
                     </ul>
                 </ul>
@@ -194,7 +194,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
               </li>
 
               <li class="dropdown">
-                <a href="<?php echo URL_WEB.'partners'; ?>" class="dropdown-toggle animated fadeIn animation-delay-11" data-name="partners">Portfolio
+                <a href="<?php echo URL_WEB.'portfolios'; ?>" class="dropdown-toggle animated fadeIn animation-delay-11" data-name="partners">Portfolio
                 </a>
               </li>
 

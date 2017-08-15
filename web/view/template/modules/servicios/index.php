@@ -5,7 +5,7 @@
         <strong>Servicios</strong>
       </h1>
       <div class="lead lead-xl mw-800 center-block color-medium mb-2 animated fadeInDown animation-delay-4"> 
-        Mejorá los resultados de tu negocio
+        Mejor&aacute; los resultados de tu negocio
       </div>
     </div>
     <div class="container mt-4">
@@ -18,7 +18,7 @@
             </span>
             <h4 class="color-<?php echo $serv['Estilo']; ?>"><strong><?php echo $serv['Titulo']; ?></strong></h4>
             <p class=""><?php echo $serv['Descripcion']; ?></p>
-            <a href="<?php echo URL_WEB.'seccion/'; ?><?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver Más</a>
+            <a href="<?php echo URL_WEB.'seccion/'; ?><?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver M&aacute;s</a>
           </div>
       </div>
       <?php   }       

@@ -14,7 +14,6 @@ class homeModel extends Model {
     return $this->where(array('table' => 'seccion', 'where' => "ID='" . $id . "'", 'limit' => 1));
   }
 
-
   public function getUser($id) {
     return $this->where(array('table' => 'sys_user', 'where' => "ID='" . $id . "'", 'limit' => 1));
   }
@@ -44,6 +43,10 @@ class homeModel extends Model {
     return (count($temp) > 0) ? $temp[0] : false;
   }
 
+  public function getPortfolio($url) {
+   return $this->where(array('table' => 'portfolio', 'where' => "URL='" . $url . "'", 'limit' => 1));
+  }
+
   public function getSliders() {
     return $this->all(array('table' => 'banner_top', 'where' => "Publico='1'"));
   }
@@ -62,6 +65,10 @@ class homeModel extends Model {
 
   public function getServicios() {
     return $this->all(array('table' => 'servicios', 'where' => "Publico='1'", 'order'=>'Posicion'));
+  }
+
+  public function getPortfolios() {
+    return $this->all(array('table' => 'portfolio', 'where' => "Publico='1'", 'order'=>'Posicion'));
   }
 
   public function getSecciones() {

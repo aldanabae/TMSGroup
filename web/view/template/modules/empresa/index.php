@@ -11,8 +11,8 @@
         </h1>
     	</br>
         <p class="lead lead-lg color-white text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">
-        	Transformación es <span class="color-aqua">lo que hacemos</span>
-        	, innovación es <span class="color-aqua">quienes somos</span> 
+        	Transformaci&oacute;n es <span class="color-aqua">lo que hacemos</span>
+        	, innovaci&oacute;n es <span class="color-aqua">quienes somos</span> 
         	y la entrega sobresaliente de servicios es lo que 
         	<span class="color-aqua">nos diferencia</span>
         </p>
@@ -28,25 +28,25 @@
 	        <div class="row">
 	          	<div class="col-md-6 text-justify">
 		            <p class="dropcaps">
-		            	TMS Group es una empresa especializada en servicios de outsourcing de tecnologías de la información y las comunicaciones. 
-		            	Su núcleo central de negocios es "la tecnología como servicio de alto valor agregado".
+		            	TMS Group es una empresa especializada en servicios de outsourcing de tecnolog&iacute;as de la informaci&oacute;n y las comunicaciones. 
+		            	Su n&uacute;cleo central de negocios es "la tecnolog&iacute;a como servicio de alto valor agregado".
 		            </p>
 		            <p>
-		            	Somos una empresa de vanguardia que se posiciona, por sí misma, entre las más destacadas a nivel local, nacional e internacional con representaciones de las más famosas marcas en hardware y software. 
-		            	Esto se suma a una tendencia latente a nivel mundial, donde cada vez son más las empresas que, motivadas por la necesidad de una gestión eficiente, deciden tercerizar en un socio de confianza los procesos de soporte.
+		            	Somos una empresa de vanguardia que se posiciona, por s&iacute; misma, entre las m&aacute;s destacadas a nivel local, nacional e internacional con representaciones de las m&aacute;s famosas marcas en hardware y software. 
+		            	Esto se suma a una tendencia latente a nivel mundial, donde cada vez son m&aacute;s las empresas que, motivadas por la necesidad de una gesti&oacute;n eficiente, deciden tercerizar en un socio de confianza los procesos de soporte.
 		            </p>
 		            <p>
-		            	TMS Group representa un tipo de empresa que se distingue por sus resultados y logros en todos los ámbitos en los que trabaja activamente, y en donde sus clientes se distinguen por tener una empresa aliada en sus negocios.
+		            	TMS Group representa un tipo de empresa que se distingue por sus resultados y logros en todos los &aacute;mbitos en los que trabaja activamente, y en donde sus clientes se distinguen por tener una empresa aliada en sus negocios.
 		            </p>
 	          	</div>
 	          	<div class="col-md-6 text-justify">
 		            <p>
 		            	Nuestros Departamentos:
-						<li><B>Departamento de Ingeniería Avanzada:</B> Infraestructura de los servidores.</li>
-						<li><b>Departamento de Desarrollo:</b> Sistemas de Información e Implementación de Sistemas web y mobile.</li>
-						<li><B>Departamento de Outsourcing y Consultoría:</B> Relevamiento y mantenimiento de servicios tecnológicos.</li>
+						<li><B>Departamento de Ingenier&iacute;a Avanzada:</B> Infraestructura de los servidores.</li>
+						<li><b>Departamento de Desarrollo:</b> Sistemas de Informaci&oacute;n e Implementaci&oacute;n de Sistemas web y mobile.</li>
+						<li><B>Departamento de Outsourcing y Consultor&iacute;a:</B> Relevamiento y mantenimiento de servicios tecnol&oacute;gicos.</li>
 						<li><B>Departamento de Servicios y Productos:</B> *Hardware: Representamos y Comercializamos las principales marcas de nivel internacional. *Software: CRM y ERP</li>
-						<li><B>Departamento Técnico:</B> Servicio de mantenimiento técnico.</li>
+						<li><B>Departamento T&eacute;cnico:</B> Servicio de mantenimiento t&eacute;cnico.</li>
 		            </p>            
 	          	</div>
 	        </div>

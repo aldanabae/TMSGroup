@@ -54,7 +54,7 @@
                       <p>
                         <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Ricardo Videla 8340, La Puntilla</p>
                       <p>
-                        <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luján de Cuyo, CP 5505</p>
+                        <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luj&aacute;n de Cuyo, CP 5505</p>
                       <p>
                         <i class="color-info-light zmdi zmdi-email mr-1"></i>
                         <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
@@ -67,7 +67,7 @@
             <div class="card card-primary animated fadeInUp animation-delay-7">
                 <div class="card-header">
                   <h3 class="card-title">
-                    <i class="zmdi zmdi-map"></i>Ubicación</h3>
+                    <i class="zmdi zmdi-map"></i>Ubicaci&oacute;n</h3>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.662706696106!2d-68.8569629846902!3d-32.95991348091724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0bad85709df5%3A0xe7458586d1fab31b!2sVidela+R.+8340%2C+Luj%C3%A1n+de+Cuyo%2C+Mendoza!5e0!3m2!1ses!2sar!4v1501703039666" width="100%" height="340" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>

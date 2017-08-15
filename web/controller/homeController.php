@@ -13,6 +13,7 @@ class homeController extends Controller {
     $data['sliders'] = $this->_index->getSliders();
     $data['planes'] = $this->_index->getPlanes();
     $data['servicios'] = $this->_index->getServicios();
+    $data['portfolio'] = $this->_index->getPortfolios();
 
     $data = array_merge($data, $this->getModules());
     $this->_view->assign('data', $data);
@@ -33,6 +34,23 @@ class homeController extends Controller {
       $data['title'] = $data[$data['tabla']]['Titulo'];
       $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
       $data['parrafos'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
+    } else {
+      die('Error 404: Página no encontrada');
+    }
+
+    $data = array_merge($data, $this->getModules());
+    $this->_view->assign('data', $data);
+    $this->_view->render($data['tabla']);
+  }
+
+  public function portfolio($url = '') {
+    $data['tabla'] = 'portfolio';
+
+    if (!empty($url)) {
+      $data[$data['tabla']] = $this->_index->getPortfolio($url);
+      $data['title'] = $data[$data['tabla']]['Titulo'];
+      $data['galeria'] = $this->_index->getGaleria($data['tabla'], $data[$data['tabla']]['ID']);
+
     } else {
       die('Error 404: Página no encontrada');
     }
@@ -242,8 +260,8 @@ class homeController extends Controller {
   public function sendformSumate() {
     if(isset($_POST['email'])) {    
         //Para y asunto del mensaje a enviar
-        $email_to = "info@tmsgroup.com.ar"; 
-        $email_subject = "Email desde pagina Web";
+        $email_to = "aldana.baeza@tmsgroup.com.ar"; 
+        $email_subject = "Formulario Postulante - TMS Gruop WEB";
 
         //Funcion utilizada
         function died($error) {
@@ -313,27 +331,27 @@ class homeController extends Controller {
         // Cuerpo del Email
         $CuerpoMensaje  = "";
         $CuerpoMensaje .= "A continuación más detalles:\r\n\r\n";
-        $CuerpoMensaje .= "<b>Nombre:</b> ".clean_string($nombre)."\r\n";
-        $CuerpoMensaje .= "<b>Apellido:</b> ".clean_string($apellido)."\r\n";
-        $CuerpoMensaje .= "<b>DNI:</b> ".clean_string($dni)."\r\n";
-        $CuerpoMensaje .= "<b>Email:</b> ".clean_string($email_from)."\r\n";    
-        $CuerpoMensaje .= "<b>Celular:</b> ".clean_string($celular)."\r\n";
-        $CuerpoMensaje .= "<b>Asunto:</b> ".clean_string($asunto)."\r\n";
-        $CuerpoMensaje .= "<b>Mensaje:</b> ".clean_string($mensaje)."\r\n";
+        $CuerpoMensaje .= "Nombre: ".clean_string($nombre)."\r\n";
+        $CuerpoMensaje .= "Apellido: ".clean_string($apellido)."\r\n";
+        $CuerpoMensaje .= "DNI: ".clean_string($dni)."\r\n";
+        $CuerpoMensaje .= "Email: ".clean_string($email_from)."\r\n";    
+        $CuerpoMensaje .= "Celular: ".clean_string($celular)."\r\n";
+        $CuerpoMensaje .= "Asunto: ".clean_string($asunto)."\r\n";
+        $CuerpoMensaje .= "Mensaje: ".clean_string($mensaje)."\r\n";
        
         
-        //cabecera del email (forma correcta de codificarla)
+        //Cabecera del email (forma correcta de codificarla)
         $headers = "From: TMS Group WEB <" . $email_from . ">\r\n";
         //$header .= "Reply-To: " . $replyto . "\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: multipart/mixed; boundary=\"=A=G=R=O=\"\r\n\r\n";
-        //armando mensaje del email
+        //Armando mensaje del email
         $email_message = "--=A=G=R=O=\r\n";
         $email_message .= "Content-type:text/plain; charset=utf-8\r\n";
         $email_message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
         $email_message .= $CuerpoMensaje . "\r\n\r\n";
         
-        //archivo adjunto  para email    
+        //Archivo adjunto  para email    
         $email_message .= "--=A=G=R=O=\r\n";
         $email_message .= "Content-Type: application/octet-stream; name=\"" . $nombrearchivo . "\"\r\n";
         $email_message .= "Content-Transfer-Encoding: base64\r\n";
@@ -341,7 +359,7 @@ class homeController extends Controller {
         $email_message .= $archivo . "\r\n\r\n";
         $email_message .= "--=A=G=R=O=--";
         
-        //enviamos el email
+        //Enviamos el email
         mail($email_to, $email_subject, $email_message, $headers);
     }
   }

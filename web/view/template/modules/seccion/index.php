@@ -1,4 +1,4 @@
-<!--Contendio Seccion -->
+<!--Contenido Seccion -->
 <?php
 $item = $data[$data['tabla']];
 
@@ -11,7 +11,7 @@ $sumario = !empty($item['Sumario']) ?
 <header class="ms-hero-page ms-hero-bg-dark-light ms-hero-img-city2 mb-4 ms-bg-fixed">
   <div class="container">
     <div class="text-center">
-      <h1 class="color-tms mb-4 animated fadeInDown animation-delay-4">
+      <h1 class="color-tms-dark mb-4 animated fadeInDown animation-delay-4">
         <strong><?php echo $item['Titulo']; ?></strong>
       </h1>
       <?php if (!empty($sumario)) : ?>
@@ -59,8 +59,8 @@ $sumario = !empty($item['Sumario']) ?
       ?>
     </div>
     <div class="text-center">
-      <a href="<?php echo URL_WEB.'contacto'; ?>" class="btn btn-raised btn-royal animated fadeInUp animation-delay-10">
-        <i class="zmdi zmdi-email"></i> Contáctenos</a>
+      <a href="<?php echo URL_WEB.'contacto'; ?>" class="btn btn-raised btn-danger animated fadeInUp animation-delay-10">
+        <i class="zmdi zmdi-email"></i> Cont&aacute;ctenos</a>
     </div>
   </div>
 </header>

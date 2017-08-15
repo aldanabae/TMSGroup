@@ -44,7 +44,7 @@
                 <i class="zmdi zmdi-face"></i> Servicios</a>
             </li>
             <li>
-              <a href="#">
+              <a href="<?php echo URL_WEB.'portfolios'; ?>">
                 <i class="zmdi zmdi-image-o"></i> Portfolio</a>
             </li>
             <li>

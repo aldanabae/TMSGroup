@@ -46,7 +46,7 @@
                         </div>
                       </div>
                       <div>  
-                        <label for="adjuntar archivo" class="col-md-2 control-label color-tms" style="font-size:18px;">Subir curriculum</label>
+                        <label for="adjuntar archivo" class="col-md-2 control-label color-tms" style="font-size:18px;">Subir Curriculum</label>
                         <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
                         <input type="file" name="cvitae" id="cvitae" >
                       </div>
@@ -73,14 +73,14 @@
                     </div>
                     <address class="no-mb">
                       <p class="center-block color-tms mb-2 animated fadeInDown animation-delay-6">
-                        Somos una empresa comprometida con el medio y en la constante búsqueda de la vanguardia tecnológica
-                        es por ésto que tus conocimientos, tu experiencia y tus ganas de sumar y mejorar la vida de los personas
+                        Somos una empresa comprometida con el medio y en la constante b&uacute;squeda de la vanguardia tecnol&oacute;gica
+                        es por &eacute;sto que tus conocimientos, tu experiencia y tus ganas de sumar y mejorar la vida de los personas
                         son intereses fundamentales para nosotros.
                       </p>
                     </br>
                       <p class="center-block color-tms mb-2 animated fadeInDown animation-delay-8">
                         Si tenes ganas de sumarte a un equipo de trabajo distendido y que siempre se apoya en el otro
-                        como herramienta básica de progreso y aprendizaje, <strong> escribinos! </stong>
+                        como herramienta b&aacute;sica de progreso y aprendizaje, <strong> escribinos! </stong>
                       </p>
                     </address>
                 </div>
@@ -89,7 +89,7 @@
             <div class="card card-primary animated fadeInUp animation-delay-7">
                 <div class="card-header">
                   <h3 class="card-title">
-                    <i class="zmdi zmdi-map"></i>Ubicación</h3>
+                    <i class="zmdi zmdi-map"></i>Ubicaci&oacute;n</h3>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.662706696106!2d-68.8569629846902!3d-32.95991348091724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0bad85709df5%3A0xe7458586d1fab31b!2sVidela+R.+8340%2C+Luj%C3%A1n+de+Cuyo%2C+Mendoza!5e0!3m2!1ses!2sar!4v1501703039666" width="100%" height="340" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
@@ -290,16 +290,16 @@
 //         $string_exp = "/^[A-Za-z .'-]+$/";
         
 //         if(!preg_match($email_exp,$email_from)) {
-//           $error_message .= 'El email que ingresaste no parece ser válido. <br />';
+//           $error_message .= 'El email que ingresaste no parece ser v&aacute;lido. <br />';
 //         }
 //         if(!preg_match($string_exp,$nombre)) {
-//           $error_message .= 'El nombre que ingresaste no parece ser válido. <br />';
+//           $error_message .= 'El nombre que ingresaste no parece ser v&aacute;lido. <br />';
 //         }
 //         if(!preg_match($string_exp,$apellido)) {
-//           $error_message .= 'El apellido que ingresaste no parece ser válido. <br />';
+//           $error_message .= 'El apellido que ingresaste no parece ser v&aacute;lido. <br />';
 //         }
 //         if(strlen($mensaje) < 2) {
-//           $error_message .= 'El mensaje que ingresaste no parece ser válido<br />';
+//           $error_message .= 'El mensaje que ingresaste no parece ser v&aacute;lido<br />';
 //         }
 //         if(strlen($error_message) > 0) {
 //           died($error_message);
@@ -313,7 +313,7 @@
 //         $archivo = chunk_split(base64_encode($archivo));
          
 //         // Cuerpo del Email
-//         $CuerpoMensaje .= "A continuación más detalles:\r\n\r\n";
+//         $CuerpoMensaje .= "A continuaci&oacute;n m&aacute;s detalles:\r\n\r\n";
 //         $CuerpoMensaje .= "<b>Nombre:</b> ".clean_string($nombre)."\r\n";
 //         $CuerpoMensaje .= "<b>Aellido:</b> ".clean_string($apellido)."\r\n";
 //         $CuerpoMensaje .= "<b>DNI:</b> ".clean_string($dni)."\r\n";

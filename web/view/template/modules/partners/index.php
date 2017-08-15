@@ -3,7 +3,7 @@
     <div class="container">
         <div class="text-center">
             <h1 class="no-m ms-site-title color-tms center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Partners</h1>
-            <p class="lead lead-lg color-light text-center color-white center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Nuestros aliados tecnológicos y comerciales</p>
+            <p class="lead lead-lg color-light text-center color-white center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Nuestros aliados tecnol&oacute;gicos y comerciales</p>
         </div>
     </div>
 </div>

@@ -1,5 +1,4 @@
-<!-- <div>
-  <h3>CONTENIDO DEL HOME</h3> -->
+
 
 <!INICIO Slider-->
 
@@ -107,7 +106,7 @@
 <div class="container mt-4">
     <h1 class="text-center color-tms mb-2 wow fadeInDown animation-delay-4">Nuestros Servicios</h1>
     <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4 color-aqua"> 
-    Mejorá los resultados de tu negocio
+    Mejor&aacute; los resultados de tu negocio
     </p>
 	</br>
     <?php 	foreach ($data['servicios'] as $serv) {				
@@ -119,7 +118,7 @@
 	        </span>
 	        <h4 class="color-<?php echo $serv['Estilo']; ?>"><?php echo $serv['Titulo']; ?></h4>
 	        <p class=""><?php echo $serv['Descripcion']; ?></p>
-	        <a href="<?php echo URL_WEB.'seccion/'; ?><?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver Más</a>
+	        <a href="<?php echo URL_WEB.'seccion/'; ?><?php echo $serv['URL']; ?>" class="btn btn-<?php echo $serv['Estilo']; ?> btn-raised">Ver M&aacute;s</a>
       	</div>
     </div>
     <?php 	}				
@@ -143,19 +142,19 @@
 
         	<div class="col-md-6 col-md-pull-6 pr-6">
           		<p class="wow fadeInLeft animation-delay-6" style="visibility: visible; animation-name: fadeInLeft;">
-	          		Creamos herramientas informáticas cuando tu negocio, empresa o entidad tiene una necesidad y 
-	          		no existe en el mercado un producto que se adecúe a ella.
+	          		Creamos herramientas inform&aacute;ticas cuando tu negocio, empresa o entidad tiene una necesidad y 
+	          		no existe en el mercado un producto que se adec&uacute;e a ella.
           		</p>
 	          	<p class="wow fadeInLeft animation-delay-7" style="visibility: visible; animation-name: fadeInLeft;">
-	          		Desarrollamos diferentes tipos de software con multiples lenguajes de programación como aplicaciones de escritorio, aplicaciones web, plataformas de gestión de entidades.
+	          		Desarrollamos diferentes tipos de software con multiples lenguajes de programaci&oacute;n como aplicaciones de escritorio, aplicaciones web, plataformas de gesti&oacute;n de entidades.
 	          	</p>
 	          	<p class="wow fadeInLeft animation-delay-8" style="visibility: visible; animation-name: fadeInLeft;">
 		          	Creemos en los nuevos conceptos de aplicaciones a medida, conscientes de que el 80% del tiempo que pasamos con 
-		          	nuestros smartphones lo dedicamos a las aplicaciones móviles. Es por ellos que nos dedicamos a adaptar tus necesidades, tambien al mundo de las apps.
+		          	nuestros smartphones lo dedicamos a las aplicaciones m&oacute;viles. Es por ellos que nos dedicamos a adaptar tus necesidades, tambien al mundo de las apps.
         		</p>
 	          	<div class="text-center">
 	            	<a href="<?php echo URL_WEB.'seccion/software-factoring'; ?>" class="btn btn-primary btn-raised wow flipInX animation-delay-16" style="visibility: visible; animation-name: flipInX;">
-	              		<i class="zmdi zmdi-case"></i>Saber más
+	              		<i class="zmdi zmdi-case"></i>Saber m&aacute;s
 	              	</a>
 	          	</div>
         	</div>
@@ -190,7 +189,7 @@
 	          <?php echo $plan['Descripcion']; ?>
 	          <div class="text-center">
 	            <a href="<?php echo URL_WEB.'contacto'; ?>" class="btn btn-<?php echo $plan['Estilo']; ?> btn-raised">
-	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
+	              <i class="mr-2 fa fa-envelope"></i> Cons&uacute;ltenos</a>
 	          </div>
 	        </div>
       	</div>
@@ -198,8 +197,8 @@
     </div>
 
     <div class="text-center mb-4">
-      <p style="color: #757575;">Planes sujetos a disponibilidad técnica y geográfica.</p>
-      <p style="color: #757575;">* Tarifas modificables por parte de TMS Group por variaciones en la economía nacional. ** Unidad de medida estimativa.</p>
+      <p style="color: #757575;">Planes sujetos a disponibilidad t&eacute;cnica y geogr&aacute;fica.</p>
+      <p style="color: #757575;">* Tarifas modificables por parte de TMS Group por variaciones en la econom&iacute;a nacional. ** Unidad de medida estimativa.</p>
     </div>
 </div>
 
@@ -209,7 +208,34 @@
 
 <!INICIO Portfolio-->
 
+<div class="container mt-6">
+    <h1 class="text-center color-tms mb-4">Portfolio</h1>
+    <div class="owl-dots">
+    </div>
+	<div class="owl-carousel owl-theme">
+		<?php 	foreach ($data['portfolio'] as $port) {
+					$url_imagen = URL_GAL.'portfolio/images/IM_'.$port['Imagen'];				
+		?>
+     	<div class="<?php echo $port['Estilo']; ?> animation-delay-<?php echo $port['Delay']; ?>">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="<?php echo $url_imagen; ?>" alt="..." class="img-responsive">
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class=""><?php echo $port['Titulo']; ?></h3>
+              <p><?php echo $port['Descripcion']; ?></p>
+              <p class="text-right">
+                <a href="<?php echo URL_WEB.'portfolio/'; ?><?php echo $port['URL']; ?>" class="btn btn-aqua btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> Ver M&aacute;s</a>
+              </p>
+            </div>
+      	</div>
+      	<?php 	}				
+		?>
+	</div>
+</div>
 
 <!INICIO Portfolio-->
-<!-- </div> -->
+
 

@@ -14,7 +14,7 @@
 	          <?php echo $plan['Descripcion']; ?>
 	          <div class="text-center">
 	            <a href="<?php echo URL_WEB.'contacto'; ?>" class="btn btn-<?php echo $plan['Estilo']; ?> btn-raised">
-	              <i class="mr-2 fa fa-envelope"></i> Consúltenos</a>
+	              <i class="mr-2 fa fa-envelope"></i> Cons&uacute;ltenos</a>
 	          </div>
 	        </div>
       	</div>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="text-center mb-4">
-      <p style="color: #000;">Planes sujetos a disponibilidad técnica y geográfica.</p>
-      <p style="color: #000;">* Tarifas modificables por parte de TMS Group por variaciones en la economía nacional. ** Unidad de medida estimativa.</p>
+      <p style="color: #000;">Planes sujetos a disponibilidad t&eacute;cnica y geogr&aacute;fica.</p>
+      <p style="color: #000;">* Tarifas modificables por parte de TMS Group por variaciones en la econom&iacute;a nacional. ** Unidad de medida estimativa.</p>
     </div>
 </div>
