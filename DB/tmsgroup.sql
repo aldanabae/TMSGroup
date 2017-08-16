@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-08-2017 a las 22:10:33
+-- Tiempo de generación: 16-08-2017 a las 19:46:46
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -35,6 +35,22 @@ CREATE TABLE `aws_archivo` (
   `Posicion` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `aws_archivo`
+--
+
+INSERT INTO `aws_archivo` (`ID`, `Tabla`, `TablaID`, `Titulo`, `Imagen`, `Posicion`) VALUES
+(1, 'portfolio', '1', 'InstalaciÃ³n Cableado de FO', '37136253.jpg', 1),
+(3, 'portfolio', '1', 'Armado e instalaciÃ³n completa de equipamiento en la Sala de Control', '630693.jpg', 2),
+(4, 'portfolio', '1', 'Racks completos ', '23506909.jpg', 3),
+(15, 'portfolio', '4', 'SincronizaciÃ³n con sistema Bejerman', '83228794.jpg', 3),
+(11, 'portfolio', '4', 'Login app mobile', '98168442.png', 1),
+(16, 'portfolio', '4', 'GestiÃ³n de clientes, productos, vendedores, pedidos y presupuestos', '56404867.jpg', 4),
+(8, 'portfolio', '2', 'Obra de gran envergadura', '7994051.jpg', 1),
+(9, 'portfolio', '2', 'Cableado de red completo de todo el estadio', '54628311.jpg', 2),
+(10, 'portfolio', '2', 'Sala de Racks completa', '59251068.jpg', 3),
+(14, 'portfolio', '4', 'Panel principal web', '76349314.jpg', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -59,9 +75,10 @@ CREATE TABLE `aws_banner_top` (
 --
 
 INSERT INTO `aws_banner_top` (`ID`, `Publico`, `Titulo`, `Descripcion`, `Posicion`, `Imagen`, `AlineaText`, `IsCrop`, `TextButton`, `URL`) VALUES
-(1, 1, 'Banner1', '<h1>Desarrollos Web y M&oacute;vil a medida</h1>\r\n\r\n<h2>Ideamos soluciones integrales a partir de tus necesidades para crear el software ideal para tu negocio.</h2>\r\n', 1, '48814863.png', 'left', 1, '', ''),
+(1, 1, 'Banner1', '<h1>Desarrollos Web y Mobile a medida</h1>\r\n\r\n<h2>Ideamos soluciones integrales a partir de tus necesidades para crear el software ideal para tu negocio.</h2>\r\n', 1, '48814863.png', 'left', 1, '', ''),
 (2, 1, 'Banner2', '<h1>Internet de Alta Velocidad</h1>\r\n\r\n<h2>Proveemos el servicio de internet mas confiable del mercado las 24 horas, sin necesidad&nbsp;de telefon&iacute;a ni cable, con planes que se ajustan a tus necesidades.</h2>\r\n', 2, '21675336.png', 'left', 1, '', ''),
-(3, 1, 'Banner3', '<h1>Soporte y Consultor&iacute;a OnSite</h1>\r\n\r\n<h2>Somos especialistas en soporte IT&nbsp;y ofrecemos consultoria especializada en tecnolog&iacute;a y sistemas inform&aacute;ticos para tu empresa.</h2>\r\n\r\n<p>&nbsp;</p>\r\n', 3, '47062711.png', 'left', 1, '', '');
+(3, 1, 'Banner3', '<h1>Soporte y Consultor&iacute;a OnSite</h1>\r\n\r\n<h2>Somos especialistas en soporte IT&nbsp;y ofrecemos consultoria especializada en tecnolog&iacute;a y sistemas inform&aacute;ticos para tu empresa.</h2>\r\n', 3, '47062711.png', 'left', 1, '', ''),
+(4, 1, 'Banner4', '<h1>Especialistas en Outsourcing</h1>\r\n\r\n<h2>Somos responsables&nbsp;de administrar e integrar hardware y plataformas de software, a fin de ayudar a tu empresa&nbsp;a gestionar la informaci&oacute;n y las estrategias de negocios.</h2>\r\n', 4, '61997144.png', 'left', 1, '', '');
 
 -- --------------------------------------------------------
 
@@ -765,7 +782,8 @@ INSERT INTO `aws_partners` (`ID`, `Publico`, `Nombre`, `Descripcion`, `Imagen`, 
 (9, 1, 'Siemens', '', '81486742.png', 'siemens', 8),
 (10, 1, 'Asterisk', '', '81401263.png', 'asterisk', 9),
 (11, 1, 'Grandstream', '', '86016341.jpg', 'grandstream', 10),
-(12, 1, 'MikroTik', '', '72882617.png', 'mikrotik', 11);
+(12, 1, 'MikroTik', '', '72882617.png', 'mikrotik', 11),
+(13, 1, 'Hikvision', '', '79911665.jpg', 'hikvision', 12);
 
 -- --------------------------------------------------------
 
@@ -825,6 +843,7 @@ CREATE TABLE `aws_portfolio` (
   `ID` int(10) NOT NULL,
   `Publico` tinyint(1) NOT NULL DEFAULT '1',
   `Titulo` varchar(100) NOT NULL,
+  `Subtitulo` varchar(250) DEFAULT NULL,
   `Descripcion` text,
   `Imagen` varchar(60) DEFAULT NULL,
   `URL` varchar(150) DEFAULT NULL,
@@ -832,6 +851,8 @@ CREATE TABLE `aws_portfolio` (
   `Estilo` varchar(60) DEFAULT NULL,
   `Delay` int(3) NOT NULL DEFAULT '0',
   `Color` varchar(20) DEFAULT NULL,
+  `Categoria` varchar(100) DEFAULT NULL,
+  `Anio` varchar(10) DEFAULT NULL,
   `Posicion` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -839,10 +860,10 @@ CREATE TABLE `aws_portfolio` (
 -- Volcado de datos para la tabla `aws_portfolio`
 --
 
-INSERT INTO `aws_portfolio` (`ID`, `Publico`, `Titulo`, `Descripcion`, `Imagen`, `URL`, `Website`, `Estilo`, `Delay`, `Color`, `Posicion`) VALUES
-(1, 1, 'AutÃ³dromo Termas de RÃ­o Hondo', '<p>Se realiz&oacute;&nbsp;la instalaci&oacute;n completa de m&aacute;s de 10 kms de Fibra &Oacute;ptica subterranea a lo largo de todo el circuito, siguiendo estrictas normas de seguridad y controlando su correcto funcionamiento, con el fin de monitorear y visualizar con mas de 30 c&aacute;maras el transcurso de cada carrera en la oficina de Race Control.&nbsp;</p>\r\n', '19376212.jpg', 'autodromo-termas-de-rio-hondo', '', 'card card-dark-inverse', 6, 'success', 1),
-(2, 1, 'Estadio Fiscal de Talca - Chile', '<p>El proyecto incluy&oacute;&nbsp;el relevamiento de las condiciones previo a la instalaci&oacute;n, la situaci&oacute;n de los elementos de IT reutilizables, el presupuesto, puesta en marcha de la instalaci&oacute;n, cableado, testeo y mantenimiento inicial de la infraestructura realizada. Se bas&oacute; en los principios operativos est&aacute;ndares del mercado,&nbsp;bajo recomendaciones ITIL v3 para los ISO/IEC 200001.</p>\r\n', '83713947.jpg', 'estadio-fiscal-de-talca-chile', '', 'card ', 8, 'royal', 2),
-(4, 1, 'Durox EnologÃ­a S.R.L.', '<p>Sistema integral de gestion, en plataformas web y m&oacute;vil, creado a medida para la empresa Durox Enolog&iacute;a S.R.L., el mismo se encarga de la gesti&oacute;n de clientes, registro de visitas, generaci&oacute;n y seguimiento de presupuestos y posteriores pedidos, manejo de vendedores, productos y generaci&oacute;n de estadisticas en base a par&aacute;metros de inter&eacute;s de la organizaci&oacute;n.&nbsp;</p>\r\n', '74709332.jpg', 'durox-enologia-srl', '', 'card card-dark-inverse', 10, 'warning', 3);
+INSERT INTO `aws_portfolio` (`ID`, `Publico`, `Titulo`, `Subtitulo`, `Descripcion`, `Imagen`, `URL`, `Website`, `Estilo`, `Delay`, `Color`, `Categoria`, `Anio`, `Posicion`) VALUES
+(1, 1, 'AutÃ³dromo Termas de RÃ­o Hondo', 'Obra de Networking de alta calidad', '<p>Se realiz&oacute;&nbsp;la instalaci&oacute;n completa de m&aacute;s de 10 kms de Fibra &Oacute;ptica subterranea a lo largo de todo el circuito, siguiendo estrictas normas de seguridad y controlando su correcto funcionamiento, con el fin de monitorear y visualizar con mas de 30 c&aacute;maras el transcurso de cada carrera en la oficina de Race Control.&nbsp;</p>\r\n', '19376212.jpg', 'autodromo-termas-de-rio-hondo', '', 'card card-dark-inverse', 6, 'success', 'Networking', '2013', 1),
+(2, 1, 'Estadio Fiscal de Talca - Chile', 'Obra de cableado en el paÃ­s trasandino', '<p>El proyecto incluy&oacute;&nbsp;el relevamiento de las condiciones previo a la instalaci&oacute;n, la situaci&oacute;n de los elementos de IT reutilizables, el presupuesto, puesta en marcha de la instalaci&oacute;n, cableado, testeo y mantenimiento inicial de la infraestructura realizada. Se bas&oacute; en los principios operativos est&aacute;ndares del mercado,&nbsp;bajo recomendaciones ITIL v3 para los ISO/IEC 200001.</p>\r\n', '83713947.jpg', 'estadio-fiscal-de-talca-chile', '', 'card ', 8, 'royal', 'Networking', '2015', 2),
+(4, 1, 'Durox EnologÃ­a S.R.L.', 'Sistema de gestiÃ³n en plataformas web y mobile', '<p>Sistema integral de gesti&oacute;n, en plataformas web y m&oacute;vil, creado a medida para la empresa Durox Enolog&iacute;a S.R.L., el mismo se encarga de la gesti&oacute;n de clientes, registro de visitas, generaci&oacute;n y seguimiento de presupuestos y posteriores pedidos, manejo de vendedores, productos y generaci&oacute;n de estadisticas en base a par&aacute;metros de inter&eacute;s de la organizaci&oacute;n.&nbsp;</p>\r\n', '74709332.jpg', 'durox-enologia-srl', '', 'card card-dark-inverse', 10, 'warning', 'Desarrollo', '2015', 3);
 
 -- --------------------------------------------------------
 
@@ -3293,7 +3314,374 @@ INSERT INTO `aws_sys_tracking` (`ID`, `Tabla`, `TablaID`, `Filename`, `UrlVisite
 (2107, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-10', '16:40:13', 0),
 (2108, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-10', '16:41:15', 0),
 (2109, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-10', '16:44:15', 0),
-(2110, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-10', '16:54:46', 0);
+(2110, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-10', '16:54:46', 0),
+(2111, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '10:27:15', 0),
+(2112, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '11:57:53', 0),
+(2113, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '11:59:54', 0),
+(2114, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:00:17', 0),
+(2115, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:01:09', 0),
+(2116, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:03:41', 0),
+(2117, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:03:56', 0),
+(2118, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:30:17', 0),
+(2119, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:31:13', 0),
+(2120, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:32:10', 0),
+(2121, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:32:55', 0),
+(2122, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:33:26', 0),
+(2123, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:35:24', 0),
+(2124, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:35:33', 0),
+(2125, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:35:44', 0),
+(2126, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:37:04', 0),
+(2127, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:37:10', 0),
+(2128, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:37:49', 0),
+(2129, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:37:53', 0),
+(2130, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:37:57', 0),
+(2131, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:38:07', 0),
+(2132, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:38:32', 0),
+(2133, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:38:42', 0),
+(2134, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:39:29', 0),
+(2135, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:39:36', 0),
+(2136, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:41:15', 0),
+(2137, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:41:54', 0),
+(2138, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:42:02', 0),
+(2139, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:42:27', 0),
+(2140, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:43:02', 0),
+(2141, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:43:20', 0),
+(2142, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:44:05', 0),
+(2143, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:44:49', 0),
+(2144, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:44:54', 0),
+(2145, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:45:02', 0),
+(2146, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:45:08', 0),
+(2147, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:45:21', 0),
+(2148, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:45:39', 0),
+(2149, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/servicios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:45:54', 0),
+(2150, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:46:49', 0),
+(2151, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:47:16', 0),
+(2152, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:47:19', 0),
+(2153, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:48:57', 0),
+(2154, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '12:50:15', 0),
+(2155, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:07:14', 0),
+(2156, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:11:16', 0),
+(2157, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:11:24', 0),
+(2158, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:11:51', 0),
+(2159, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:12:07', 0),
+(2160, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:12:29', 0),
+(2161, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:13:08', 0),
+(2162, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:13:43', 0),
+(2163, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:25:01', 0),
+(2164, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:27:47', 0),
+(2165, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:27:52', 0),
+(2166, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:27:56', 0),
+(2167, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:00', 0),
+(2168, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:07', 0),
+(2169, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:13', 0),
+(2170, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:17', 0),
+(2171, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:21', 0),
+(2172, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:33', 0),
+(2173, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:28:39', 0),
+(2174, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:30:18', 0),
+(2175, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '13:31:50', 0),
+(2176, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:42:09', 0),
+(2177, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:43:03', 0),
+(2178, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:43:51', 0),
+(2179, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:46:40', 0),
+(2180, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:48:52', 0),
+(2181, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:50:26', 0),
+(2182, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:51:21', 0),
+(2183, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:52:06', 0),
+(2184, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:52:23', 0),
+(2185, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:58:21', 0),
+(2186, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:58:39', 0),
+(2187, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '14:59:46', 0),
+(2188, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:00:11', 0),
+(2189, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:00:35', 0),
+(2190, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:16:22', 0),
+(2191, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:16:40', 0),
+(2192, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:17:02', 0),
+(2193, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:17:31', 0),
+(2194, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:17:42', 0),
+(2195, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '15:47:33', 0),
+(2196, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:02:10', 0),
+(2197, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:02:30', 0),
+(2198, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:07:13', 0),
+(2199, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:11:51', 0),
+(2200, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:12:18', 0),
+(2201, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:15:50', 0),
+(2202, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:16:12', 0),
+(2203, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:19:26', 0),
+(2204, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:19:33', 0),
+(2205, '', '0', '/TMSGroup/index.php', '', '::1', 'Dell-PC', 'Chrome / 60.0.3112.90', '2017-08-11', '16:46:06', 0),
+(2206, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:54:03', 0),
+(2207, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:54:09', 0),
+(2208, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:54:15', 0),
+(2209, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '16:54:22', 0),
+(2210, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '17:22:15', 0),
+(2211, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '17:22:50', 0),
+(2212, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '17:29:47', 0),
+(2213, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '17:30:04', 0),
+(2214, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '17:35:15', 0),
+(2215, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-11', '18:06:19', 0),
+(2216, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '11:30:10', 0),
+(2217, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '13:22:53', 0),
+(2218, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '13:25:02', 0),
+(2219, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '13:25:07', 0),
+(2220, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:53:49', 0),
+(2221, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:53:54', 0),
+(2222, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:54:24', 0),
+(2223, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:54:28', 0),
+(2224, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:54:33', 0),
+(2225, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:54:36', 0),
+(2226, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:54:40', 0),
+(2227, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '14:57:05', 0),
+(2228, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:29:12', 0),
+(2229, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:29:42', 0),
+(2230, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:30:01', 0),
+(2231, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:32:30', 0),
+(2232, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:32:59', 0),
+(2233, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:34:06', 0),
+(2234, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:34:10', 0),
+(2235, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:34:19', 0),
+(2236, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:35:02', 0),
+(2237, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '15:35:04', 0),
+(2238, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:02:39', 0),
+(2239, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:08:42', 0),
+(2240, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:09:18', 0),
+(2241, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:09:30', 0),
+(2242, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:19:52', 0),
+(2243, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:20:07', 0),
+(2244, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:25:08', 0),
+(2245, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:26:08', 0),
+(2246, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:27:41', 0),
+(2247, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:37:58', 0),
+(2248, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:38:46', 0),
+(2249, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/prueba/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:51:20', 0),
+(2250, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:54:33', 0),
+(2251, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:55:00', 0),
+(2252, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:55:03', 0),
+(2253, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:56:40', 0),
+(2254, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:56:44', 0),
+(2255, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:56:47', 0),
+(2256, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:57:07', 0),
+(2257, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:59:03', 0),
+(2258, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:59:20', 0),
+(2259, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '16:59:58', 0),
+(2260, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:00:23', 0),
+(2261, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:00:54', 0),
+(2262, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:01:26', 0),
+(2263, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:02:24', 0),
+(2264, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:02:47', 0),
+(2265, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:03:26', 0),
+(2266, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:04:21', 0),
+(2267, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:04:52', 0),
+(2268, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:07:36', 0),
+(2269, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:08:06', 0),
+(2270, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:08:15', 0),
+(2271, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:09:03', 0),
+(2272, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:12:34', 0),
+(2273, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:12:40', 0),
+(2274, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:17:57', 0),
+(2275, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:18:00', 0),
+(2276, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:19:07', 0),
+(2277, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:19:15', 0),
+(2278, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:19:28', 0),
+(2279, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:19:32', 0),
+(2280, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:19:40', 0),
+(2281, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:20:22', 0),
+(2282, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:20:33', 0),
+(2283, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:21:02', 0),
+(2284, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:21:05', 0),
+(2285, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:26:49', 0),
+(2286, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:28:11', 0),
+(2287, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:28:23', 0),
+(2288, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:31:26', 0),
+(2289, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:32:01', 0),
+(2290, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:39:17', 0),
+(2291, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '17:46:37', 0),
+(2292, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '18:00:49', 0),
+(2293, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '18:08:14', 0),
+(2294, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '18:08:17', 0),
+(2295, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-14', '18:08:34', 0),
+(2296, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:13:13', 0),
+(2297, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:32:50', 0),
+(2298, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:32:54', 0),
+(2299, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:33:06', 0),
+(2300, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:36:39', 0),
+(2301, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:36:55', 0),
+(2302, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:37:51', 0),
+(2303, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:38:28', 0),
+(2304, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:38:38', 0),
+(2305, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:39:42', 0),
+(2306, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:39:46', 0),
+(2307, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:41:28', 0),
+(2308, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:41:45', 0),
+(2309, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:41:51', 0),
+(2310, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:50:50', 0),
+(2311, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:51:56', 0),
+(2312, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:52:09', 0),
+(2313, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:53:33', 0),
+(2314, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '11:54:27', 0),
+(2315, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:12:28', 0),
+(2316, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:28:00', 0),
+(2317, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:47:43', 0),
+(2318, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:47:51', 0),
+(2319, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/servicios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:47:55', 0),
+(2320, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:48:09', 0),
+(2321, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:48:17', 0),
+(2322, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:48:31', 0),
+(2323, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:48:43', 0),
+(2324, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:49:00', 0);
+INSERT INTO `aws_sys_tracking` (`ID`, `Tabla`, `TablaID`, `Filename`, `UrlVisited`, `IP`, `Host`, `Navegador`, `Fecha`, `Hora`, `IsHome`) VALUES
+(2325, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:49:15', 0),
+(2326, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '12:49:55', 0),
+(2327, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:09:14', 0),
+(2328, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:10:26', 0),
+(2329, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:12:25', 0),
+(2330, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:16:12', 0),
+(2331, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:16:33', 0),
+(2332, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:19:04', 0),
+(2333, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:19:16', 0),
+(2334, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:22:36', 0),
+(2335, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:23:10', 0),
+(2336, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:23:30', 0),
+(2337, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:24:05', 0),
+(2338, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:24:29', 0),
+(2339, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:25:53', 0),
+(2340, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/?q=outsourcing', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:26:28', 0),
+(2341, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/?q=App', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:26:42', 0),
+(2342, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/?q=consulta', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:26:53', 0),
+(2343, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/?q=consulta', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:32:15', 0),
+(2344, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '13:32:19', 0),
+(2345, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:47:14', 0),
+(2346, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:50:33', 0),
+(2347, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:51:11', 0),
+(2348, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:52:02', 0),
+(2349, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:52:16', 0),
+(2350, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:55:33', 0),
+(2351, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:56:28', 0),
+(2352, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '14:58:28', 0),
+(2353, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:01:20', 0),
+(2354, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:01:24', 0),
+(2355, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:03:27', 0),
+(2356, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:03:32', 0),
+(2357, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:05:53', 0),
+(2358, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:07:49', 0),
+(2359, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:13:31', 0),
+(2360, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:18:20', 0),
+(2361, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:19:05', 0),
+(2362, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-15', '15:32:52', 0),
+(2363, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '15:59:44', 0),
+(2364, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:01:15', 0),
+(2365, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-15', '16:02:50', 0),
+(2366, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:15:55', 0),
+(2367, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:21:37', 0),
+(2368, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:23:01', 0),
+(2369, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:23:12', 0),
+(2370, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:24:13', 0),
+(2371, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-15', '16:24:33', 0),
+(2372, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:42:44', 0),
+(2373, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:43:14', 0),
+(2374, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:43:28', 0),
+(2375, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:45:48', 0),
+(2376, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:47:51', 0),
+(2377, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:48:01', 0),
+(2378, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:50:24', 0),
+(2379, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:50:59', 0),
+(2380, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:51:18', 0),
+(2381, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:53:17', 0),
+(2382, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:54:02', 0),
+(2383, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:54:25', 0),
+(2384, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:58:06', 0),
+(2385, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:58:44', 0),
+(2386, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:58:48', 0),
+(2387, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:58:59', 0),
+(2388, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '16:59:21', 0),
+(2389, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '17:01:49', 0),
+(2390, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '17:02:02', 0),
+(2391, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-15', '17:13:26', 0),
+(2392, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '12:22:22', 0),
+(2393, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '12:31:58', 0),
+(2394, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:01:22', 0),
+(2395, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:01:40', 0),
+(2396, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:01:53', 0),
+(2397, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:02:12', 0),
+(2398, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:02:36', 0),
+(2399, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:03:20', 0),
+(2400, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:04:39', 0),
+(2401, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:04:50', 0),
+(2402, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:07:08', 0),
+(2403, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:07:12', 0),
+(2404, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:08:27', 0),
+(2405, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:09:17', 0),
+(2406, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:09:21', 0),
+(2407, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:10:02', 0),
+(2408, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:10:22', 0),
+(2409, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:10:36', 0),
+(2410, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:10:57', 0),
+(2411, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:17:37', 0),
+(2412, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:23:51', 0),
+(2413, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:23:57', 0),
+(2414, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:24:09', 0),
+(2415, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:24:19', 0),
+(2416, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:24:28', 0),
+(2417, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:25:09', 0),
+(2418, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:25:47', 0),
+(2419, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:27:19', 0),
+(2420, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:27:24', 0),
+(2421, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:32:13', 0),
+(2422, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:32:57', 0),
+(2423, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:33:20', 0),
+(2424, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:33:45', 0),
+(2425, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:34:40', 0),
+(2426, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:34:45', 0),
+(2427, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:35:44', 0),
+(2428, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:36:32', 0),
+(2429, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:38:23', 0),
+(2430, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:39:00', 0),
+(2431, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:39:23', 0),
+(2432, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:39:52', 0),
+(2433, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:40:32', 0),
+(2434, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:40:37', 0),
+(2435, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:40:51', 0),
+(2436, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:41:02', 0),
+(2437, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:41:19', 0),
+(2438, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:42:10', 0),
+(2439, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:42:21', 0),
+(2440, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto?q=lalala', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:42:44', 0),
+(2441, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:42:50', 0),
+(2442, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:43:27', 0),
+(2443, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:43:32', 0),
+(2444, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Firefox / 54.0', '2017-08-16', '13:45:14', 0),
+(2445, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Firefox / 54.0', '2017-08-16', '13:52:45', 0),
+(2446, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:55:23', 0),
+(2447, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:55:57', 0),
+(2448, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Firefox / 54.0', '2017-08-16', '13:56:36', 0),
+(2449, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '13:57:32', 0),
+(2450, 'portfolio', '1', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/autodromo-termas-de-rio-hondo', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:58:06', 0),
+(2451, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:58:12', 0),
+(2452, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-16', '13:58:36', 0),
+(2453, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:04:55', 0),
+(2454, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:05:56', 0),
+(2455, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:08:40', 0),
+(2456, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:22:33', 0),
+(2457, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:23:44', 0),
+(2458, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:23:51', 0),
+(2459, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:23:54', 0),
+(2460, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:24:48', 0),
+(2461, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:31:45', 0),
+(2462, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:32:15', 0),
+(2463, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:33:13', 0),
+(2464, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:34:02', 0),
+(2465, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:34:15', 0),
+(2466, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:35:53', 0),
+(2467, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:36:01', 0),
+(2468, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:36:13', 0),
+(2469, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:36:29', 0),
+(2470, 'partners', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/partners', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:36:44', 0),
+(2471, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:36:57', 0),
+(2472, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:37:01', 0),
+(2473, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/servicios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:37:17', 0),
+(2474, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:37:33', 0),
+(2475, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/empresa', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:37:44', 0),
+(2476, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.90', '2017-08-16', '14:38:35', 0);
 
 -- --------------------------------------------------------
 
@@ -3321,7 +3709,7 @@ CREATE TABLE `aws_sys_user` (
 --
 
 INSERT INTO `aws_sys_user` (`ID`, `Publico`, `Nombre`, `Email`, `Usuario`, `Contrasenia`, `Imagen`, `Descripcion`, `RolID`, `FechaCreacion`, `UltimaVez`, `KeyCookie`) VALUES
-(1, 1, 'Creator Owner', 'admin@gmail.com', 'admin', '09c133a7d8e9544350d4f1ba5d7686faee445d4a', '', '', '0', '2015-01-01 03:00:00', '2017-08-10 14:52:31', '436467687');
+(1, 1, 'Creator Owner', 'admin@gmail.com', 'admin', '09c133a7d8e9544350d4f1ba5d7686faee445d4a', '', '', '0', '2015-01-01 03:00:00', '2017-08-16 16:54:50', '277044407');
 
 --
 -- Índices para tablas volcadas
@@ -3545,12 +3933,12 @@ ALTER TABLE `aws_sys_user`
 -- AUTO_INCREMENT de la tabla `aws_archivo`
 --
 ALTER TABLE `aws_archivo`
-  MODIFY `ID` bigint(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` bigint(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `aws_banner_top`
 --
 ALTER TABLE `aws_banner_top`
-  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `aws_banner_type`
 --
@@ -3640,7 +4028,7 @@ ALTER TABLE `aws_paragraph`
 -- AUTO_INCREMENT de la tabla `aws_partners`
 --
 ALTER TABLE `aws_partners`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `aws_planes`
 --
@@ -3655,7 +4043,7 @@ ALTER TABLE `aws_plantillas`
 -- AUTO_INCREMENT de la tabla `aws_portfolio`
 --
 ALTER TABLE `aws_portfolio`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `aws_posts`
 --
@@ -3705,7 +4093,7 @@ ALTER TABLE `aws_sys_tables`
 -- AUTO_INCREMENT de la tabla `aws_sys_tracking`
 --
 ALTER TABLE `aws_sys_tracking`
-  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2111;
+  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2477;
 --
 -- AUTO_INCREMENT de la tabla `aws_sys_user`
 --
