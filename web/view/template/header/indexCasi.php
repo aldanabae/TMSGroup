@@ -48,7 +48,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
       </div>
     </div>
     
-    <div class="sb-site-container"><!--Open sb-site-container-->
+    <div class="sb-site-container">
       <header class="ms-header ms-header-primary">
         <div class="container container-full">
           <div class="ms-title">
@@ -88,9 +88,6 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
                 <i class="zmdi zmdi-search"></i>
               </label>
             </form>
-            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-tms sb-toggle-left animated zoomInDown animation-delay-10">
-              <i class="zmdi zmdi-menu"></i>
-            </a>
           </div>
         </div>
       </header>
@@ -209,16 +206,9 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
             </ul>
           </div>
           <!-- navbar-collapse collapse -->
-          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+          <!-- <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
             <i class="zmdi zmdi-menu"></i>
-          </a>
+          </a> -->
         </div>
         <!-- container -->
       </nav>
-
-
-
-      
-      
-      
-  

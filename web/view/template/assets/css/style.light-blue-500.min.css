@@ -4486,7 +4486,7 @@ blockquote.ms-blockquote footer {
   color: #000;
 }
 .btn-circle.btn-circle-primary {
-  color: #124D6F; /*Cambio color boton compartir color: #03a9f4;*/
+  color: #03a9f4; 
 }
 .btn-circle.btn-circle-primary::before {
   background-color: #124D6F; /*Cambio color fondo bot compartir background-color: #03a9f4;*/
@@ -4536,16 +4536,25 @@ blockquote.ms-blockquote footer {
 .btn-circle.btn-circle-royal::before {
   background-color: #9c27b0;
 }
-.btn-circle.btn-circle-royal:hover, .btn-circle.btn-circle-tms:focus {
+.btn-circle.btn-circle-royal:hover, .btn-circle.btn-circle-royal:focus {
   color: #fff;
 }
-.btn-circle.btn-circle-tms {
+.btn-circle.btn-circle-tms {/*Cambio Agrego color tms*/
   color: #124D6F;
 }
-.btn-circle.btn-circle-tms::before {
+.btn-circle.btn-circle-tms::before {/*Cambio Agrego color tms*/
   background-color: #124D6F;
 }
-.btn-circle.btn-circle-tms:hover, .btn-circle.btn-circle-tms:focus {
+.btn-circle.btn-circle-tms:hover, .btn-circle.btn-circle-tms:focus {/*Cambio Agrego color tms*/
+  color: #fff;
+}
+.btn-circle.btn-circle-aqua {/*Cambio Agrego color aqua*/
+  color: #20B2AA;
+}
+.btn-circle.btn-circle-aqua::before {/*Cambio Agrego color aqua*/
+  background-color: #20B2AA;
+}
+.btn-circle.btn-circle-aqua:hover, .btn-circle.btn-circle-aqua:focus {/*Cambio Agrego color aqua*/
   color: #fff;
 }
 .btn-circle.btn-facebook {
@@ -4870,7 +4879,12 @@ blockquote.ms-blockquote footer {
 .btn-circle.btn-circle-raised.btn-circle-tms::before {/*Cambio Agrego color tms*/
   background-color: #41708B;
 }
-
+.btn-circle.btn-circle-raised.btn-circle-aqua {/*Cambio Agrego color aqua*/
+  background-color: #20B2AA; 
+}
+.btn-circle.btn-circle-raised.btn-circle-aqua::before {/*Cambio Agrego color aqua*/
+  background-color: #4CC1BB;
+}
 .btn-circle.btn-circle-raised.btn-facebook {
   background-color: #3b5998;
 }
@@ -8938,13 +8952,12 @@ pre.line-numbers > code {
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 4rem; 
+  margin-bottom: 5rem; 
   margin-left: -10000px;
   padding: 40px 2rem 40px 10000px; /*Cambio muevo el el titulo hacia abajo y agrando la caja*/
   text-align: left; /*Cambio alineacion dle texto a la izq*/
   z-index: 6;
   margin-top: 50px;/*Cambio agrego codigo para bajar la caja*/
-  height: 200px; /*Cambio agrego codigo para bajar que prev y sig queden mas abajo del titulo*/
 }
 
 .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title h1 {
@@ -11875,7 +11888,7 @@ body.lb-disable-scrolling {
   margin-bottom: 20px;
 }
 .ms-slidebar .ms-slidebar-header {
-  background-image: url("../img/bg-slidebar.png");
+  background-image: url("../img/sidebar.jpg");
   min-height: 150px;
   position: relative;
 }
@@ -11894,7 +11907,7 @@ body.lb-disable-scrolling {
   margin-right: 10px;
 }
 .ms-slidebar .ms-slidebar-header .ms-slidebar-title {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(18, 77, 111, 0.5); /*Cambio coloco color tms en slidebar*/
   bottom: 0;
   display: block;
   height: 50px;
@@ -11980,12 +11993,12 @@ body.lb-disable-scrolling {
   color: rgba(0, 0, 0, 0.3);
 }
 .ms-slidebar .ms-slidebar-header .ms-slidebar-title .search-form .search-input:focus {
-  border-bottom: 3px solid #03a9f4;
+  border-bottom: 3px solid #20B2AA; /*Cambio border-bottom: 3px solid #03a9f4; */
   border-radius: 0;
   width: 300px;
 }
 .ms-slidebar .ms-slidebar-header .ms-slidebar-title .search-form .search-input:focus + label {
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
   transform: scaleX(-1);
 }
 .ms-slidebar .ms-slidebar-header .ms-slidebar-title .search-form .search-input:focus + label::before {
@@ -12002,7 +12015,7 @@ body.lb-disable-scrolling {
 }
 .ms-slidebar .ms-slidebar-menu > li > a {
   background-color: #eee;
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4*/
   display: block;
   font-size: 16px;
   font-weight: 400;
@@ -12032,7 +12045,7 @@ body.lb-disable-scrolling {
 }
 .ms-slidebar .ms-slidebar-menu > li > a:hover {
   background-color: #f5f5f5;
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-slidebar .ms-slidebar-menu > li > a > i {
   margin-right: 15px;
@@ -12045,13 +12058,13 @@ body.lb-disable-scrolling {
   background-color: #fafafa;
   color: #616161;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   padding: 12px 20px;
 }
 .ms-slidebar .ms-slidebar-menu > li > ul li > a:hover {
   background-color: #f5f5f5;
-  color: #03a9f4;
+  color: #20B2AA; /*Cambio color: #03a9f4;*/
 }
 .ms-slidebar .ms-slidebar-menu > li > ul li > a > i {
   margin-right: 15px;
@@ -12471,5 +12484,15 @@ body.lb-disable-scrolling {
   }
   .no-mt-md {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {/*Cambio para que se vea bien responsive el slider*/
+  .ms-hero.ms-hero-material .ms-hero-material-text-container .ms-hero-material-title {
+    height: auto;
+  }
+
+  .ms-hero.ms-hero-material .ms-hero-img {
+    margin: 0;
   }
 }
