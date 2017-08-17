@@ -32,6 +32,7 @@ if (isset($data['meta']) && count($data['meta']) > 0) {
     <link rel="stylesheet" href="<?php echo URL_CSS; ?>plugins.min.css" />
     <link rel="stylesheet" href="<?php echo URL_CSS; ?>style.light-blue-500.min.css" />
     <link rel="stylesheet" href="<?php echo URL_CSS; ?>width-boxed.min.css" id="ms-boxed" disabled="">
+    <link rel="stylesheet" href="<?php echo URL_JS; ?>fileInput/fileinput.min.css" />
     <!--[if lt IE 9]>
         <script src="assets/js/html5shiv.min.js"></script>
         <script src="assets/js/respond.min.js"></script>

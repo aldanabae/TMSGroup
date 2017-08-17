@@ -213,6 +213,8 @@
 <script src="<?php echo URL_JS; ?>app.min.js"></script>
 <script src="<?php echo URL_JS; ?>configurator.min.js"></script>
 <script src="<?php echo URL_JS; ?>index.js"></script>
+<script src="<?php echo URL_JS; ?>fileInput/fileinput.min.js"></script>
+<script src="<?php echo URL_JS; ?>fileInput/es.js"></script>
 <!-- END FOOTER PAGE -->
 
 <!-- BEGIN JAVASCRIPT FILES -->
