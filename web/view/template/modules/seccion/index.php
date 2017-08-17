@@ -15,7 +15,7 @@ $sumario = !empty($item['Sumario']) ?
         <strong><?php echo $item['Titulo']; ?></strong>
       </h1>
       <?php if (!empty($sumario)) : ?>
-        <div class="lead lead-xl mw-800 center-block color-medium mb-2 animated fadeInDown animation-delay-4"> 
+        <div class="lead lead-xl mw-800 center-block color-white mb-2 animated fadeInDown animation-delay-4"> 
           <?php echo $sumario; ?>
         </div>
       <?php endif; ?>

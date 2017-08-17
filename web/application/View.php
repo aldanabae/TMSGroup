@@ -44,7 +44,7 @@ class View {
       require_once $fileView;
       require_once $_rutaFiles['footer'] . 'index.php';
     } else {
-      throw new Exception('Error: Vista ' . $fileView . ' no encontrada!');
+      Url::redirect('error');
     }
   }
 

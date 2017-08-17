@@ -27,6 +27,10 @@ class homeController extends Controller {
       $data[$data['tabla']] = $this->_index->getSeccion($url);
       $info = $data[$data['tabla']];
 
+      if(!$info){
+         Url::redirect('error');
+      }
+
       if(!empty($info['TablaSec'])) {
         $data['tabla_sec'] = $this->_index->getTablaSec($info['TablaSec']);
       }
@@ -35,7 +39,7 @@ class homeController extends Controller {
       $data['meta'] = $this->_index->getMeta($data['tabla'], $data[$data['tabla']]['ID']);
       $data['parrafos'] = $this->_index->getParrafos($data['tabla'], $data[$data['tabla']]['ID']);
     } else {
-      die('Error 404: Página no encontrada');
+      Url::redirect('error');
     }
 
     $data = array_merge($data, $this->getModules());
@@ -52,7 +56,7 @@ class homeController extends Controller {
       $data['galeria'] = $this->_index->getGaleria($data['tabla'], $data[$data['tabla']]['ID']);
 
     } else {
-      die('Error 404: Página no encontrada');
+      Url::redirect('error');
     }
 
     $data = array_merge($data, $this->getModules());
@@ -70,7 +74,7 @@ class homeController extends Controller {
       $page = (isset($_POST['page'])) ? $_POST['page'] : 1;
       $data['postcat'] = $this->_index->paginationCategorias($page, $data['info_cat']['ID']);
     } else {
-      die('Error 404: Página no encontrada');
+      Url::redirect('error');
     }
 
     $data = array_merge($data, $this->getModules());
@@ -110,7 +114,7 @@ class homeController extends Controller {
       $page = (isset($_POST['page'])) ? $_POST['page'] : 1;
       $data['postuser'] = $this->_index->paginationUser($page, $id);
     } else {
-      die('Error 404: Página no encontrada');
+      Url::redirect('error');
     }
 
     $data = array_merge($data, $this->getModules());

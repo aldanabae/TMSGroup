@@ -44,7 +44,7 @@
 							    foreach ($data['sliders'] as $item) :
 							      	$active = $i == 27 ? 'active' : '';
 							?>
-					        	<li data-target="#carousel-hero" data-slide-to="0" class="animated fadeInUpBig animation-delay-27 <?php echo $active; ?>"></li>
+					        	<li data-target="#carousel-hero" data-slide-to="0" class="animated fadeInUpBig animation-delay-12 <?php echo $active; ?>"></li>
 							<?php 
 								endforeach; 
 							?>		        

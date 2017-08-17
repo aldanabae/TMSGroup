@@ -2684,7 +2684,7 @@ hr.on-light {
     color: #bdbdbd;
   }
   50% {
-    color: #fff; /*Cambio color: #20B2AA;*/
+    color: #fff; 
   }
   100% {
     color: #bdbdbd;
@@ -2692,13 +2692,13 @@ hr.on-light {
 }
 @keyframes colorStar {
   0% {
-    color: #bdbdbd;
+    color: #fff; /*Cambio color: #bdbdbd;*/
   }
   50% {
     color: #20B2AA; /*Cambio color: #20B2AA;*/
   }
   100% {
-    color: #bdbdbd;
+    color: #fff; /*Cambio color: #bdbdbd;*/
   }
 }
 .colorStar {
@@ -7972,6 +7972,7 @@ pre.line-numbers > code {
 }
 .card .card-block-big, .card.card-block-big {
   padding: 4rem;
+  background-color: #124D6F; /*Cambio Agrego color al fondo del card ERROR*/
 }
 .card .card-header {
   background-color: #f5f5f5;

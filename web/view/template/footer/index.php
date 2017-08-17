@@ -188,7 +188,7 @@
           </li>
         </ul>
         <div class="ms-slidebar-social ms-slidebar-block">
-          <h4 class="ms-slidebar-block-title text-center">Redes sociales</h4>
+          <h4 class="ms-slidebar-block-title text-center">Redes Sociales</h4>
           <div class="ms-slidebar-social">
             <a href="https://www.facebook.com/tmsgroupsa/" class="btn-circle btn-circle-raised btn-facebook">
               <i class="zmdi zmdi-facebook"></i>
