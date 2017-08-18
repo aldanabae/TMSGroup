@@ -83,7 +83,7 @@
                     </br>
                       <p class="center-block color-tms mb-2 animated fadeInDown animation-delay-8">
                         Si tenes ganas de sumarte a un equipo de trabajo distendido y que siempre se apoya en el otro
-                        como herramienta b&aacute;sica de progreso y aprendizaje, <strong> escribinos! </stong>
+                        como herramienta b&aacute;sica de progreso y aprendizaje, <strong> escribinos! </strong>
                       </p>
                     </address>
                 </div>
