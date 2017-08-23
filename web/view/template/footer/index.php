@@ -3,10 +3,10 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-4 ms-footer-col" style="height: 442px;">
+          <div class="col-md-3 ms-footer-col" style="height: 442px;">
             <div class="ms-footbar-block">
               <h3 class="ms-footbar-title">Mapa del Sitio</h3>
-              <ul class="list-unstyled ms-icon-list three_cols">
+              <ul class="list-unstyled ms-icon-list two_cols">
                 <li>
                   <a href="<?php echo URL_WEB; ?>">
                     <i class="zmdi zmdi-home"></i> Home</a>
@@ -43,7 +43,7 @@
             </div>
           </div>
 
-          <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
+          <div class="col-md-6 col-sm-7 ms-footer-col ms-footer-alt-color">
             <div class="ms-footbar-block">
               <div class="ms-footbar-block">
                 <div class="ms-footbar-title">
@@ -52,20 +52,42 @@
                   </h3>
                 </div>
                 
-                <div class="ms-footer-media text-center">
+                <div class="col-md-6 ms-footer-col ms-footer-media text-center">
                   <address class="no-mb">
+                  <a href="#" id="link-argentina">
+                    <img src="<?php echo URL_IMG.'argentina.gif'; ?>" class="banderas-header">
+                  </a>
                   <p>
                     <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Ricardo Videla 8340, La Puntilla</p>
                   <p>
-                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luján de Cuyo, CP 5505</p>
-                  <p>
-                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                    <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
-                  </p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luj&aacute;n de Cuyo, CP 5505</p>
+                  
                   <p>
                     <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261 5244759 </p>
                   <p>
                   </address>
+                </div>
+
+                <div class="col-md-6 ms-footer-col ms-footer-media text-center">
+                  <address class="no-mb">
+                  <a href="#" id="link-chile">
+                    <img src="<?php echo URL_IMG.'chile.gif'; ?>" class="banderas-header">
+                  </a>
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Av. Manquehue Norte 952, Las Condes</p>
+                  <p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> Santiago de Chile, CP 7550000</p>
+                  
+                  <p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+56 222 755028 </p>
+                  <p>
+                  </address>
+                </div>
+                <div class="ms-footbar-title text-center mb-2">
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
+                  </p>
                 </div>
               </div>
             </div>

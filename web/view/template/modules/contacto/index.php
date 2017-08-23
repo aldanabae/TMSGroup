@@ -56,8 +56,8 @@
                       <p>
                         <i class="color-warning-light zmdi zmdi-map mr-1"></i> Luj&aacute;n de Cuyo, CP 5505</p>
                       <p>
-                        <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                        <a href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
+                        <i class="color-aqua zmdi zmdi-email mr-1"></i>
+                        <a class="color-aqua" href="mailto:info@tmsgroup.com.ar">info@tmsgroup.com.ar</a>
                       </p>
                       <p>
                         <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+54 261 5244759 </p>

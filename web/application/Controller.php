@@ -129,7 +129,7 @@ abstract class Controller {
         'body' => $body));
 
     if (ACTIVE_EMAIL) {
-      if (!$send) {
+      if (!$respuesta) {
         $output = json_encode(array('type' => 'error', 'text' => 'No se pudo enviar el correo. Por favor, int&eacute;ntelo m&aacute;s tarde!'));
         return $output;
       }

@@ -50,7 +50,7 @@
                         <label class="col-md-2 control-label">Subir Curriculum</label>
                         <div class="col-md-9">
                           <input type="hidden" name="MAX_FILE_SIZE" value="250000">
-                          <input type="file" id="cvitae" class="file-loading" accept="application/pdf, application/msword">
+                          <input type="file" id="cvitae" name="cvitae" class="file-loading" accept="application/pdf, application/msword">
                         </div>
                       </div>
 

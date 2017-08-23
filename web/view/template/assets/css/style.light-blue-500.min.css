@@ -3569,7 +3569,7 @@ a {
   transition: all 0.1s ease 0s;
 }
 a:hover, a:focus, a:active {
-  color: #000;
+  color: #124D6F; /*Cambio color: #000;*/
   text-decoration: none;
 }
 .lead {
@@ -11740,6 +11740,29 @@ body.lb-disable-scrolling {
   width: 15px;
 }
 .three_cols li a:hover i {
+  color: #27E092; /*Cambio color: #ffa726;*/
+  transform: rotateY(360deg);
+  transition: all 0.5s ease 0s;
+}
+.two_cols {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
+  overflow: hidden;
+  width: 100%;
+}
+.two_cols li {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
+  float: left;
+  width: 50%;
+}
+.two_cols li a {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
+  display: block;
+  padding: 2px 0;
+}
+.two_cols li a i {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
+  color: #20B2AA; /*Cambio color: #26c6da;*/
+  margin-right: 10px;
+  text-align: center;
+  width: 15px;
+}
+.two_cols li a:hover i {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
   color: #27E092; /*Cambio color: #ffa726;*/
   transform: rotateY(360deg);
   transition: all 0.5s ease 0s;
