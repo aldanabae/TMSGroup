@@ -11713,7 +11713,7 @@ body.lb-disable-scrolling {
   transition: all 0.3s ease 0s;
 }
 .ms-footbar a:hover, .ms-footbar a:focus {
-  color: #27E092; /*Cambio color: #ffa726;*/
+  color: #20B2AA; /*Cambio color: #ffa726;*/
 }
 .ms-footbar .ms-footbar-block {
   margin: 2rem 0;
@@ -11763,7 +11763,7 @@ body.lb-disable-scrolling {
   width: 15px;
 }
 .two_cols li a:hover i {/*Cambio agrego 2 columnas para el Mapa de Sitio en Footer*/
-  color: #27E092; /*Cambio color: #ffa726;*/
+  color: #20B2AA; /*Cambio color: #ffa726;*/
   transform: rotateY(360deg);
   transition: all 0.5s ease 0s;
 }

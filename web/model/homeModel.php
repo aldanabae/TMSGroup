@@ -48,7 +48,7 @@ class homeModel extends Model {
   }
 
   public function getSliders() {
-    return $this->all(array('table' => 'banner_top', 'where' => "Publico='1'"));
+    return $this->all(array('table' => 'banner_top', 'where' => "Publico='1'", 'order' => 'Posicion'));
   }
 
   public function getTablaSec($tabla) {

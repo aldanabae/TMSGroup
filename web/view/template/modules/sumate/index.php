@@ -3,7 +3,7 @@
         <div class="col-lg-8 col-md-7">
             <div class="card card-primary animated fadeInUp animation-delay-7">
                 <div class="ms-hero-bg-primary ms-hero-img-mountain">
-                  <h2 class="text-center no-m pt-4 pb-4 color-white index-1">¡Sumate a <strong>TMS</strong>Group!</h2>
+                  <h2 class="text-center no-m pt-4 pb-4 color-white index-1">&iquest;Sumate a <strong>TMS</strong>Group!</h2>
                 </div>
                 <div class="card-block">
                   <!-- <div id="result"></div> -->

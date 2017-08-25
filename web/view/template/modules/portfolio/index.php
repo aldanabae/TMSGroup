@@ -70,7 +70,7 @@
                         <strong>Categor&iacute;a:</strong> <?php echo $port['Categoria']; ?>
                       </li>
                       <li>
-                        <strong>Año:</strong> <?php echo $port['Anio']; ?>
+                        <strong>A&ntilde;o:</strong> <?php echo $port['Anio']; ?>
                       </li>
                     </ul>
                     <h3 class="color-aqua">Descripci&oacute;n</h3>

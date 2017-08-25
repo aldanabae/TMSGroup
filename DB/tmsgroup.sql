@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-08-2017 a las 19:02:12
+-- Tiempo de generación: 25-08-2017 a las 20:27:34
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -75,10 +75,10 @@ CREATE TABLE `aws_banner_top` (
 --
 
 INSERT INTO `aws_banner_top` (`ID`, `Publico`, `Titulo`, `Descripcion`, `Posicion`, `Imagen`, `AlineaText`, `IsCrop`, `TextButton`, `URL`) VALUES
-(1, 1, 'Banner1', '<h1>Desarrollos Web y Mobile a medida</h1>\r\n\r\n<h2>Ideamos soluciones integrales a partir de tus necesidades para crear el software ideal para tu negocio.</h2>\r\n', 1, '48814863.png', 'left', 1, '', ''),
-(2, 1, 'Banner2', '<h1>Internet de Alta Velocidad</h1>\r\n\r\n<h2>Proveemos el servicio de internet mas confiable del mercado las 24 horas, sin necesidad&nbsp;de telefon&iacute;a ni cable, con planes que se ajustan a tus necesidades.</h2>\r\n', 2, '21675336.png', 'left', 1, '', ''),
-(3, 1, 'Banner3', '<h1>Soporte y Consultor&iacute;a OnSite</h1>\r\n\r\n<h2>Somos especialistas en soporte IT&nbsp;y ofrecemos consultoria especializada en tecnolog&iacute;a y sistemas inform&aacute;ticos para tu empresa.</h2>\r\n', 3, '47062711.png', 'left', 1, '', ''),
-(4, 1, 'Banner4', '<h1>Especialistas en Outsourcing</h1>\r\n\r\n<h2>Somos responsables&nbsp;de administrar e integrar hardware y plataformas de software, a fin de ayudar a tu empresa&nbsp;a gestionar la informaci&oacute;n y las estrategias de negocios.</h2>\r\n', 4, '61997144.png', 'left', 1, '', '');
+(1, 1, 'Banner1', '<h1>Desarrollos Web y Mobile a medida</h1>\r\n\r\n<h2>Ideamos soluciones integrales a partir de tus necesidades para crear el software ideal para tu negocio.</h2>\r\n', 2, '48814863.png', 'left', 1, '', ''),
+(2, 1, 'Banner2', '<h1>Internet de Alta Velocidad</h1>\r\n\r\n<h2>Proveemos el servicio de internet mas confiable del mercado las 24 horas, sin necesidad&nbsp;de telefon&iacute;a ni cable, con planes que se ajustan a tus necesidades.</h2>\r\n', 3, '21675336.png', 'left', 1, '', ''),
+(3, 1, 'Banner3', '<h1>Soporte y Consultor&iacute;a OnSite</h1>\r\n\r\n<h2>Somos especialistas en soporte IT&nbsp;y ofrecemos consultoria especializada en tecnolog&iacute;a y sistemas inform&aacute;ticos para tu empresa.</h2>\r\n', 4, '47062711.png', 'left', 1, '', ''),
+(4, 1, 'Banner4', '<h1>Especialistas en Outsourcing</h1>\r\n\r\n<h2>Somos responsables&nbsp;de administrar e integrar hardware y plataformas de software, a fin de ayudar a tu empresa&nbsp;a gestionar la informaci&oacute;n y las estrategias de negocios.</h2>\r\n', 1, '61997144.png', 'left', 1, '', '');
 
 -- --------------------------------------------------------
 
@@ -227,7 +227,7 @@ CREATE TABLE `aws_config` (
 --
 
 INSERT INTO `aws_config` (`ID`, `Nombre`, `Slogan`, `Email`, `Telefono`, `Movil`, `Fax`, `Direccion`, `Localidad`, `Provincia`, `PaisID`, `CodigoPostal`, `Website`, `Latitud`, `Longitud`, `Titulo`, `Descripcion`, `Robots`, `Analytics`) VALUES
-(1, 'TMS Group - TecnologÃ­a, TercerizaciÃ³n, Aplicaciones MÃ³viles, Desarrollo Web, Clouding, TelefonÃ­a IP, Mendoza', '', 'admin@gmail.com', '', '', '', '', '', '', '10', '55001', 'http://www.tmsgroup.com.ar', '', '', 'TMS Group - TecnologÃ­a, TercerizaciÃ³n, Aplicaciones MÃ³viles, Desarrollo Web, Clouding, TelefonÃ­a IP, Mendoza', 'TMS Group - TecnologÃ­a, TercerizaciÃ³n, Aplicaciones MÃ³viles, Desarrollo Web, Clouding, TelefonÃ­a IP, Mendoza', 'index, follow', '');
+(1, 'TMS Group - Tecnolog&iacute;a, Tercerizaci&oacute;n, Aplicaciones M&oacute;viles, Desarrollo Web, Clouding, Telefon&iacute;­a IP, Mendoza', '', 'admin@gmail.com', '', '', '', '', '', '', '10', '55001', 'http://www.tmsgroup.com.ar', '', '', 'TMS Group - TecnologÃ­a, TercerizaciÃ³n, Aplicaciones MÃ³viles, Desarrollo Web, Clouding, TelefonÃ­a IP, Mendoza', 'TMS Group - TecnologÃ­a, TercerizaciÃ³n, Aplicaciones MÃ³viles, Desarrollo Web, Clouding, TelefonÃ­a IP, Mendoza', 'index, follow', '');
 
 -- --------------------------------------------------------
 
@@ -984,13 +984,13 @@ CREATE TABLE `aws_seccion` (
 --
 
 INSERT INTO `aws_seccion` (`ID`, `Publico`, `Titulo`, `Sumario`, `Detalle`, `Imagen`, `TextImage`, `AlineaImg`, `Video`, `TextVideo`, `IsTop`, `IsBot`, `MenuTop`, `MenuBot`, `IsForm`, `Posicion`, `PadreID`, `URL`, `PlantillaID`, `TablaSec`, `Icono`) VALUES
-(4, 1, 'Outsourcing IT', '<p>Somos especialistas en el manejo de esas actividades que tu firma&nbsp;<strong>debe externalizar estrat&eacute;gicamente</strong>&nbsp;para las cuales no tiene ni una&nbsp;<strong>necesidad cr&iacute;tica ni capacidades especiales</strong>.</p>\r\n', '', '9619875.jpg', '', 'right', '', '', 0, 0, '', '', 0, 1, '0', 'outsourcing-it', '0', NULL, NULL),
-(5, 1, 'Software Factoring', '<p>Nuestro objetivo es asistir a nuestros clientes en la obtenci&oacute;n de soluciones pr&aacute;cticas en tiempo y calidad, fundamentadas en las&nbsp;<strong>necesidades reales de su organizaci&oacute;n</strong>.</p>\r\n\r\n<p>La integraci&oacute;n de tecno</p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 2, '0', 'software-factoring', '0', NULL, NULL),
+(4, 1, 'Outsourcing IT', '<p>Somos especialistas en el manejo de esas actividades que tu firma&nbsp;<strong>debe externalizar estrat&eacute;gicamente</strong>&nbsp;para las cuales no tiene ni una&nbsp;<strong>necesidad cr&iacute;tica ni capacidades especiales</strong>.</p>\n', '', '9619875.jpg', '', 'right', '', '', 0, 0, '', '', 0, 1, '0', 'outsourcing-it', '0', NULL, NULL),
+(5, 1, 'Software Factoring', '<p>Nuestro objetivo es asistir a nuestros clientes en la obtenci&oacute;n de soluciones pr&aacute;cticas en tiempo y calidad, fundamentadas en las&nbsp;<strong>necesidades reales de su organizaci&oacute;n</strong>.</p>\n\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 2, '0', 'software-factoring', '0', NULL, NULL),
 (6, 1, 'ConsultorÃ­a y CapacitaciÃ³n', '<p>Estudiamos el funcionamiento , la seguridad de los procesos, los procedimientos y aplicaciones inform&aacute;ticas&nbsp;<strong>definiendo el nivel de madurez de acuerdo a los est&aacute;ndares del mercado</strong>.</p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 3, '0', 'consultoria-capacitacion', '0', '0', NULL),
 (7, 1, 'Cloud Solutions', '<p>Somos&nbsp;<strong>proveedores de servicios en la nube (CSP)</strong>&nbsp;ya que ofrecemos a las organizaciones recursos de servicios p&uacute;blicos, como m&aacute;quinas virtuales, redes y capacidad de almacenamiento.</p>\r\n\r\n<p>La plataformas en la nube son estructuras de soporte que facilitan los entornos de desarrollo mediante&nbsp;<strong>recursos agrupados y escalables</strong>.Tambi&eacute;n hay servicios de software que ofrecen aplicaciones que utilizan una arquitectura multitenant.</p>\r\n\r\n<p>Los recursos de la nube pueden vivir tanto dentro como fuera de las instalaciones, o una combinaci&oacute;n de ambos, empleando un&nbsp;<strong>modelo de nube h&iacute;brido</strong>.</p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 4, '0', 'cloud-solutions', '0', NULL, NULL),
 (8, 1, 'Internet Service Provider', '<p>Proveemos el servicio de internet wireless mas confiable del mercado&nbsp;<strong>las 24 horas, sin necesidad de telefon&iacute;a ni cable</strong>,&nbsp;con planes que se&nbsp;<strong>ajustan a tus necesidades</strong>.</p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 5, '0', 'internet-service-provider', '4', 'planes', NULL),
-(9, 1, 'Networking Solutions', '<p>Somos&nbsp;<strong>especialistas en proyectos de despliegue&nbsp;</strong>de redes inal&aacute;mbricas, redes de datos, VoIP y seguridad, siguiendo los&nbsp;<strong>m&aacute;s altos est&aacute;ndares de calidad&nbsp;</strong>y adaptados a las necesidad</p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 6, '0', 'networking-solutions', '0', NULL, NULL),
-(10, 1, 'Soporte TecnolÃ³gico', '<p>Brindamos soluciones profesionales para el servicio de soporte t&eacute;cnico para empresas <strong>integrando la tecnolog&iacute;a a sus procesos de negocios</strong> para ayudarlo a reducir costos y descentralizar la<strong> gestion de todos sus&nbsp;recursos inform&aacute;ticos.</strong></p>\r\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 7, '0', 'soporte-tecnologico', '0', NULL, NULL);
+(9, 1, 'Networking Solutions', '<p>Somos&nbsp;<strong>especialistas en proyectos de despliegue&nbsp;</strong>de redes inal&aacute;mbricas, redes de datos, VoIP y seguridad, siguiendo los&nbsp;<strong>m&aacute;s altos est&aacute;ndares de calidad&nbsp;</strong>y adapt&aacute;ndolos a las necesidades de tu empresa.</p> \n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 6, '0', 'networking-solutions', '0', NULL, NULL),
+(10, 1, 'Soporte TecnolÃ³gico', '<p>Brindamos soluciones profesionales para el servicio de soporte t&eacute;cnico para empresas <strong>integrando la tecnolog&iacute;a a sus procesos de negocios</strong> para ayudarlo a reducir costos y descentralizar la<strong> gestion de todos sus&nbsp;recursos inform&aacute;ticos.</strong></p>\n', '', '', '', 'right', '', '', 0, 0, '', '', 0, 7, '0', 'soporte-tecnologico', '0', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3877,7 +3877,119 @@ INSERT INTO `aws_sys_tracking` (`ID`, `Tabla`, `TablaID`, `Filename`, `UrlVisite
 (2668, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-18', '11:54:32', 0),
 (2669, 'seccion', '6', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/consultoria-capacitacion', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-18', '11:56:45', 0),
 (2670, 'seccion', '6', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/consultoria-capacitacion', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-18', '13:00:39', 0),
-(2671, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-18', '15:48:00', 0);
+(2671, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-18', '15:48:00', 0),
+(2672, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:12:37', 0),
+(2673, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:12:47', 0),
+(2674, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:19:32', 0),
+(2675, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:38:42', 0),
+(2676, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:39:09', 0),
+(2677, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:39:43', 0),
+(2678, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:42:15', 0),
+(2679, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:42:54', 0),
+(2680, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:43:18', 0),
+(2681, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:43:35', 0),
+(2682, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:45:00', 0),
+(2683, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.215', 'android-48bf8b896204f0d0.tmsgroup.lan', 'Chrome / 58.0.3029.83', '2017-08-22', '15:47:15', 0),
+(2684, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:50:57', 0),
+(2685, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:52:57', 0),
+(2686, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:53:18', 0),
+(2687, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:53:31', 0),
+(2688, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:53:46', 0),
+(2689, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:54:38', 0),
+(2690, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:55:26', 0),
+(2691, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:55:37', 0),
+(2692, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:55:48', 0),
+(2693, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:56:27', 0),
+(2694, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:56:54', 0),
+(2695, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:57:19', 0),
+(2696, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:58:06', 0),
+(2697, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:58:17', 0),
+(2698, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:58:34', 0),
+(2699, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '15:58:44', 0),
+(2700, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:00:50', 0),
+(2701, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:01:12', 0),
+(2702, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:01:43', 0),
+(2703, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:01:55', 0),
+(2704, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:03:22', 0),
+(2705, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:06:15', 0),
+(2706, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:06:25', 0),
+(2707, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:09:08', 0),
+(2708, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:09:42', 0),
+(2709, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:10:05', 0),
+(2710, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:10:21', 0),
+(2711, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:12:44', 0),
+(2712, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:14:18', 0),
+(2713, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:14:38', 0),
+(2714, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '16:14:53', 0),
+(2715, 'portfolio', '2', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/estadio-fiscal-de-talca-chile', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-22', '17:13:43', 0),
+(2716, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:34:09', 0),
+(2717, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:34:12', 0),
+(2718, 'clientes', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/clientes', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:43:03', 0),
+(2719, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:43:05', 0),
+(2720, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:43:33', 0),
+(2721, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:48:14', 0),
+(2722, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:48:35', 0),
+(2723, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:48:48', 0),
+(2724, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:49:00', 0),
+(2725, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:49:40', 0),
+(2726, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '12:50:14', 0),
+(2727, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '13:05:56', 0),
+(2728, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '13:15:06', 0),
+(2729, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '13:21:21', 0),
+(2730, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:42:28', 0),
+(2731, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:42:32', 0),
+(2732, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:42:39', 0),
+(2733, 'seccion', '6', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/consultoria-capacitacion', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:42:42', 0),
+(2734, 'seccion', '10', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/soporte-tecnologico', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:42:46', 0),
+(2735, 'seccion', '7', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/cloud-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:43:01', 0),
+(2736, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:43:06', 0),
+(2737, 'seccion', '7', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/cloud-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:43:17', 0),
+(2738, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:43:22', 0),
+(2739, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:45:36', 0),
+(2740, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:45:40', 0),
+(2741, 'seccion', '6', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/consultoria-capacitacion', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:46:29', 0),
+(2742, 'seccion', '8', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/internet-service-provider', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:46:35', 0),
+(2743, 'seccion', '10', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/soporte-tecnologico', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:46:38', 0),
+(2744, 'seccion', '7', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/cloud-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:46:42', 0),
+(2745, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:46:47', 0),
+(2746, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:49:33', 0),
+(2747, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:50:26', 0),
+(2748, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:50:55', 0),
+(2749, 'seccion', '7', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/cloud-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:51:11', 0),
+(2750, 'seccion', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/outsourcing-it', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:51:25', 0),
+(2751, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '15:51:30', 0),
+(2752, 'seccion', '5', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/software-factoring', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '16:01:20', 0),
+(2753, 'seccion', '7', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/cloud-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '16:02:17', 0),
+(2754, 'seccion', '9', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/seccion/networking-solutions', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-23', '16:02:23', 0),
+(2755, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:08:28', 0),
+(2756, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:08:37', 0),
+(2757, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:09:35', 0),
+(2758, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:10:02', 0),
+(2759, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:10:31', 0),
+(2760, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:10:54', 0),
+(2761, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:11:05', 0),
+(2762, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:11:39', 0),
+(2763, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:12:10', 0),
+(2764, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:12:44', 0),
+(2765, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:12:58', 0),
+(2766, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:14:04', 0),
+(2767, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:14:20', 0),
+(2768, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.61', 'Dell-PC.tmsgroup.lan', 'Firefox / 55.0', '2017-08-25', '15:14:57', 0),
+(2769, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.61', 'Dell-PC.tmsgroup.lan', 'Firefox / 55.0', '2017-08-25', '15:15:03', 0),
+(2770, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/', '192.168.1.61', 'Dell-PC.tmsgroup.lan', 'Firefox / 55.0', '2017-08-25', '15:15:33', 0),
+(2771, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:15:44', 0),
+(2772, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:16:45', 0),
+(2773, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/sumate', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:17:57', 0),
+(2774, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolios', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:18:13', 0),
+(2775, 'portfolio', '4', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/portfolio/durox-enologia-srl', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:18:17', 0),
+(2776, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:21:57', 0),
+(2777, '', '0', '/TMSGroup/index.php', 'http://192.168.1.236/TMSGroup/contacto', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:24:06', 0),
+(2778, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:24:14', 0),
+(2779, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:24:25', 0),
+(2780, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:24:33', 0),
+(2781, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:25:00', 0),
+(2782, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:26:09', 0),
+(2783, '', '0', '/TMSGroup/index.php', 'http://localhost/TMSGroup/', '192.168.1.236', 'Dell-PC.tmsgroup.lan', 'Chrome / 60.0.3112.101', '2017-08-25', '15:26:22', 0);
 
 -- --------------------------------------------------------
 
@@ -3905,7 +4017,7 @@ CREATE TABLE `aws_sys_user` (
 --
 
 INSERT INTO `aws_sys_user` (`ID`, `Publico`, `Nombre`, `Email`, `Usuario`, `Contrasenia`, `Imagen`, `Descripcion`, `RolID`, `FechaCreacion`, `UltimaVez`, `KeyCookie`) VALUES
-(1, 1, 'Creator Owner', 'admin@gmail.com', 'admin', '09c133a7d8e9544350d4f1ba5d7686faee445d4a', '', '', '0', '2015-01-01 03:00:00', '2017-08-18 14:49:34', '277044407');
+(1, 1, 'Creator Owner', 'admin@gmail.com', 'admin', '09c133a7d8e9544350d4f1ba5d7686faee445d4a', '', '', '0', '2015-01-01 03:00:00', '2017-08-25 18:15:05', '277044407');
 
 --
 -- Índices para tablas volcadas
@@ -4289,7 +4401,7 @@ ALTER TABLE `aws_sys_tables`
 -- AUTO_INCREMENT de la tabla `aws_sys_tracking`
 --
 ALTER TABLE `aws_sys_tracking`
-  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2672;
+  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2784;
 --
 -- AUTO_INCREMENT de la tabla `aws_sys_user`
 --
