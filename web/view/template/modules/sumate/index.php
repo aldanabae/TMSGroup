@@ -6,7 +6,9 @@
                   <h2 class="text-center no-m pt-4 pb-4 color-white index-1">&iquest;Sumate a <strong>TMS</strong>Group!</h2>
                 </div>
                 <div class="card-block">
-                  <!-- <div id="result"></div> -->
+                  <div id="result" class="text-center color-aqua">
+                    <?php echo Session::get('mensaje_ok');?>
+                  </div>
                   <form class="form-horizontal" id="contactForm" name="contactForm" enctype="multipart/form-data" action="<?php echo URL_WEB.'sendformSumate'; ?>" method="post">                  
                     <fieldset>
                       <div class="form-group is-empty">

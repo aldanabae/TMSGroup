@@ -267,15 +267,6 @@ class homeController extends Controller {
         $email_to = "aldana.baeza@tmsgroup.com.ar"; 
         $email_subject = "Formulario Postulante - TMS Gruop WEB";
 
-        //Funcion utilizada
-        function died($error) {
-          echo "Lo sentimos mucho, pero hubo un error(es) encontrado en el formulario. ";
-          echo "Estos son los errores:<br /><br />";
-          echo $error."<br /><br />";
-          echo "Retroceda y arregle el error.<br /><br />";
-          die();
-        }
-            
         //Validation expected data exists
         if(!isset($_POST['nombre']) ||
             !isset($_POST['apellido']) ||
@@ -286,7 +277,7 @@ class homeController extends Controller {
             !isset($_POST['mensaje']) ||
             !isset($_FILES['cvitae']['name'])){
               $error = "Lo sentimos, pero hubo un error(es) encontrado en el formulario.";
-              died($error);       
+              $this->died($error);       
         }
          
         //variables para los campos
@@ -315,7 +306,7 @@ class homeController extends Controller {
           $error_message .= 'El mensaje que ingresaste no parece ser válido<br />';
         }
         if(strlen($error_message) > 0) {
-          died($error_message);
+          $this->died($error_message);
         }
 
         //variables para los datos del archivo 
@@ -325,23 +316,17 @@ class homeController extends Controller {
         
         $archivo = file_get_contents($archivo);
         $archivo = chunk_split(base64_encode($archivo));
-
-        //Funcion utilizada 
-        function clean_string($string) {
-          $bad = array("content-type","bcc:","to:","cc:","href");
-          return str_replace($bad,"",$string);
-        }
-         
+    
         // Cuerpo del Email
         $CuerpoMensaje  = "";
         $CuerpoMensaje .= "A continuación más detalles:\r\n\r\n";
-        $CuerpoMensaje .= "Nombre: ".clean_string($nombre)."\r\n";
-        $CuerpoMensaje .= "Apellido: ".clean_string($apellido)."\r\n";
-        $CuerpoMensaje .= "DNI: ".clean_string($dni)."\r\n";
-        $CuerpoMensaje .= "Email: ".clean_string($email_from)."\r\n";    
-        $CuerpoMensaje .= "Celular: ".clean_string($celular)."\r\n";
-        $CuerpoMensaje .= "Asunto: ".clean_string($asunto)."\r\n";
-        $CuerpoMensaje .= "Mensaje: ".clean_string($mensaje)."\r\n";
+        $CuerpoMensaje .= "Nombre: ".$this->clean_string($nombre)."\r\n";
+        $CuerpoMensaje .= "Apellido: ".$this->clean_string($apellido)."\r\n";
+        $CuerpoMensaje .= "DNI: ".$this->clean_string($dni)."\r\n";
+        $CuerpoMensaje .= "Email: ".$this->clean_string($email_from)."\r\n";    
+        $CuerpoMensaje .= "Celular: ".$this->clean_string($celular)."\r\n";
+        $CuerpoMensaje .= "Asunto: ".$this->clean_string($asunto)."\r\n";
+        $CuerpoMensaje .= "Mensaje: ".$this->clean_string($mensaje)."\r\n";
        
         
         //Cabecera del email (forma correcta de codificarla)
@@ -363,9 +348,26 @@ class homeController extends Controller {
         $email_message .= $archivo . "\r\n\r\n";
         $email_message .= "--=A=G=R=O=--";
         
-        //Enviamos el email
-        mail($email_to, $email_subject, $email_message, $headers);
+        //Enviamos el email   
+        if(mail($email_to, $email_subject, $email_message, $headers)){
+          Session::set('mensaje_ok', "Su mensaje fue enviado correctamente!");
+          Url::redirect('sumate');
+        }
     }
+  }
+
+  public function died($error) {
+    Session::set('mensaje_ok', "<div style='color: #f44336;'>
+                                Lo sentimos mucho, pero hubo un error(es) encontrado en el formulario.</br> 
+                                Estos son los errores:</br>
+                                $error</br>
+                                Arregle el error.</div>");
+    Url::redirect('sumate');
+  }
+
+  public function clean_string($string) {
+    $bad = array("content-type","bcc:","to:","cc:","href");
+    return str_replace($bad,"",$string);
   }
 
 

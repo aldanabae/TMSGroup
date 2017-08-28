@@ -12046,7 +12046,7 @@ body.lb-disable-scrolling {
   padding: 12px 20px;
 }
 .ms-slidebar .ms-slidebar-menu > li > a::after {
-  content: "";
+  content: "\f273";
   float: right;
   font-family: Material-Design-Iconic-Font;
   font-size: 1.2em;
@@ -12057,7 +12057,7 @@ body.lb-disable-scrolling {
   color: #616161;
 }
 .ms-slidebar .ms-slidebar-menu > li > a.collapsed::after {
-  content: "";
+  content: "\f278";
   transform: rotate(180deg);
 }
 .ms-slidebar .ms-slidebar-menu > li > a.link {
@@ -12065,7 +12065,7 @@ body.lb-disable-scrolling {
   color: #616161;
 }
 .ms-slidebar .ms-slidebar-menu > li > a.link::after {
-  content: "";
+  content: "\f2fb";
 }
 .ms-slidebar .ms-slidebar-menu > li > a:hover {
   background-color: #f5f5f5;

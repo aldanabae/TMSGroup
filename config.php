@@ -13,6 +13,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 //DATOS DE CONFIGURACIÓN DEL WEBSITE
 define('URL_WEB', 'http://192.168.1.236/TMSGroup/');
+//define('URL_WEB', 'http://tmsgroup.com.ar/');
 define('URL_THEME', 'template');
 define('URL_GAL', URL_WEB . 'galleries/');
 define('URL_CSS', URL_WEB . 'web/view/' . URL_THEME . '/assets/css/');
@@ -48,6 +49,8 @@ define('APP_DESCRIPTION', 'Website by TMS Group');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'Admin123$');
+// define('DB_USER', 'root');
+// define('DB_PASS', 'bluepill');
 define('DB_NAME', 'tmsgroup');
 define('DB_CHAR', 'latin1');
 define('DB_PREF', 'aws_');
