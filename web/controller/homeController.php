@@ -264,7 +264,7 @@ class homeController extends Controller {
   public function sendformSumate() {
     if(isset($_POST['email'])) {    
         //Para y asunto del mensaje a enviar
-        $email_to = "aldana.baeza@tmsgroup.com.ar"; 
+        $email_to = "info@tmsgroup.com.ar"; 
         $email_subject = "Formulario Postulante - TMS Gruop WEB";
 
         //Validation expected data exists
