@@ -55,7 +55,7 @@
                 <div class="col-md-6 ms-footer-col ms-footer-media text-center">
                   <address class="no-mb">
                   <a href="#" id="link-argentina">
-                    <img src="<?php echo URL_IMG.'argentina.gif'; ?>" class="banderas-header">
+                    <img src="<?php echo URL_IMG.'argentina.png'; ?>" class="banderas-header">
                   </a>
                   <p>
                     <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Ricardo Videla 8340, La Puntilla</p>
@@ -71,7 +71,7 @@
                 <div class="col-md-6 ms-footer-col ms-footer-media text-center">
                   <address class="no-mb">
                   <a href="#" id="link-chile">
-                    <img src="<?php echo URL_IMG.'chile.gif'; ?>" class="banderas-header">
+                    <img src="<?php echo URL_IMG.'chile.png'; ?>" class="banderas-header">
                   </a>
                   <p>
                     <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Av. Manquehue Norte 952, Las Condes</p>

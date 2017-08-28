@@ -6398,7 +6398,7 @@ label.color-white {
   z-index: -1;
 }
 .ms-navbar .navbar-nav li.dropdown .dropdown-menu .dropdown-submenu > a::after {
-  content: "";
+  content: "\f2fb";
   float: right;
   font-family: Material-Design-Iconic-Font;
   margin-right: -15px;
